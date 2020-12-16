@@ -6,7 +6,6 @@ o artista anapolino interessado, no contexto artístico de seu município,
 e também deixa à toda população o acesso à informação, à carga cultural
 que estas diversas edições coletaram.
 
-Revisão do readme: 16-dez-2020
 ---
 ## Estrutura do aplicativo:
 
