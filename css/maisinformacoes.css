@@ -1,3 +1,12 @@
+/* Tipografia */
+li {
+    font-family: var(--font-normal);
+    font-size: var(--font-size-1); }
+
+h5 { /* Para tirar espaçamento no topo - Equipe Técnica */
+    margin-top: 0;
+}
+
 /*.main-center: */
 /*      MAIN-INFO */
 /*      MAIN-GALERIA-FOTOS */
