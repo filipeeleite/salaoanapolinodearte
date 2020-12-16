@@ -1,0 +1,302 @@
+/* TIPOGRAFIA */
+/* Fonte títulos - h2 h3 h4 h5 h6 */
+@import url(https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@900&display=swap);
+
+/* Fonte normal - a p */
+/* Google fonts */
+/* @import url(https://fonts.googleapis.com/css2?family=Jost&display=swap); */
+/*Local */
+@font-face {
+    font-family: 'jost';
+    src:  url('/fonts/Jost-VariableFont_wght.ttf') format('truetype'),
+  }
+
+/* VARIÁVEIS */
+:root {
+    /* TIPOGRAFIA */
+    --font-titulos: 'Big Shoulders Text';
+    --font-normal: 'Jost';
+    --font-size-5: 2.50rem;
+    --font-size-4: 1.50rem;
+    --font-size-3: 1.20rem;
+    --font-size-2: 1.14rem;
+    --font-size-1: 0.90rem; /* Base */
+    --font-size-0: 0.75rem;
+    /* UNIDADES: MARGINS E PADDINGS */
+    --unit-1: 16px;
+    --unit-05: 10px;
+    --height-header: 80px;
+    --border-indicador: 3px;
+    --height-footer: 128px;
+    --unit-min: 560px;
+    --unit-ref: 640px;
+    --unit-max: 1004px;
+    /* CORES */
+    --color-azul-principal: #085273;
+    --color-outline-menu-bar: #0b415a;
+    --color-azul-hover: #1b6588;
+    --color-laranja-principal: #D49100;
+    --color-background: #bdcfd8;
+    --color-texto-oculto: #a3a8aa;
+    --color-base: black;
+    --color-base-clara: white;
+    /* DETALHES */
+    --color-outline-folha: rgb(190, 190, 190);
+    --box-shadow-folha: 0 0 68px -48px black;
+}
+/* GERAL */
+html {
+    height: 100%;
+    min-width: 320px;
+    scroll-behavior: smooth; }
+
+body, img { display: block; margin: 0; }
+
+/* Geral */
+a, h2, h3, h4, p { text-decoration: none; }
+
+/* FONT-FAMILY */
+/* 1º Tipo - normal */
+a, p, h5, h6 { font-family: var(--font-normal); }
+/* 2º Tipo - títulos */
+h2, h3, h4 { font-family: var(--font-titulos); }
+
+/* Links no menu */
+p#option1, p#option2, p#option3 {
+margin: 0;
+font-family: var(--font-normal);
+font-size: var(--font-size-0); }
+
+/* Titulos e subtitulos */
+h2 { font-size: var(--font-size-5);
+     margin: 0;
+     margin-bottom: var(--unit-05); }
+
+/* h3, h4, h5 (Usando: .main-ed-anteriores) */
+h3 { font-size: var(--font-size-4); }
+
+h4 { font-size: var(--font-size-3);
+     margin-bottom: 0.2rem; }
+
+h5 { font-size: var(--font-size-2);
+     font-weight: 500;
+     margin-bottom: 0; }
+
+/* Listas */
+ol { list-style: none; /* (Usando: .main-ed-anteriores) */
+    padding: unset; /* Tirar espaco da esquerda na lista */ }
+
+/* Tipografia de unidade 1 */
+/* Links de arquivos e texto <p> */
+a.arquivo, p {
+    font-size: var(--font-size-1); }
+
+a.arquivo {
+    color: blue;
+    margin-left: var(--unit-1); }
+
+p { line-height: calc(var(--font-size-1) + 0.5rem); }
+
+.pag-inicial-texto p { /* Texto inicial */
+    text-align: justify; }
+
+/* Tipografia de unidade 0 (menor que 1) */
+/* texto no footer */
+p.logomarcas,
+p.rodape-pc,
+p.rodape-mobile {
+    font-family: var(--font-normal);
+    text-align: center;
+    font-size: var(--font-size-0);
+}
+
+.linha-divisao {
+    height: 2px;
+    width: 100%;
+    background-color: var(--color-azul-principal);
+}
+
+/* -------------------------------------------------------------- --
+.. ...............|.<-..........(GRID AREAS NO)................-> ..
+.. PÁGINA:........|.main-center (  .MAIN-GRID ) .main-right ..... ..
+.. ============================================================== ==
+.. INDEX .........|.main-texto ................ .main-calendario  ..
+..
+.. +INFO .........|.main-info ................. .main-publicacoes ..
+.. ...............|.galeria-fotos.............. .main-sobre ..... ..
+.. 
+.. INSCRICAO .....|.main-inscricao .............................. ..
+..
+.. ED-ANTERIORES .|.main-ed-anteriores .......................... ..
+-- -------------------------------------------------------------- */
+
+main {
+    padding: 0 var(--unit-05); /* [<--- e --->] */
+}
+
+    .main-grid {
+        padding: var(--unit-05) 0;
+        transition: padding 3s ease;
+        width: 100%;
+        max-width: 1004px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: "center";
+        grid-gap: var(--unit-05);
+        min-height: calc(100% - 20px);
+    }
+    /* Sem setar,
+    renderizam na ordem:
+     | .main-center
+     | (grid-gap)
+     V .main-right */
+
+        .main-center,
+        .main-right {
+            min-width: 300px;
+            width: 100%;
+            max-width: 672px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            /* Para quando estiverem assim:
+            .. ...... ^ .......... ^ ....
+            .. ...... | .......... | ....
+            .. .. main-center main-right.
+            .. ...... | .......... | ....
+            .. ...... v .......... v ..*/
+        }
+            /* Setando toda div que tem conteúdo para ocupar a altura max possivel na main-grid */
+            .main-texto,
+            .main-calendario,
+        /*  .main-info, */
+        /*  .main-galeria-fotos, */
+            .main-publicacoes,
+            .main-sobregaleria,
+        /*  .main-inscricao-etapa1, */
+            .main-downloads,
+            .main-ed-anteriores {
+                height: 100%;
+            }
+
+            /* BORDA INTERNA */
+            .main-center > div, /* Aplicando em toda div filha de main-center e de main-right */
+            .main-right > div:not(.main-calendario) { /* Com excessao do calendario */
+                padding-left: var(--unit-1);
+                padding-right: var(--unit-1);
+            }
+            .main-center > div,
+            .main-right > div {
+                padding-top: 1px;
+                padding-bottom: 1px;
+            }
+            /* Espacamento no topo de todo primeiro elemento das folhas */
+            .main-texto h2:first-of-type,
+            .main-texto img:first-of-type,
+            .main-calendario h2:first-of-type,
+            .main-calendario img:first-of-type,
+
+            .main-info h2:first-of-type,
+            .main-info img:first-of-type,
+            .main-galeria-fotos h2:first-of-type,
+            .main-publicacoes h2:first-of-type,
+            .main-sobregaleria h2:first-of-type,
+            .main-sobregaleria img:first-of-type,
+            .main-equipe-tecnica h2:first-of-type,
+
+            .main-inscricao-etapa1 h2:first-of-type,
+            .main-inscricao-etapa1 img:first-of-type,
+            .main-downloads h2:first-of-type,
+
+            .main-ed-anteriores h2:first-of-type,
+            .main-ed-anteriores .submenu-ed-anteriores {
+                margin-top: var(--unit-1)
+            }
+ 
+            /* ESPACAMENTO */
+            /* Aplicando em baixo entre as divs
+            Excessao: última */
+            .main-center > div:not(:last-child),
+            .main-right > div:not(:last-child) {
+                margin-bottom: var(--unit-05);
+            }
+            /* ESTILIZACAO  DAS DIVS */
+            .main-center > div,
+            .main-right > div {
+                background-color: var(--color-base-clara);
+                outline: 1px solid var(--color-outline-folha);
+                box-shadow: var(--box-shadow-folha);
+            }
+
+    /* Em 1004px vai para lá [---------->] */
+    .main-sobregaleria,
+    .main-calendario,
+    .main-publicacoes {
+        max-width: 672px;
+    }
+    /* .MAIN-CALENDARIO ...... */
+        /* Datas inativas (h4 e p) - cor cinza */
+        .main-calendario h4,
+        .main-calendario p {
+            color: var(--color-texto-oculto);
+        }
+        /* Datas ativas (h4 e p) - cor preta */
+        .main-calendario > div:nth-child(n+4) > h4,
+        .main-calendario > div:nth-child(n+4) > p {
+            color: var(--color-base);
+        }
+        /* Barra ao lado da data */
+        /* Aplica em todas as datas com a cor do fundo */
+        .main-calendario > div {
+            border-left: var(--border-indicador) solid var(--color-base-clara);
+        }
+        /* Com a cor em uso, aplicar só na data ativa */
+        .main-calendario > div:nth-child(4) {
+            border-left: var(--border-indicador) solid var(--color-azul-principal);
+        }
+
+/* TELAS PEQUENAS */
+@media screen and (max-width:560px) {
+
+    /* MAIN */
+    main {
+        background-size: 25vw;
+    }
+
+        /* Espaçar 1a div para ver o background */
+        .main-grid {
+            padding-top: 40px;
+            transition: 2s padding-top ease-in-out;
+        }
+
+            .submenu-ed-anteriores {
+                top: calc(50vh - 180px);
+            }
+
+}
+
+@media screen and (min-width:1036px) {
+
+    /* MAIN */
+    main {
+        /* display: flex;
+        align-items: stretch; */
+        min-height: calc(100vh - 80px - 128px);
+    }
+        .main-grid {
+            min-height: calc(100vh - 80px - 128px - 20px);
+            grid-template-areas:
+            "center right";
+            grid-template-columns: 672px 1fr;
+            grid-row-gap: 10px;
+        }
+            .main-center { grid-area: center; }
+            .main-right { grid-area: right; }
+}
+
+
+#ed-18 {
+    display: none;
+}

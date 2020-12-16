@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--
+    Salão Anapolino de Arte 2020
+    Projeto contemplado pelo Fundo de Arte e Cultura do Estado de Goiás
+    ..
+    Desenvolvimento: Secretaria Municipal de Cultura
+-->
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- FAVICON -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <!-- header - Estrutura do menu -->
+        <link rel="stylesheet" href="/css/header.css">
+        <!-- custom - Estrutura especifica da pagina -->
+        <link rel="stylesheet" href="/css/inscrever.css">
+        <!-- footer - Estrutura do footer -->
+        <link rel="stylesheet" href="/css/footer.css">
+        <!-- style - Estrutura Geral - MEDIA QUERY -->
+        <link rel="stylesheet" href="/css/main.css">
+        <title>25º Salão Anapolino de Artes</title>
+        <style>
+        /* TEXT-DECORATION DA PÁGINA ATUAL ................................. ##
+        ## ----------------------------------------------------------------- ##
+        ## option0 --- menu icon ........................................... ##
+        ## menu-left - pag inicial ...........(/salaoanapolinodearte.html) . ##
+        ## option1 --- pag +informacoes ........(/../informacoes.html)...... ##
+        ## option2 --- pag inscrever ...........(/../inscricao.html)........ ##
+        ## option3 --- pag edicoes anteriores ..(/../edanteriores.html)..... */
+
+        .option2 { /*<--- PÁGINA INICIAL NÃO TEM! .. */
+            border-top: var(--border-indicador) solid var(--color-azul-principal);
+            border-bottom: var(--border-indicador) solid var(--color-base-clara);
+        }
+
+        @media screen and (max-width:560px) {
+            .menu-left {
+                border-top: none;
+                border-bottom: none;
+            }
+        }
+
+        main {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSI0ODBweCIgaGVpZ2h0PSI0ODBweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiPjxzdHlsZT5wb2x5Z29uIHsgZmlsbDpub25lOyBzdHJva2U6IGJsYWNrOyBzdHJva2Utd2lkdGg6IDI7IHN0cm9rZS1vcGFjaXR5OiAwLjA1O308L3N0eWxlPjxwb2x5Z29uIHBvaW50cz0iNiwyOCA1LDI5IDQsMjkgMywyOSAzLDI5IDIsMjggMSwyNyAxLDI2IDEsMjUgMiwyNSAxLDI0IDIsMjMgMywyMiA1LDIxIDYsMjEgNiwxNyA0LDE1IDQsMTQgNSwxMyA0LDEyIDcsMTIgOCwxMSA5LDEzIDEwLDEzIDEzLDEwIDEyLDEwIDEyLDkgMTIsOCAxMiw3IDEzLDggMTcsNSAxNyw1IDE4LDcgMTgsOCAxOCw5IDIwLDEwIDIyLDkgMjMsOSAyNCw4IDI1LDggMjcsOCAyOCw4IDMwLDQgMzAsNSAzMSw2IDMyLDcgMzIsOCAzMCwxMyAzMiwxMiAzMiwxMyAzNCwxMyAzNiwxMCAzNywxMCAzOCwxMCAzOCwxMiAzOCwxMyAzNiwxNyAzOCwxNyAzOCwxOCAzOCwxOSA0MCwyMSAzOSwyMiA0MSwyMyA0MSwyNCA0MSwyNSA0MSwyNiA0MSwyNyAzOSwyOCAzOCwyOCAzNywyOCAzNSwyOCAzNSwyNyAzNSwyNSAzNSwyNCAyNiwyNSAyNSwyNSAyMywyMyAyMywyNSAxOSwyNSAxOCwyNiAxOSwyOCAyMSwyOCAyMSwyOCAyMiwzMCAyMSwzMiAxOSwzMiAxNiwzMSAxNSwzMSAxNCwzMCAxMywyOCAxMiwyOCA5LDMwIDcsMzEgNiwzMCAiLz48cG9seWdvbiBwb2ludHM9IjcyLDI5IDcxLDI4IDcxLDI4IDcyLDI2IDcyLDI1IDcwLDI1IDcwLDI0IDY4LDIzIDY4LDIyIDY3LDIyIDY2LDIyIDYzLDIyIDY0LDIxIDYzLDIwIDY0LDE5IDY0LDE3IDY0LDE2IDY1LDE1IDY0LDEzIDY1LDEyIDYzLDEwIDY0LDggNjQsNyA2Myw2IDY2LDQgNjgsMSA2OSwyIDcwLDMgNzAsNCA3Miw0IDczLDQgNzUsNSA3Nyw1IDc3LDYgODAsMTAgODMsMTAgODMsMTEgODMsMTMgODMsMTQgODIsMTYgODEsMTcgNzksMTkgNzcsMjAgNzcsMjEgNzUsMjIgNzQsMjMgNzQsMjUgNzQsMjYgNzMsMjcgNzMsMjggIi8+PHBvbHlnb24gcG9pbnRzPSI0Myw2MyA0NCw2MSA0Niw1OSA0Nyw1OCA0OCw1NiA0OSw1NCA1Miw1NCA1Myw1NCA1NCw1NCA1NSw1NCA1Nyw1MyA1Nyw1MiA1Nyw1MSA1Nyw1MSA1Nyw0OSA1OCw0OCA1OCw0OCA1OSw0NiA2MCw0NSA2MSw0NiA2NSw0NSA2Niw0NSA2Niw0NiA2OCw0NSA2OSw0NyA3MSw0NyA3Miw0OSA3NCw0OSA3NSw1MCA3NCw1MiA3NCw1MyA3NCw1NSA3NSw1NiA3NSw1NyA3NSw1OCA3NSw1OSA3NCw1OSA3NCw2MCA3Miw2MiA3Miw2NCA3MSw2NSA3MCw2NSA2OSw2NiA2Niw2NiA2NSw2NiA2NCw2NiA2Myw2NiA2MCw2OCA1OSw2OCA1Nyw2OCA1NCw3MCA1Miw3MCA1Miw2OSA1MSw2OSA1MSw2OCA1MCw2NyA1MCw2NSA0OSw2NSA0Nyw2NCA0Niw2NCA0NCw2MyAiLz48cG9seWdvbiBwb2ludHM9IjczLDg4IDc0LDg3IDc3LDg1IDc4LDg0IDgwLDgzIDgzLDgyIDgzLDgxIDgzLDgwIDgzLDc4IDgyLDc4IDgzLDc2IDgzLDc1IDgzLDczIDg1LDcyIDg2LDcyIDg5LDcyIDkxLDczIDkyLDczIDk0LDc0IDk0LDc0IDk0LDc2IDk0LDc3IDk0LDc4IDk2LDc4IDk3LDc5IDk2LDgwIDk3LDgwIDk1LDgxIDk1LDgyIDk1LDg0IDk1LDg2IDk0LDg3IDkzLDg4IDkxLDg5IDkwLDkxIDg4LDkzIDg2LDk0IDg5LDkxIDg3LDkwIDg2LDkyIDg0LDkzIDg0LDk2IDgzLDk3IDgxLDk4IDgxLDk3IDgyLDk2IDgxLDk0IDc5LDkyIDc3LDkyIDc3LDkwIDc2LDkwIDc1LDg5IDc0LDg4IDczLDg4ICIvPjxwb2x5Z29uIHBvaW50cz0iMTIsNTEgMTEsNTMgMTEsNTQgNiw1MiA2LDU0IDYsNTQgNSw1NiA3LDU2IDcsNTcgNyw1OCA3LDU5IDYsNjAgNiw2MiA1LDYyIDUsNjQgNyw2NSA3LDY2IDgsNjggNyw2OSA2LDcxIDYsNzMgNSw3NCA3LDc1IDgsNzUgOSw3NSA4LDc4IDksNzggOSw3OCAxMSw3NyAxMiw3NyAxNSw3NSAxNiw3NCAxNiw3MyAxOCw3MiAxOSw3MiAyMSw3MyAyMiw3MiAyMiw3MSAyMyw3MCAyMyw3MCAyMyw2OSAyNCw2OCAyNSw2OCAyNSw2NiAyNiw2NSAyMyw2NSAyMSw2MyAyMSw2MiAyMSw2MCAyMiw1OCAxMyw1NSAxMiw1NCAiLz48L3N2Zz4=);
+            background-repeat: repeat;
+            background-color: var(--color-background);
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="menu-bar">
+                <div class="menu-left">
+                    <!-- LOGO DO SALAO -->
+                    <a href="Index.html">
+                        <svg class="logo-salao" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 1031 381" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="logo-25">
+                        <metadata id=""/>
+                        <polygon class="fill_1 logo-norte" points="35,156 28,161 21,160 18,155 13,154 12,148 7,140 6,136 8,130 12,127 12,120 15,115 23,110 34,107 40,107 45,82 40,71 38,65 44,61 43,53 58,52 63,50 73,61 80,63 97,48 92,44 91,39 93,35 92,29 103,33 126,23 127,20 136,32 132,37 132,46 141,57 155,51 166,51 171,46 177,45 184,49 195,49 209,30 212,35 213,42 217,51 223,55 203,82 214,80 217,85 227,87 241,75 248,74 257,79 256,88 252,97 238,115 244,120 246,127 244,135 253,143 250,151 256,161 260,163 255,170 258,176 256,185 243,190 232,185 226,189 218,184 216,177 217,167 220,159 162,155 156,151 149,140 144,149 117,149 116,155 118,168 126,169 131,173 132,182 124,193 112,191 97,182 89,182 82,173 82,157 72,158 53,169 42,169 34,166 "/>
+                        <polygon class="fill_1 logo-nordeste" points="378,188 372,183 369,179 376,168 370,163 362,163 356,157 350,156 346,153 338,153 333,148 316,158 316,150 313,144 314,137 313,123 312,117 316,112 306,98 309,90 299,80 301,71 301,63 293,59 308,41 316,21 323,22 331,29 330,38 342,31 352,35 365,38 374,36 381,39 404,58 418,59 422,64 422,71 425,79 424,91 419,100 408,112 400,122 395,131 386,138 384,146 385,156 385,164 383,173 382,181 "/>
+                        <polygon class="fill_1 logo-centro-oeste" points="488,18 487,26 485,32 457,31 456,40 458,46 456,54 467,54 471,57 471,63 473,68 465,81 468,88 468,95 470,107 485,107 484,114 493,126 492,132 487,146 491,157 489,167 499,169 504,169 510,170 513,185 517,187 523,187 529,177 538,170 547,155 552,148 554,140 560,133 569,131 581,131 585,127 585,121 588,115 586,109 590,104 591,97 597,93 596,83 597,74 583,77 569,72 561,67 560,57 563,40 502,38 496,34 "/>
+                        <polygon class="fill_1 logo-sudeste" points="632,148 643,136 650,122 659,114 661,104 672,89 686,88 692,84 704,84 709,86 718,79 718,73 715,69 720,63 716,54 720,47 725,45 726,34 732,27 739,32 764,21 772,22 775,28 782,25 793,33 804,34 812,43 826,44 833,49 823,64 823,69 830,80 836,84 833,92 837,98 835,103 828,108 827,116 815,131 817,138 811,143 804,147 802,154 782,155 777,157 771,154 762,156 746,169 736,170 726,174 707,191 698,188 697,182 687,182 686,174 683,169 681,159 674,155 662,155 652,151 644,149 "/>
+                        <polygon class="fill_1 logo-sul" points="868,136 875,127 889,113 897,105 908,97 925,90 925,83 926,77 922,66 914,63 920,55 916,45 921,34 928,25 936,21 953,20 964,22 973,26 984,26 988,30 988,41 993,46 993,52 1003,52 1007,56 1005,62 1014,62 1002,71 1002,77 1004,90 1004,102 1002,111 992,118 985,126 979,138 970,152 956,163 971,139 963,138 958,147 945,161 945,175 943,182 928,192 927,184 932,178 925,169 909,156 902,155 896,148 889,150 885,142 878,136 871,138 "/>
+                        <path class="fill_2" d="M148 340l8 0c0,6 2,9 4,12 2,3 5,4 9,4 3,0 6,-1 8,-4 3,-2 4,-6 4,-10 0,-3 -1,-6 -3,-9 -2,-3 -7,-7 -13,-12 -6,-4 -10,-9 -13,-12 -2,-3 -3,-7 -3,-12 0,-5 2,-9 6,-13 3,-3 7,-5 12,-5 6,0 11,2 15,6 3,4 5,9 5,16l-7 0c-1,-5 -2,-9 -4,-11 -2,-3 -5,-4 -8,-4 -4,0 -6,1 -8,3 -2,2 -3,5 -3,8 0,2 0,4 1,6 1,1 2,3 3,4 2,2 4,4 8,7 4,3 6,4 7,5 4,4 8,8 10,11 2,4 3,8 3,12 0,6 -2,12 -6,15 -4,4 -8,6 -14,6 -7,0 -12,-2 -15,-6 -4,-4 -6,-9 -6,-17z"/>
+                        <path class="fill_2" d="M224 331c-6,1 -11,3 -14,6 -4,3 -6,7 -6,11 0,2 1,4 3,5 1,2 3,3 5,3 2,0 4,-1 6,-2 2,-1 4,-3 6,-5l0 -18zm0 26c-2,1 -4,3 -6,4 -2,1 -5,1 -7,1 -4,0 -8,-1 -10,-4 -3,-2 -4,-6 -4,-10 0,-6 2,-11 7,-15 4,-4 11,-8 20,-10l0 -1 0 -3c0,-3 0,-6 -2,-7 -1,-2 -3,-3 -7,-3 -2,0 -4,1 -6,3 -1,1 -2,4 -3,8l-7 -1c0,-5 2,-10 5,-12 3,-3 7,-5 11,-5 6,0 10,2 13,5 3,3 4,8 4,15l0 26c0,3 0,5 0,7 0,2 1,5 1,7l-8 0 -1 -5z"/>
+                        <polygon class="fill_2" points="245,362 245,281 253,281 253,362 "/>
+                        <path class="fill_2" d="M291 331c-6,1 -11,3 -14,6 -4,3 -5,7 -5,11 0,2 0,4 2,5 1,2 3,3 5,3 2,0 4,-1 6,-2 2,-1 4,-3 6,-5l0 -18zm0 26c-2,1 -4,3 -6,4 -2,1 -4,1 -7,1 -4,0 -8,-1 -10,-4 -3,-2 -4,-6 -4,-10 0,-6 2,-11 7,-15 5,-4 11,-8 20,-10l0 -1 0 -3c0,-3 0,-6 -2,-7 -1,-2 -3,-3 -6,-3 -3,0 -5,1 -7,3 -1,1 -2,4 -3,8l-7 -1c1,-5 2,-10 5,-12 3,-3 7,-5 12,-5 5,0 10,2 12,5 3,3 4,8 4,15l0 26c0,3 0,5 0,7 1,2 1,5 1,7l-8 0 -1 -5zm9 -75c-1,3 -3,6 -5,7 -1,2 -4,3 -6,3 -1,0 -1,0 -2,0 0,0 -1,0 -2,-1l-4 -1c-1,0 -1,0 -2,0 0,0 -1,0 -1,0 -1,0 -2,0 -3,0 -1,1 -2,2 -2,3l-5 0c1,-3 2,-6 4,-8 2,-1 4,-2 7,-2 0,0 1,0 1,0 1,0 1,0 2,0l4 2c1,0 1,0 2,0 0,0 1,0 1,0 2,0 3,0 4,-1 1,0 1,-1 2,-2l5 0z"/>
+                        <path class="fill_2" d="M318 333c0,8 1,14 2,18 2,3 4,5 7,5 4,0 6,-2 8,-5 1,-4 2,-10 2,-18 0,-8 -1,-14 -2,-18 -2,-4 -4,-6 -8,-6 -3,0 -5,2 -7,6 -1,3 -2,9 -2,18zm-8 0c0,-11 1,-18 4,-23 3,-5 7,-8 13,-8 6,0 11,3 13,8 3,5 5,13 5,23 0,10 -2,18 -5,23 -2,5 -7,7 -13,7 -6,0 -10,-2 -13,-7 -3,-5 -4,-13 -4,-23z"/>
+                        <path class="fill_2" d="M388 330l17 0 -8 -42 -9 42zm-14 32l17 -81 12 0 18 81 -9 0 -5 -24 -20 0 -5 24 -8 0z"/>
+                        <path class="fill_2" d="M429 362l0 -58 7 0 0 6c3,-3 5,-5 7,-6 2,-1 5,-2 7,-2 4,0 7,1 8,4 2,2 3,6 3,11l0 45 -7 0 0 -42c0,-4 -1,-7 -2,-9 -1,-1 -3,-2 -5,-2 -2,0 -4,1 -6,2 -2,1 -3,3 -5,6l0 45 -7 0z"/>
+                        <path class="fill_2" d="M499 331c-6,1 -11,3 -14,6 -4,3 -5,7 -5,11 0,2 0,4 2,5 1,2 3,3 5,3 2,0 4,-1 6,-2 2,-1 4,-3 6,-5l0 -18zm0 26c-2,1 -4,3 -6,4 -2,1 -5,1 -7,1 -4,0 -8,-1 -10,-4 -3,-2 -4,-6 -4,-10 0,-6 2,-11 7,-15 4,-4 11,-8 20,-10l0 -1 0 -3c0,-3 0,-6 -2,-7 -1,-2 -3,-3 -6,-3 -3,0 -5,1 -7,3 -1,1 -2,4 -3,8l-7 -1c0,-5 2,-10 5,-12 3,-3 7,-5 11,-5 6,0 10,2 13,5 3,3 4,8 4,15l0 26c0,3 0,5 0,7 0,2 1,5 1,7l-8 0 -1 -5z"/>
+                        <path class="fill_2" d="M529 316l0 33c1,2 3,4 4,5 2,1 4,2 5,2 4,0 6,-2 7,-6 2,-3 3,-10 3,-18 0,-8 -1,-14 -3,-18 -1,-3 -3,-5 -7,-5 -1,0 -3,0 -5,2 -1,1 -3,3 -4,5zm-8 65l0 -77 5 0 3 5c1,-2 3,-4 5,-5 2,-1 4,-2 6,-2 5,0 9,3 12,8 2,5 4,13 4,23 0,9 -2,17 -4,22 -3,5 -7,8 -12,8 -2,0 -4,0 -6,-2 -2,-1 -4,-2 -5,-5l0 25 -8 0z"/>
+                        <path class="fill_2" d="M572 333c0,8 0,14 2,18 1,3 4,5 7,5 3,0 6,-2 7,-5 2,-4 2,-10 2,-18 0,-8 0,-14 -2,-18 -1,-4 -4,-6 -7,-6 -3,0 -6,2 -7,6 -2,3 -2,9 -2,18zm-8 0c0,-11 1,-18 4,-23 3,-5 7,-8 13,-8 6,0 10,3 13,8 3,5 5,13 5,23 0,10 -2,18 -5,23 -3,5 -7,7 -13,7 -6,0 -10,-2 -13,-7 -3,-5 -4,-13 -4,-23z"/>
+                        <polygon class="fill_2" points="609,362 609,281 617,281 617,362 "/>
+                        <path class="fill_2" d="M630 290l0 -9 8 0 0 9 -8 0zm0 72l0 -58 8 0 0 58 -8 0z"/>
+                        <path class="fill_2" d="M652 362l0 -58 8 0 0 6c2,-3 4,-5 6,-6 3,-1 5,-2 7,-2 4,0 7,1 9,4 2,2 3,6 3,11l0 45 -8 0 0 -42c0,-4 -1,-7 -2,-9 -1,-1 -2,-2 -5,-2 -2,0 -4,1 -5,2 -2,1 -4,3 -5,6l0 45 -8 0z"/>
+                        <path class="fill_2" d="M703 333c0,8 1,14 2,18 2,3 4,5 8,5 3,0 5,-2 7,-5 1,-4 2,-10 2,-18 0,-8 -1,-14 -2,-18 -2,-4 -4,-6 -7,-6 -4,0 -6,2 -8,6 -1,3 -2,9 -2,18zm-8 0c0,-11 2,-18 4,-23 3,-5 8,-8 14,-8 6,0 10,3 13,8 3,5 4,13 4,23 0,10 -1,18 -4,23 -3,5 -7,7 -13,7 -6,0 -11,-2 -14,-7 -2,-5 -4,-13 -4,-23z"/>
+                        <path class="fill_2" d="M797 362l-8 0 0 -6c-2,3 -4,4 -6,5 -1,2 -3,2 -5,2 -6,0 -9,-3 -12,-8 -3,-5 -4,-12 -4,-22 0,-10 1,-18 4,-23 3,-5 6,-8 11,-8 2,0 4,1 6,2 2,1 4,3 6,5l0 -28 8 0 0 81zm-8 -13l0 -33c-2,-2 -3,-4 -5,-5 -1,-2 -3,-2 -5,-2 -3,0 -5,2 -7,5 -1,4 -2,10 -2,18 0,8 1,15 2,18 2,4 4,6 7,6 2,0 4,-1 5,-2 2,-1 3,-3 5,-5z"/>
+                        <path class="fill_2" d="M834 343l8 0c-1,6 -2,11 -5,15 -3,3 -7,5 -12,5 -6,0 -10,-2 -13,-7 -3,-5 -4,-13 -4,-23 0,-11 1,-18 4,-23 3,-5 7,-8 13,-8 6,0 10,3 13,7 3,5 4,11 4,20 0,1 0,2 0,3 0,1 0,1 0,2l-26 0c0,8 0,14 2,17 1,4 4,5 7,5 3,0 5,-1 7,-3 1,-3 2,-6 2,-10zm-18 -16l18 0 0 -2c0,-6 0,-10 -2,-12 -1,-3 -4,-4 -7,-4 -3,0 -5,1 -7,4 -1,3 -2,8 -2,14z"/>
+                        <path class="fill_2" d="M886 330l17 0 -9 -42 -8 42zm-15 32l18 -81 11 0 18 81 -9 0 -4 -24 -21 0 -5 24 -8 0z"/>
+                        <path class="fill_2" d="M926 362l0 -58 8 0 0 6c2,-2 4,-4 6,-6 2,-1 4,-2 7,-2 0,0 0,0 1,0 0,1 0,1 1,1l0 7c-1,0 -1,0 -1,0 -1,0 -1,0 -1,0 -3,0 -6,1 -8,2 -2,2 -4,4 -5,7l0 43 -8 0z"/>
+                        <path class="fill_2" d="M957 310l-8 0 0 -6 8 0 0 -20 8 0 0 20 10 0 0 6 -10 0 0 38c0,3 0,5 1,7 1,1 2,1 4,1 1,0 2,0 5,0l0 -1 0 7c-2,0 -3,1 -4,1 -2,0 -3,0 -4,0 -3,0 -6,-1 -7,-3 -2,-2 -3,-4 -3,-8l0 -42z"/>
+                        <path class="fill_2" d="M1006 343l8 0c-1,6 -2,11 -5,15 -3,3 -7,5 -12,5 -6,0 -10,-2 -13,-7 -3,-5 -4,-13 -4,-23 0,-11 1,-18 4,-23 3,-5 7,-8 13,-8 6,0 10,3 13,7 3,5 4,11 4,20 0,1 0,2 0,3 0,1 0,1 0,2l-27 0c0,8 1,14 3,17 1,4 4,5 7,5 3,0 5,-1 7,-3 1,-3 2,-6 2,-10zm-19 -16l19 0 0 -2c0,-6 -1,-10 -2,-12 -1,-3 -4,-4 -7,-4 -3,0 -5,1 -7,4 -1,3 -2,8 -3,14z"/>
+                        <path class="fill_2" d="M98 362l-8 0c-4,-2 -8,-4 -13,-6 -4,-3 -11,-7 -19,-13 -1,-1 -2,-1 -3,-2 -11,-8 -20,-13 -27,-13 -4,0 -8,2 -10,4 -3,2 -4,5 -4,8 0,4 2,7 5,9 3,2 8,4 14,4l0 8c-9,0 -16,-2 -20,-6 -4,-3 -7,-8 -7,-15 0,-6 2,-11 6,-15 4,-3 9,-5 16,-5 7,0 18,5 33,16 1,0 2,1 2,2 7,5 13,8 17,11 3,2 7,4 10,5l0 -34 8 0 0 42z"/>
+                        <path class="fill_2" d="M77 307l0 -8c5,0 9,-1 11,-3 3,-2 4,-4 4,-8 0,-4 -2,-7 -7,-10 -4,-2 -11,-3 -19,-3 -6,0 -12,1 -15,3 -4,2 -5,5 -5,9 0,3 0,5 2,7 1,2 3,3 6,4l-1 7 -45 -3 0 -31 8 1 0 23 26 2c-1,-2 -2,-3 -3,-5 0,-1 -1,-3 -1,-6 0,-6 3,-11 8,-15 4,-3 11,-5 20,-5 11,0 19,2 25,6 6,4 9,10 9,17 0,6 -2,10 -6,13 -4,3 -9,5 -16,5l-1 0z"/>
+                        <path class="fill_2" d="M30 250c7,0 11,0 14,-2 3,-1 4,-3 4,-6 0,-3 -1,-5 -4,-6 -3,-1 -8,-2 -14,-2 -7,0 -12,1 -14,2 -3,1 -5,3 -5,6 0,3 2,5 4,6 3,2 8,2 15,2zm0 7c-8,0 -14,-1 -18,-4 -4,-2 -6,-6 -6,-11 0,-5 2,-9 6,-11 4,-2 10,-3 18,-3 8,0 14,1 18,3 4,2 6,6 6,11 0,5 -2,9 -6,11 -4,3 -10,4 -18,4z"/>
+                        </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="menu-right">
+                    <a href="#" class="menu-icon" href="#">=</a>
+                    <a href="mais-informacoes.html" class="menu-option">
+                        <div class="hover-menu option1">
+                            <p id="option1">+Informações</p>
+                        </div>
+                    </a>
+                    <a href="inscricao.html" class="menu-option">
+                        <div class="hover-menu option2">
+                            <p id="option2">Inscrever</p>
+                        </div>
+                    </a>
+                    <a href="edicoes-anteriores.html" class="menu-option">
+                        <div class="hover-menu option3">
+                            <p id="option3">Edições Anteriores</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="main-grid">
+                <div class="main-center">
+                    <div class="main-inscricao-etapa1">
+                        <h2>Inscrever</h2>
+                        <p>As inscrições para o 25º Salão Anapolino de Arte foram de 1 de janeiro de 2020 a 1 de fevereiro de 2020.</p>
+                        <p>Fique atento para a próxima edição!</p>
+                        <!--<div class="button-incricao-etapa1">
+                            <button class="para-pag-inscricao">
+                                <p>Inscrever!</p>
+                            </button>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="main-right">
+                    <div class="main-downloads">
+                        <h2>Downloads</h2>
+                        <div class="dowloads">
+                            <div class="arquivo">
+                                    <img class="arquivo" src="https://dl.dropbox.com/s/5mjruqqimdwb82p/icon-pdf-edital.png" alt="">
+                                    <a class="arquivo" href="#">Edital 25º Salão Anapolino de Arte</a>
+                                </div>
+                                <div class="arquivo">
+                                    <img class="arquivo" src="https://dl.dropbox.com/s/5mjruqqimdwb82p/icon-pdf-edital.png" alt="">
+                                    <a class="arquivo" href="#">Edital de convocação</a>
+                                </div>
+                                <div class="arquivo">
+                                    <img class="arquivo" src="https://dl.dropbox.com/s/5mjruqqimdwb82p/icon-pdf-edital.png" alt="">
+                                    <a class="arquivo" href="#">Mais um arquivo!!!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="logomarcas">
+                    <div class="realizacao">
+                        <p class="logomarcas">Realização:</p>
+                        <div class="footer-logos">
+                            <!--a1-Associacao-AmigosMapa.png-->
+                            <img class="footer-logo" src="/img/logos/a1-Associacao-AmigosMapa.png" alt="">
+                            <!--a2-Galeria.png-->
+                            <img class="footer-logo" src="img/logos/a2-Galeria.png" alt="">
+                            <!--a3-Prefeitura.png-->
+                            <img class="footer-logo" src="img/logos/a3-Prefeitura.png" alt="">
+                        </div>
+                    </div>
+                    <div class="apresentacao">
+                        <p class="logomarcas">Apresentação:</p>
+                        <div class="footer-logos">
+                            <!--b1-FundodeArteeCultura.png-->
+                            <img class="footer-logo" src="img/logos/b1-FundodeArteeCultura.png" alt="">
+                            <!--b2-Secult-Goias.png-->
+                            <img class="footer-logo" src="img/logos/b2-Secult-Goias.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <p class="rodape-pc">Este projeto foi contemplado pelo Edital de Fomento às Artes Visuais do Fundo de Arte e Cultura do Estado de Goiás 2018</p>
+                <p class="rodape-mobile">Este projeto foi contemplado pelo Edital de<br> Fomento às Artes Visuais do Fundo de Arte e Cultura<br>do Estado de Goiás 2018</p>
+            </div>
+        </footer>
+    </body>
+</html>

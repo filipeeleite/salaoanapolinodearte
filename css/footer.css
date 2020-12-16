@@ -1,0 +1,72 @@
+footer {
+    background-color: var(--color-base-clara);
+    width: 100%;
+    height: var(--height-footer);
+    outline: var(--color-outline-folha);
+    }
+
+    div.footer {
+        max-width: 1024px;
+        height: 100%;
+        margin: 0 auto;
+        padding: 10px 0;
+        }
+
+        div.logomarcas {
+            display: flex;
+            justify-content: space-evenly;
+            max-width: 512px;
+            margin: 0 auto auto auto;
+            }
+            div.realizacao {
+                max-width: 250px;
+                margin: 0 auto;
+                }
+                p.logomarcas-h6 { /* Realizacao / Apresentacao */
+                    text-align: center;
+                }
+                div.footer-logos { /*DIV DAS LOGOS*/
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        margin: 10px 0;
+                    }
+                    img.footer-logo {
+                        margin: 0 10px;
+                        height: 40px;
+                    }
+            div.apresentacao {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+
+        p.logomarcas,
+        p.rodape-pc,
+        p.rodape-mobile {
+            margin: 0;
+            padding: 0 var(--unit-05);
+        }
+        p.rodape-mobile { /* Só aparece vw menor que 560vw */
+            display: none;
+        }
+            
+        
+/* TELAS PEQUENAS */
+@media screen and (max-width:560px) {
+    footer {
+        height: 100%;
+    }
+
+    div.logomarcas { display: block; }
+
+    div.footer-logos { justify-content: space-evenly; }
+
+    /* Exibir ropabe mobile */
+    p.rodape-mobile { display: block; }
+    /*Ocultar rodape para pc*/
+    p.rodape-pc { display: none; }
+}
+
+@media screen and (min-width:1036px) {
+    /* Reservado */
+}
