@@ -11,24 +11,23 @@ que estas diversas edições coletaram.
 
 
 1. Páginas estáticas:
-   - Index.html > Calendário e texto principal da página
+- **Index.html** > Calendário e texto principal da página
 
-   - mais-informacoes.html > Página complementar à inicial
+- **mais-informacoes.html** > Página complementar à inicial
 
-   - inscrever.html > Página de inscrição, introdução ao processo e o sistema de inscrição em si
+- **inscrever.html** > Página de inscrição, introdução ao processo e o sistema de inscrição em si
 
-   - edicoes-anteriores.html > Histórico das edições, Link p/ todos os catálogos anteriores (.pdf)
+- **edicoes-anteriores.html** > Histórico das edições, Link p/ todos os catálogos anteriores (.pdf)
 
 2. Folhas de estilo:
-   - header.css > Design e funcionalidades do header
-   - main.css > Design e funcionalidade geral da aplicação, dita a estrutura básica do layout e tipografia
+- **header.css** > Design e funcionalidades do header
+- **main.css** > Design e funcionalidade geral da aplicação, dita a estrutura básica do layout e tipografia
    
 2.1. Design e Funcionalidades específicas das páginas:
-     - MaisInformacoes.css
-     - Inscrever.css
-     - edicoes-anteriores.css
-
-     - footer.css > Design e funcionalidades do footer
+  - **mais-informacoes.css**
+  - **Inscrever.css**
+  - **edicoes-anteriores.css**
+  - **footer.css** > Design e funcionalidades do footer
 
 ## Conexão/relação entre as páginas:
 ```
