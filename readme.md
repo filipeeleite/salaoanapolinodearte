@@ -10,7 +10,7 @@ que estas diversas edições coletaram.
 ## Estrutura do aplicativo:
 
 
-1. Páginas estáticas:
+### Páginas estáticas:
 - **Index.html** > Calendário e texto principal da página
 
 - **mais-informacoes.html** > Página complementar à inicial
@@ -19,11 +19,11 @@ que estas diversas edições coletaram.
 
 - **edicoes-anteriores.html** > Histórico das edições, Link p/ todos os catálogos anteriores (.pdf)
 
-2. Folhas de estilo:
+### Folhas de estilo:
 - **header.css** > Design e funcionalidades do header
 - **main.css** > Design e funcionalidade geral da aplicação, dita a estrutura básica do layout e tipografia
    
-2.1. Design e Funcionalidades específicas das páginas:
+#### Design e Funcionalidades específicas das páginas:
   - **mais-informacoes.css**
   - **Inscrever.css**
   - **edicoes-anteriores.css**
