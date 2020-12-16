@@ -1,6 +1,7 @@
 # Salão Anapolino de Arte
 #### Site desenvolvido pela Secretaria Municipal de Cultura Dezembro de 2020
 
+Teste de commit!
 Site que apresenta o Salão Anapolino de Arte, sua edição atual, e situa
 o artista anapolino interessado, no contexto artístico de seu município,
 e também deixa à toda população o acesso à informação, à carga cultural
