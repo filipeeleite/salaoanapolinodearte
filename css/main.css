@@ -4,12 +4,12 @@
 
 /* Fonte normal - a p */
 /* Google fonts */
-/* @import url(https://fonts.googleapis.com/css2?family=Jost&display=swap); */
+@import url(https://fonts.googleapis.com/css2?family=Jost&display=swap);
 /*Local */
-@font-face {
+/*@font-face {
     font-family: 'jost';
     src:  url('/fonts/Jost-VariableFont_wght.ttf') format('truetype'),
-  }
+  }*/
 
 /* VARIÁVEIS */
 :root {
