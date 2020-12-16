@@ -7,65 +7,60 @@ e também deixa à toda população o acesso à informação, à carga cultural
 que estas diversas edições coletaram.
 
 Revisão do readme: 16-dez-2020
+---
+## Estrutura do aplicativo:
 
-1. Estrutura do aplicativo:
-------------------------
 
-  1. Páginas estáticas:
-    * Index.html
-    Calendário e texto principal da página
+1. Páginas estáticas:
+   - Index.html > Calendário e texto principal da página
 
-    * MaisInformacoes.html
-    Página complementar à inicial
+   - mais-informacoes.html > Página complementar à inicial
 
-    * Inscrever.html
-    Página de inscrição
-    Introdução ao processo
-    e o sistema de inscrição em si
+   - inscrever.html > Página de inscrição, introdução ao processo e o sistema de inscrição em si
 
-    * EdicoesAnteriores.html
-    Histórico das edições
-    Link p/ todos os catálogos anteriores (.pdf)
+   - edicoes-anteriores.html > Histórico das edições, Link p/ todos os catálogos anteriores (.pdf)
 
-  2. Folhas de estilo:
-   * header.css
-   Design e funcionalidades do header
-   * main.css
-   Design e funcionalidade geral da aplicação
-   Dita a estrutura básica do layout e tipografia
+2. Folhas de estilo:
+   - header.css > Design e funcionalidades do header
+   - main.css > Design e funcionalidade geral da aplicação, dita a estrutura básica do layout e tipografia
    
-    1. Design e Funcionalidades específicas das páginas:
-       * MaisInformacoes.css
-       * Inscrever.css
-       * EdicoesAnteriores.css
+2.1. Design e Funcionalidades específicas das páginas:
+     - MaisInformacoes.css
+     - Inscrever.css
+     - edicoes-anteriores.css
 
-       * footer.css
-       Design e funcionalidades do footer
+     - footer.css > Design e funcionalidades do footer
 
-Conexão/relação entre as páginas:
----------------------------------
-
+## Conexão/relação entre as páginas:
+```
 Index.html  
-header
-  .menubar
-    .menu-left
-      a
-        svg.logo-salao
+    <header>
+        <.menubar>
+            <.menu-left>
+                <a href= >
+                    <svg.logo-salao>
 
-MaisInformacoes.html
-header
-  .menubar
-    .menu-right
-       a .menuoption
-         .hovermenu
-           p #option1
+mais-informacoes.html
+<header>
+    <.menubar>
+        <.menu-right>
+            <a .menuoption href= >
+                <.hovermenu>
+                    <p #option1>
 
-Inscrever.html
-       a .menuoption
-         .hovermenu
-           p #option2
+inscricao.html
+<header>
+    <.menubar>
+        <.menu-right>
+            <a .menuoption href= >
+                <.hovermenu>
+                    <p #option2>
 
-EdicoesAnteriores.html
-       a .menuoption
-         .hovermenu
-           p #option3
+edicoes-anteriores.html
+<header>
+    <.menubar>
+        <.menu-right>
+            <a .menuoption href= >
+                <.hovermenu>
+                    <p #option1>
+```
