@@ -7,8 +7,8 @@
 :root {
     --font-normal: 'Jost';
     --font-size-h1: 2.00rem; /* Titulo do bloco em cada página */
-    --font-size-h2: 1.50rem; /* Usando apenas na página ed-anteriores */
-    --font-size-h3: 1.20rem; /* Títulos das datas do calendario */
+    --font-size-h2: 1.50rem; /* Usando apenas na página ed-anteriores - Número da edição*/
+    --font-size-h3: 1.20rem; /* Títulos das datas do calendario - Subtitulo ed-anteriores */
     --font-size-h4: 0.90rem; /* Datas no calendário */
     --font-size-h5: 0.90rem;
     --font-size-h6: 0.7rem; /* Rodapé */
@@ -34,9 +34,13 @@ p#option1, p#option2, p#option3 {
     font-size: var(--font-size-menu); }
 
 /* <p> e tipografia semelhante (links e outros) */
-a.arquivo, p {
+.link-arquivo, a.arquivo, p {
     font-size: var(--font-size-p); }
 p { line-height: calc(var(--font-size-p) + 0.5rem); }
+
+.link-arquivo {
+    text-decoration: underline var(--color-azul-principal);
+}
 
 .pag-inicial-texto p { /* Texto inicial */
    text-align: justify; }
