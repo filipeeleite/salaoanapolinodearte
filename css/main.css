@@ -53,6 +53,7 @@ body { background-color: var(--color-azul-principal);}
 -- -------------------------------------------------------------- */
 
 main {
+    min-height: calc(100vh - calc(var(--height-header)) - var(--height-footer));
     padding: 0 var(--unit-05); /* [<--- e --->] */
 }
 
@@ -98,7 +99,7 @@ main {
             .main-publicacoes,
             .main-sobregaleria,
         /*  .main-inscricao-etapa1, */
-            .main-downloads,
+        /* .main-downloads, */
             .main-ed-anteriores {
                 height: 100%;
             }
@@ -176,6 +177,8 @@ main {
     /* MAIN */
     main {
         background-size: 25vw;
+        min-height: 0;
+        /* height: 100%; */
     }
 
         /* Espaçar 1a div para ver o background */
