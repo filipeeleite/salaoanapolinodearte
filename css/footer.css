@@ -1,7 +1,7 @@
 footer {
     background-color: var(--color-base-clara);
     width: 100%;
-    height: var(--height-footer);
+    /*height: var(--height-footer);*/
     outline: var(--color-outline-folha);
     }
 

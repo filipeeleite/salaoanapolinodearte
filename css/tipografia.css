@@ -1,0 +1,126 @@
+/* Folha de estilo específica para tipografia e cores das fontes */
+/* Para especificar fonte em alguma página, usar classe */
+
+/* Google fonts */
+@import url(https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500&display=swap);
+
+:root {
+    --font-normal: 'Jost';
+    --font-size-h1: 2.00rem; /* Titulo do bloco em cada página */
+    --font-size-h2: 1.50rem; /* Usando apenas na página ed-anteriores */
+    --font-size-h3: 1.20rem; /* Títulos das datas do calendario */
+    --font-size-h4: 0.90rem; /* Datas no calendário */
+    --font-size-h5: 0.90rem;
+    --font-size-h6: 0.7rem; /* Rodapé */
+    --font-size-p: 0.90rem;
+    --font-size-menu: 0.8rem; /* Menu */
+    /* OUTRAS CORES */
+    --color-texto-oculto: #a3a8aa;
+}
+
+h1, h2, h3, h4, h5, h6, a, p { font-family: var(--font-normal); text-decoration: none;}
+
+/*
+ FONT-FAMILY
+1º Tipo - normal
+a, p, h5, h6 { font-family: var(--font-normal); }
+2º Tipo - títulos
+h2, h3, h4 { font-family: var(--font-titulos); } */
+
+/* MENU */
+p#option1, p#option2, p#option3 {
+    margin: 0;
+    font-family: var(--font-normal);
+    font-size: var(--font-size-menu); }
+
+/* <p> e tipografia semelhante (links e outros) */
+a.arquivo, p {
+    font-size: var(--font-size-p); }
+p { line-height: calc(var(--font-size-p) + 0.5rem); }
+
+.pag-inicial-texto p { /* Texto inicial */
+   text-align: justify; }
+
+/* <h1 a h6> */
+h1 { font-size: var(--font-size-h1); font-weight: 500; }
+
+h2 { font-size: var(--font-size-h2); font-weight: 500; }
+
+h3 {
+    font-size: var(--font-size-h3);
+    font-weight: 300;
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+/* Listas */
+ol { list-style: none; /* (Usando: .main-ed-anteriores) */
+   padding: unset; /* Tirar espaco da esquerda na lista */ }
+
+/* Tipografia de unidade 1 */
+/* Links de arquivos e texto <p> */
+
+
+a.arquivo {
+   color: blue;
+   margin-left: var(--unit-1); }
+
+
+/* textos no footer */
+p.logomarcas,
+p.rodape-pc,
+p.rodape-mobile {
+   font-family: var(--font-normal);
+   text-align: center;
+   font-size: var(--font-size-h6);
+}
+
+/* CALENDÁRIO */
+/* .main-calendario tem padding porque a div não tem espaçamento interno,
+pra poder encaixar o indicador (border) na div da data do calendário */
+.main-calendario h1 {
+    padding-left: var(--unit-1);
+    padding-right: var(--unit-1);
+}
+.main-calendario h3,
+.main-calendario h4 {
+    padding: 0 16px; /* Padding laterais */
+}
+.main-calendario h3 ~ h4 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+/* Datas inativas (h3 e h4) - cor cinza */
+.main-calendario h3,
+.main-calendario h4 {
+    color: var(--color-texto-oculto);
+}
+/* Datas ativas (h3 e h4) - cor preta */
+.main-calendario > div:nth-child(n+4) > h3,
+.main-calendario > div:nth-child(n+4) > h4 {
+    color: var(--color-base);
+}
+
+
+
+/* BACKUP
+h2 { font-size: var(--font-size-5);
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: var(--unit-05); }
+
+h3 { font-size: var(--font-size-4); }
+
+h4 { font-size: var(--font-size-3);
+    font-weight: 400;
+    margin-bottom: 0.2rem; }
+
+h5 { font-size: var(--font-size-2);
+    font-weight: 500;
+    margin-bottom: 0; } */

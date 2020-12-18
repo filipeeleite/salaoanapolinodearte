@@ -5,19 +5,6 @@ img.banner-texto {
 
 /* ESPACAMENTOS INTERNOS DAS FOLHAS */
 
-    /* main-calendario foi excessao por causa do border na data atual */
-    .main-calendario h2 {
-        padding-left: var(--unit-1);
-        padding-right: var(--unit-1);
-    }
-    .main-calendario p,
-    .main-calendario h4 {
-        padding: 0 16px; /* Padding entre os elementos */
-    }
-    .main-calendario h4 ~ p {
-        margin-top: 16px;
-        margin-bottom: 16px;
-    }
     /* Espaço na ultima linha */
     /* .main-calendario > div:last-child > p {
         padding-bottom: var(--unit-1);
