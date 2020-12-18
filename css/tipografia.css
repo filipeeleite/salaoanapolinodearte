@@ -34,7 +34,7 @@ p#option1, p#option2, p#option3 {
     font-size: var(--font-size-menu); }
 
 /* <p> e tipografia semelhante (links e outros) */
-p {
+p, li {
     font-weight: 300;
 }
 .link-arquivo, a.arquivo, p {
