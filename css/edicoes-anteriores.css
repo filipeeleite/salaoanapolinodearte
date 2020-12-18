@@ -51,7 +51,7 @@ li {
 
     /* - "Prêmio" */    
     li.premiado::after {
-        font-size: var(--font-size-0);
+        font-size: var(--font-size-p);
         color: rgb(128,128,128)
     }
 
