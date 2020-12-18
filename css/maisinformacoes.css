@@ -1,4 +1,5 @@
 /* Tipografia */
+/* Lista nome das pessoas edição atual */
 li {
     font-family: var(--font-normal);
     font-size: var(--font-size-1); }
@@ -6,6 +7,8 @@ li {
 h5 { /* Para tirar espaçamento no topo - Equipe Técnica */
     margin-top: 0;
 }
+
+
 
 /*.main-center: */
 /*      MAIN-INFO */
@@ -40,69 +43,6 @@ img.banner-info {
             filter: brightness(150%);
             transition: filter 1.5s;
         }
-
-/* ARQUIVO */
-div.arquivo {
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    margin-top: var(--unit-1);
-    }
-
-    div.arquivo div {
-        width: 48px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    /* --- SVG ARQUIVO ICON --- */
-    svg.arquivo-icon {
-        width: 48px;
-        }
-        /* ESTILIZAÇÃO */
-        svg .fundo { fill: red; }
-        svg .dobra { fill: rgb(167, 0, 0); /* Vermelho um pouco mais escuro */
-                     stroke-width: 0; }
-        svg .recorte-dobra { fill:white; }
-        svg path.lupa,
-        svg polygon.lupa { fill: white;
-                           animation: lupa 2s infinite alternate ease; }
-        /* Escrito PDF */
-        svg polygon.rotulo { fill: white; }
-            
-        /* HOVER */
-        g.arquivo-icon-hover {
-            transform: translateX(0);
-            transition: transform 1s ease;
-        }
-        g.arquivo-icon-hover:hover {
-            transform: translateX(47px); /* ~ Metade viewbox do svg */
-        }
-        
-        /* INDICADOR */
-        svg.arquivo-icon.indicador {
-            width: 15px;
-        }
-        svg.arquivo-icon polyline.indicador {
-            fill: none;
-            stroke: var(--color-base);
-            stroke-width: 1.5;
-            transform: translateY(0px);
-            animation-name: indicadorarquivo;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-        }
-        @keyframes indicadorarquivo {
-            50% {
-                transform: translateY(3px);
-            }
-        }
-
-    /* último div.arquivo sem margem-bottom */
-    div div.arquivo:last-of-type {
-        margin-bottom: var(--unit-1);
-    }
 
         /* .main-publicacoes
         .. L .publicacoes
