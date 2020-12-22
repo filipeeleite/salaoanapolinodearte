@@ -76,8 +76,6 @@ main {
         padding-bottom: var(--unidade);
 
         width: 320px;
-        /* padding: var(--unit-05) 0; */
-        transition: padding 3s ease;
         margin: 0 auto;
         display: grid;
         grid-gap: var(--unidade);
@@ -166,21 +164,6 @@ main {
         .main-calendario > div:nth-child(4) {
             border-left: var(--border-indicador) solid var(--color-azul-principal);
         }
-        
-/* Mobile
-@media screen and (max-width:620px) {
-
-
-        Espaçar 1a div para ver o background
-        .main-grid {
-            max-width: 300px;
-            padding-top: 40px;
-            transition: 2s padding-top ease-in-out;
-        }
-
-            .submenu-ed-anteriores {
-                top: calc(50vh - 180px);
-            } */
 
 /* Tela média */
 @media screen and (min-width:600px) {
@@ -194,11 +177,6 @@ main {
         /*width: calc(100vw - 80px - (2 * var(--unidade)));*/
     }
 }
-
-
-
-
-
 
 /* Telas largas */
 @media screen and (min-width:960px) {

@@ -6,8 +6,25 @@
 }
 
 /* Calendario */
-h3, h4 {
+/* h3, h4 {
     margin-left: 0;
+} */
+
+
+.main-equipe-tecnica h3 { color: var(--color-azul-principal); }
+
+h3 {
+font-size: var(--font-size-3);
+font-weight: 500;
+text-decoration: none;
+}
+
+li {
+    font-family: var(--font-normal);
+    font-size: var(--font-size-p); }
+
+h5 { /* Para tirar espaçamento no topo - Equipe Técnica */
+    margin-top: 0;
 }
 
 img.banner-texto {
@@ -18,12 +35,12 @@ img.banner-texto {
 .main-grid {
     grid-template-areas:
     "main-texto"
-    "main-calendario"
+    "main-equipe-tecnica"
 }
 @media screen and (min-width:800px) {
     .main-grid {
         grid-template-areas:
-        "main-texto main-calendario";
+        "main-texto main-equipe-tecnica";
         grid-template-columns: 2fr 1fr; /* 1036 */
     }
     .main-grid {

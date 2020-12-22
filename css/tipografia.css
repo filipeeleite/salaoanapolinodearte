@@ -127,12 +127,12 @@ p.rodape-mobile {
 /* .main-calendario tem padding porque a div não tem espaçamento interno,
 pra poder encaixar o indicador (border) na div da data do calendário */
 .main-calendario h1 {
-    padding-left: var(--unit-1);
-    padding-right: var(--unit-1);
+    /*padding-left: var(--unit-1);
+    padding-right: var(--unit-1);*/
 }
 .main-calendario h3,
 .main-calendario h4 {
-    padding: 0 16px; /* Padding laterais */
+    /*padding: 0 16px; /* Padding laterais */
 }
 .main-calendario h3 ~ h4 {
     margin-top: 16px;

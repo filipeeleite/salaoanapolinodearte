@@ -24,26 +24,29 @@
 .main-grid {
     grid-template-areas:
     "main-info"
-    "main-publicacoes"
+    "main-calendario"
     "main-sobregaleria"
-    "main-equipe-tecnica"
+    "main-publicacoes"
 }
 @media screen and (min-width:800px) {
     .main-grid {
         grid-template-areas:
-        "main-info           main-sobregaleria"
-        "main-equipe-tecnica main-sobregaleria"
-        "main-equipe-tecnica main-publicacoes"
-        "main-equipe-tecnica .";
-        grid-template-columns: 2fr 1fr; /* 1036 */
+        "main-info         main-calendario"
+        "main-sobregaleria main-calendario"
+        "main-publicacoes  main-calendario";
+        grid-template-columns: 1fr 0.75fr; /* 1036 */
     }
     .main-grid {
         max-width: 960px;
     }
 }
 
+.main-info-video {
+    padding-top: var(--unidade);
+}
+
 /* Tipografia */
-.main-equipe-tecnica h3 { color: var(--color-azul-principal); }
+/* .main-equipe-tecnica h3 { color: var(--color-azul-principal); }
 
 h3 {
 font-size: var(--font-size-3);
@@ -56,8 +59,8 @@ li {
     font-size: var(--font-size-p); }
 
 h5 { /* Para tirar espaçamento no topo - Equipe Técnica */
-    margin-top: 0;
-}
+    /* margin-top: 0;
+} */
 /*.main-center: */
 /*      MAIN-INFO */
 /*      MAIN-GALERIA-FOTOS */
