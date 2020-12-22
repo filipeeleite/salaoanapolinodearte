@@ -38,36 +38,37 @@ e a toda carga cultural que suas diversas edições até o momento produziram.
 ```==== index.html:
 <main>
  └.main-grid
-   └.main-texto          -> main-texto
-   └.main-equipe-tecnica -> main-equipe-tecnica
+   └.main-texto                     -> main-texto
+   └.main-equipe-tecnica            -> main-equipe-tecnica
 
 ==== mais-informacoes.html:
 <main>
  └.main-grid
-   └.main-info               -> main-info
-   └.main-calendario         -> main-calendario
-   └.main-sobregaleria       -> main-sobregaleria
-   └.main-publicacoes        -> main-publicacoes
+   └.main-info                      -> main-info
+   └.main-calendario                -> main-calendario
+   └.main-sobregaleria              -> main-sobregaleria
+   └.main-publicacoes               -> main-publicacoes
 
 ==== inscricao.html:
 <main>
  └.main-grid
-   └.main-inscricao-etapa1   -> main-inscricao-etapa1
-   └.main-downloads          -> main-downloads
+   └.main-inscricao-etapa1          -> main-inscricao-etapa1
+   └.main-downloads                 -> main-downloads
 
 ==== edicoes-anteriores.html
-.main-grid                -> main-ed-anteriores
- └.main-ed-anteriores
-   └<section>
-     └.grid-ed-ant-section-24  -> grid-ed-ant-section-24
-   └<section>
-     └.grid-ed-ant-section-23  -> grid-ed-ant-section-23
-   └<section>
-     └.grid-ed-ant-section-22  -> grid-ed-ant-section-22
-   └<section>
-     └.grid-ed-ant-section-21  -> grid-ed-ant-section-21
-   └<section>
-     └.grid-ed-ant-section-20  -> grid-ed-ant-section-20
-   └<section>
-     └.grid-ed-ant-section-19  -> grid-ed-ant-section-19
+<main>
+ └.main-grid                        -> main-ed-anteriores
+   └.main-ed-anteriores
+     └<section>
+       └.grid-ed-ant-section-24     -> grid-ed-ant-section-24
+     └<section>
+       └.grid-ed-ant-section-23     -> grid-ed-ant-section-23
+     └<section>
+       └.grid-ed-ant-section-22     -> grid-ed-ant-section-22
+     └<section>
+       └.grid-ed-ant-section-21     -> grid-ed-ant-section-21
+     └<section>
+       └.grid-ed-ant-section-20     -> grid-ed-ant-section-20
+     └<section>
+       └.grid-ed-ant-section-19     -> grid-ed-ant-section-19
  ```
