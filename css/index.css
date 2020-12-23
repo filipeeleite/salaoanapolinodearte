@@ -1,6 +1,38 @@
+.menu-left {
+    height: calc((100%) - (2 * var(--border-indicador)));
+
+    border-top: var(--border-indicador) solid var(--color-azul-principal);
+    border-bottom: var(--border-indicador) solid var(--color-base-clara);
+}
+
+/* Calendario */
+h3, h4 {
+    margin-left: 0;
+}
+
 img.banner-texto {
     width: 100%;
 }
+
+
+.main-grid {
+    grid-template-areas:
+    "main-texto"
+    "main-calendario"
+}
+@media screen and (min-width:800px) {
+    .main-grid {
+        grid-template-areas:
+        "main-texto main-calendario";
+        grid-template-columns: 2fr 1fr; /* 1036 */
+    }
+    .main-grid {
+        max-width: 960px;
+    }
+}
+
+
+
 
 
 /* ESPACAMENTOS INTERNOS DAS FOLHAS */

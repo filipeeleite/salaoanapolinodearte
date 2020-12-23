@@ -1,7 +1,52 @@
+.option2 { 
+    border-top: var(--border-indicador) solid var(--color-azul-principal);
+    border-bottom: var(--border-indicador) solid var(--color-base-clara);
+}
+
+@media screen and (max-width:600px) {
+
+    .option2 {
+        border-top: none;
+        border-bottom: none;
+    }
+    #option2 {
+        background-color: var(--color-azul-hover);
+    }
+
+    .menu-right {
+        border-top: var(--border-indicador) solid var(--color-azul-principal);
+        border-bottom: var(--border-indicador) solid var(--color-base-clara);
+    }
+
+}
+
+.main-grid {
+    grid-template-areas:
+    "main-inscricao"
+    "main-downloads"
+}
+@media screen and (min-width:800px) {
+    .main-grid {
+        grid-template-areas:
+        "main-inscricao main-downloads";
+        grid-template-columns: 2fr 1fr; /* 1036 */
+    }
+    .main-grid {
+        max-width: 960px;
+    }
+}
+
+
+
+
+
+
+
+
 .main-inscricao-etapa1 {
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between;*/
 
 }
 
@@ -15,7 +60,7 @@
 /* buttons */
 button {
     border-width: 0;
-    margin-bottom: var(--unit-1);
+    margin-bottom: var(--unidade);
     transition: background-color 1s ease;
     background-color: var(--color-laranja-principal);
     height: 48px;

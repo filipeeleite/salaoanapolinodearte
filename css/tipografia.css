@@ -18,19 +18,26 @@
     --color-texto-oculto: #a3a8aa;
 }
 
-h1, h2, h3, h4, h5, h6, a, p { font-family: var(--font-normal); text-decoration: none;}
 
-/*
- FONT-FAMILY
-1º Tipo - normal
-a, p, h5, h6 { font-family: var(--font-normal); }
-2º Tipo - títulos
-h2, h3, h4 { font-family: var(--font-titulos); } */
+
+h1, h2, h3, h4, h5, h6, a, p {
+    font-family: var(--font-normal);
+    text-decoration: none;
+}
+/* Todos menos links */
+h1, h2, h3, h4, h5, h6, li, p:not(.menu-tipografia) {
+    /*color: red;*/
+    margin-left: var(--unidade);
+    margin-right: var(--unidade);
+}
+h1 { /* Espaco livre todo h1 */
+    margin-right: calc(var(--unidade) * 2);
+}
+
+
 
 /* MENU */
-p#option1, p#option2, p#option3 {
-    margin: 0;
-    font-family: var(--font-normal);
+.menu-right p {
     font-size: var(--font-size-menu); }
 
 /* <p> e tipografia semelhante (links e outros) */
@@ -39,7 +46,8 @@ p, li {
 }
 .link-arquivo, a.arquivo, p {
     font-size: var(--font-size-p); }
-p { line-height: calc(var(--font-size-p) + 0.5rem); }
+p { line-height: calc(var(--font-size-p) + 0.5rem);
+    /*margin-top: -6px;*/ }
 
 .link-arquivo {
     text-decoration: underline var(--color-azul-principal);
@@ -49,26 +57,53 @@ p { line-height: calc(var(--font-size-p) + 0.5rem); }
    text-align: justify; }
 
 /* <h1 a h6> */
-h1 { font-size: var(--font-size-h1); font-weight: 500; }
-
-h2 { font-size: var(--font-size-h2); font-weight: 500; }
-
+.regua {
+    outline: 1px dashed blue;
+}
+h1 {
+    /*outline: 1px solid blue;*/
+    font-size: var(--font-size-h1);
+    font-weight: 500;
+    /*text-decoration: underline;*/
+    margin-bottom: -12px;
+}
+h2 {
+    font-size: var(--font-size-h2);
+    font-weight: 500;
+    /*margin-top: -7px;*/
+    /*margin-top: 0px;*/
+}
 h3 {
     font-size: var(--font-size-h3);
     font-weight: 300;
     text-decoration: underline;
-    margin-bottom: 0;
 }
-
 h4 {
     font-size: var(--font-size-h4);
     font-weight: 300;
     margin-bottom: 0;
 }
+h5 {
+    font-weight: 300;
+}
+
+
+/* padding-bottom: - white space controlado */
+h1, h2, h3, h4, h5, h6, p {
+    /*outline: 1px solid black;*/
+    padding-bottom: 0px;
+    padding-top: 0px;
+    text-decoration: none;
+}
 
 /* Listas */
 ol { list-style: none; /* (Usando: .main-ed-anteriores) */
-   padding: unset; /* Tirar espaco da esquerda na lista */ }
+   padding: unset; /* Tirar espaco da esquerda na lista */
+}
+li {
+    font-family: var(--font-normal);
+    font-size: var(--font-size-p);
+}
 
 /* Tipografia de unidade 1 */
 /* Links de arquivos e texto <p> */

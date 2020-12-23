@@ -1,13 +1,15 @@
+/* --height-footer-pc: 128px;
+--height-footer-mobile: 270px; */
+
 footer {
     background-color: var(--color-base-clara);
     width: 100%;
-    /*height: var(--height-footer);*/
+    height: var(--height-footer-pc);
     outline: var(--color-outline-folha);
     }
 
     div.footer {
         max-width: 1024px;
-        height: 100%;
         margin: 0 auto;
         padding: 10px 0;
         }
@@ -52,9 +54,9 @@ footer {
             
         
 /* TELAS PEQUENAS */
-@media screen and (max-width:560px) {
+@media screen and (max-width:600px) {
     footer {
-        height: 100%;
+        height: var(--height-footer-mobile);
     }
 
     div.logomarcas { display: block; }

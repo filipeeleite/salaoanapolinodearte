@@ -23,25 +23,6 @@
 
         <title>25º Salão Anapolino de Artes</title>
         <style>
-        /* TEXT-DECORATION DA PÁGINA ATUAL ................................. ##
-        ## ----------------------------------------------------------------- ##
-        ## option0 --- menu icon ........................................... ##
-        ## menu-left - pag inicial ...........(/salaoanapolinodearte.html) . ##
-        ## option1 --- pag +informacoes ........(/../informacoes.html)...... ##
-        ## option2 --- pag inscrever ...........(/../inscricao.html)........ ##
-        ## option3 --- pag edicoes anteriores ..(/../edanteriores.html)..... */
-
-        .menu-left { /*<--- PÁGINA INICIAL NÃO TEM! .. */
-            border-top: var(--border-indicador) solid var(--color-azul-principal);
-            border-bottom: var(--border-indicador) solid var(--color-base-clara);
-        }
-
-        @media screen and (max-width:560px) {
-            .menu-left {
-                border-top: none;
-                border-bottom: none;
-            }
-        }
 
         main {
             background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSI0ODBweCIgaGVpZ2h0PSI0ODBweCIgdmlld0JveD0iMCAwIDEwMCAxMDAiPjxzdHlsZT5wb2x5Z29uIHsgZmlsbDpub25lOyBzdHJva2U6IGJsYWNrOyBzdHJva2Utd2lkdGg6IDI7IHN0cm9rZS1vcGFjaXR5OiAwLjA1O308L3N0eWxlPjxwb2x5Z29uIHBvaW50cz0iNiwyOCA1LDI5IDQsMjkgMywyOSAzLDI5IDIsMjggMSwyNyAxLDI2IDEsMjUgMiwyNSAxLDI0IDIsMjMgMywyMiA1LDIxIDYsMjEgNiwxNyA0LDE1IDQsMTQgNSwxMyA0LDEyIDcsMTIgOCwxMSA5LDEzIDEwLDEzIDEzLDEwIDEyLDEwIDEyLDkgMTIsOCAxMiw3IDEzLDggMTcsNSAxNyw1IDE4LDcgMTgsOCAxOCw5IDIwLDEwIDIyLDkgMjMsOSAyNCw4IDI1LDggMjcsOCAyOCw4IDMwLDQgMzAsNSAzMSw2IDMyLDcgMzIsOCAzMCwxMyAzMiwxMiAzMiwxMyAzNCwxMyAzNiwxMCAzNywxMCAzOCwxMCAzOCwxMiAzOCwxMyAzNiwxNyAzOCwxNyAzOCwxOCAzOCwxOSA0MCwyMSAzOSwyMiA0MSwyMyA0MSwyNCA0MSwyNSA0MSwyNiA0MSwyNyAzOSwyOCAzOCwyOCAzNywyOCAzNSwyOCAzNSwyNyAzNSwyNSAzNSwyNCAyNiwyNSAyNSwyNSAyMywyMyAyMywyNSAxOSwyNSAxOCwyNiAxOSwyOCAyMSwyOCAyMSwyOCAyMiwzMCAyMSwzMiAxOSwzMiAxNiwzMSAxNSwzMSAxNCwzMCAxMywyOCAxMiwyOCA5LDMwIDcsMzEgNiwzMCAiLz48cG9seWdvbiBwb2ludHM9IjcyLDI5IDcxLDI4IDcxLDI4IDcyLDI2IDcyLDI1IDcwLDI1IDcwLDI0IDY4LDIzIDY4LDIyIDY3LDIyIDY2LDIyIDYzLDIyIDY0LDIxIDYzLDIwIDY0LDE5IDY0LDE3IDY0LDE2IDY1LDE1IDY0LDEzIDY1LDEyIDYzLDEwIDY0LDggNjQsNyA2Myw2IDY2LDQgNjgsMSA2OSwyIDcwLDMgNzAsNCA3Miw0IDczLDQgNzUsNSA3Nyw1IDc3LDYgODAsMTAgODMsMTAgODMsMTEgODMsMTMgODMsMTQgODIsMTYgODEsMTcgNzksMTkgNzcsMjAgNzcsMjEgNzUsMjIgNzQsMjMgNzQsMjUgNzQsMjYgNzMsMjcgNzMsMjggIi8+PHBvbHlnb24gcG9pbnRzPSI0Myw2MyA0NCw2MSA0Niw1OSA0Nyw1OCA0OCw1NiA0OSw1NCA1Miw1NCA1Myw1NCA1NCw1NCA1NSw1NCA1Nyw1MyA1Nyw1MiA1Nyw1MSA1Nyw1MSA1Nyw0OSA1OCw0OCA1OCw0OCA1OSw0NiA2MCw0NSA2MSw0NiA2NSw0NSA2Niw0NSA2Niw0NiA2OCw0NSA2OSw0NyA3MSw0NyA3Miw0OSA3NCw0OSA3NSw1MCA3NCw1MiA3NCw1MyA3NCw1NSA3NSw1NiA3NSw1NyA3NSw1OCA3NSw1OSA3NCw1OSA3NCw2MCA3Miw2MiA3Miw2NCA3MSw2NSA3MCw2NSA2OSw2NiA2Niw2NiA2NSw2NiA2NCw2NiA2Myw2NiA2MCw2OCA1OSw2OCA1Nyw2OCA1NCw3MCA1Miw3MCA1Miw2OSA1MSw2OSA1MSw2OCA1MCw2NyA1MCw2NSA0OSw2NSA0Nyw2NCA0Niw2NCA0NCw2MyAiLz48cG9seWdvbiBwb2ludHM9IjczLDg4IDc0LDg3IDc3LDg1IDc4LDg0IDgwLDgzIDgzLDgyIDgzLDgxIDgzLDgwIDgzLDc4IDgyLDc4IDgzLDc2IDgzLDc1IDgzLDczIDg1LDcyIDg2LDcyIDg5LDcyIDkxLDczIDkyLDczIDk0LDc0IDk0LDc0IDk0LDc2IDk0LDc3IDk0LDc4IDk2LDc4IDk3LDc5IDk2LDgwIDk3LDgwIDk1LDgxIDk1LDgyIDk1LDg0IDk1LDg2IDk0LDg3IDkzLDg4IDkxLDg5IDkwLDkxIDg4LDkzIDg2LDk0IDg5LDkxIDg3LDkwIDg2LDkyIDg0LDkzIDg0LDk2IDgzLDk3IDgxLDk4IDgxLDk3IDgyLDk2IDgxLDk0IDc5LDkyIDc3LDkyIDc3LDkwIDc2LDkwIDc1LDg5IDc0LDg4IDczLDg4ICIvPjxwb2x5Z29uIHBvaW50cz0iMTIsNTEgMTEsNTMgMTEsNTQgNiw1MiA2LDU0IDYsNTQgNSw1NiA3LDU2IDcsNTcgNyw1OCA3LDU5IDYsNjAgNiw2MiA1LDYyIDUsNjQgNyw2NSA3LDY2IDgsNjggNyw2OSA2LDcxIDYsNzMgNSw3NCA3LDc1IDgsNzUgOSw3NSA4LDc4IDksNzggOSw3OCAxMSw3NyAxMiw3NyAxNSw3NSAxNiw3NCAxNiw3MyAxOCw3MiAxOSw3MiAyMSw3MyAyMiw3MiAyMiw3MSAyMyw3MCAyMyw3MCAyMyw2OSAyNCw2OCAyNSw2OCAyNSw2NiAyNiw2NSAyMyw2NSAyMSw2MyAyMSw2MiAyMSw2MCAyMiw1OCAxMyw1NSAxMiw1NCAiLz48L3N2Zz4=);
@@ -53,7 +34,7 @@
     <body>
         <header>
             <div class="menu-bar">
-                <div class="menu-left">
+                <nav class="menu-left">
                     <!-- LOGO DO SALAO -->
                     <a href="Index.html">
                         <svg class="logo-salao" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="0 0 1031 381" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -90,80 +71,76 @@
                         </g>
                         </svg>
                     </a>
-                </div>
-                <div class="menu-right">
+                </nav>
+                <nav class="menu-right">
                     <a href="#" class="menu-icon" href="#">=</a>
-                    <a href="mais-informacoes.html" class="menu-option">
+                    <a id="option1" class="menu-option" href="mais-informacoes.html" >
                         <div class="hover-menu option1">
-                            <p id="option1">+Informações</p>
+                            <p class="menu-tipografia">+Informações</p>
                         </div>
                     </a>
-                    <a href="inscricao.html" class="menu-option">
+                    <a id="option2" class="menu-option" href="inscricao.html" >
                         <div class="hover-menu option2">
-                            <p id="option2">Inscrever</p>
+                            <p class="menu-tipografia">Inscrever</p>
                         </div>
                     </a>
-                    <a href="edicoes-anteriores.html" class="menu-option">
+                    <a id="option3" class="menu-option" href="edicoes-anteriores.html" >
                         <div class="hover-menu option3">
-                            <p id="option3">Edições Anteriores</p>
+                            <p class="menu-tipografia">Edições Anteriores</p>
                         </div>
                     </a>
-                </div>
+                </nav>
             </div>
         </header>
         <main>
             <div class="main-grid">
-                <div class="main-center">
-                    <div class="main-texto">
-                        <img class="banner-texto" src="img/panoramica-index-a.jpg" alt="">
-                        <p>E já são 40 anos e 25 edições - com algumas paradas no meio do caminho, é verdade - de persistência e insistência até conseguir consolidar, em Goiás e no Centro-Oeste (quem diria?), um espaço de divulgação e valorização das artes visuais. E o crescimento, ano a ano, do Salão Anapolino de Arte, seu êxito como instrumento de estímulo e fomento à produção contemporânea fortalece a convicção de que vale a pena continuar lutando para mantê-lo e aprimorá-lo. Os números da 24ª edição são prova suficiente. Além de ter registrado recorde de inscrições - foram 795 -, de contar com a participação de artistas de quase todos os estados, também foi a primeira em que a quantidade de homens e mulheres selecionados foi absolutamente igualitária. </p>
-                        <p>Quanto à premiação e ao processo seletivo para a exposição, algumas mudanças foram feitas em relação ao Salão anterior. A novidade deste ano é a categoria Fomento à Produção Anapolina, criada para estimular os jovens talentos da cidade. O Salão Anapolino de Arte assume como missão contribuir para o contínuo processo de fortalecimento da arte e apoiar jovens artistas. E, também, cumpre o papel de colaborar para a formação do acervo de arte contemporânea do Museu de Artes Plásticas de Anápolis - Mapa -, unidade da Secretaria Municipal de Cultura. As aquisições, chanceladas por uma equipe curatorial de renomados profissionais do circuito nacional, permitem a criação de um acervo que reflita questões pertinentes ao homem contemporâneo, garantindo assim, a memória patrimonial do nosso tempo. E, também, se apresenta como espaço de reconhecimento aos artistas goianos com o Prêmio Artista Convidado, categoria lançada no ano passado. Nesta segunda edição, a organização do Salão Anapolino faz homenagem ao goiano Siron Franco, que tem seu nome marcado na história da arte brasileira e projeção internacional. Selma Parreira, Dalton Paula e Marcelo Solá foram os homenageados no ano passado.</p>
-                        <p>Com o Prêmio Artista Convidado, o objetivo é reconhecer a importante contribuição desses artistas na projeção da arte contemporânea goiana em âmbito nacional e internacional. Com realização da Prefeitura de Anápolis/Secretaria Municipal de Cultura em parceria com a Associação dos Amigos da Galeria Antônio Sibasolly, mais uma vez o evento conta recursos do Fundo de Arte e Cultura do Estado de Goiás para sua execução.</p>
-                    </div>
-                    <!--<div>
-                        <h3>Alguma informação aqui</h3>
-                        <div class="linha-divisao"></div>
-                    </div>-->
+                <div class="main-texto">
+                    <img class="banner-texto" src="img/panoramica-index-a.jpg" alt="">
+                    <p>E já são 40 anos e 25 edições - com algumas paradas no meio do caminho, é verdade - de persistência e insistência até conseguir consolidar, em Goiás e no Centro-Oeste (quem diria?), um espaço de divulgação e valorização das artes visuais. E o crescimento, ano a ano, do Salão Anapolino de Arte, seu êxito como instrumento de estímulo e fomento à produção contemporânea fortalece a convicção de que vale a pena continuar lutando para mantê-lo e aprimorá-lo. Os números da 24ª edição são prova suficiente. Além de ter registrado recorde de inscrições - foram 795 -, de contar com a participação de artistas de quase todos os estados, também foi a primeira em que a quantidade de homens e mulheres selecionados foi absolutamente igualitária. </p>
+                    <p>Quanto à premiação e ao processo seletivo para a exposição, algumas mudanças foram feitas em relação ao Salão anterior. A novidade deste ano é a categoria Fomento à Produção Anapolina, criada para estimular os jovens talentos da cidade. O Salão Anapolino de Arte assume como missão contribuir para o contínuo processo de fortalecimento da arte e apoiar jovens artistas. E, também, cumpre o papel de colaborar para a formação do acervo de arte contemporânea do Museu de Artes Plásticas de Anápolis - Mapa -, unidade da Secretaria Municipal de Cultura. As aquisições, chanceladas por uma equipe curatorial de renomados profissionais do circuito nacional, permitem a criação de um acervo que reflita questões pertinentes ao homem contemporâneo, garantindo assim, a memória patrimonial do nosso tempo. E, também, se apresenta como espaço de reconhecimento aos artistas goianos com o Prêmio Artista Convidado, categoria lançada no ano passado. Nesta segunda edição, a organização do Salão Anapolino faz homenagem ao goiano Siron Franco, que tem seu nome marcado na história da arte brasileira e projeção internacional. Selma Parreira, Dalton Paula e Marcelo Solá foram os homenageados no ano passado.</p>
+                    <p>Com o Prêmio Artista Convidado, o objetivo é reconhecer a importante contribuição desses artistas na projeção da arte contemporânea goiana em âmbito nacional e internacional. Com realização da Prefeitura de Anápolis/Secretaria Municipal de Cultura em parceria com a Associação dos Amigos da Galeria Antônio Sibasolly, mais uma vez o evento conta recursos do Fundo de Arte e Cultura do Estado de Goiás para sua execução.</p>
                 </div>
-                <div class="main-right">
-                    <div class="main-calendario">
-                        <h1>Calendário</h1>
-                        <div>
-                            <h3>Inscrições</h3>
-                            <h4>21 de fevereiro a 24 de abril de 2020</h4>
-                        </div>
-                        <div>
-                            <h3>Seleção dos trabalhos</h3>
-                            <h4>2, 3 e 4 de maio de 2020</h4>
-                        </div>
-                        <div>
-                            <h3>Divulgação dos artistas selecionados</h3>
-                            <h4>5 de maio de 2020</h4>
-                        </div>
-                        <div>
-                            <h3>Recepção das obras na Galeria Antônio Sibasolly - Anápolis/GO</h3>
-                            <h4>5 a 20 de maio de 2020</h4>
-                        </div>
-                        <div>
-                            <h3>Premiação e abertura da exposição na Galeria Antônio Sibasolly - Anápolis/GO</h3>
-                            <h4>30 de maio de 2019</h4>
-                        </div>
-                        <div>
-                            <h3>Período da exposição e ações educativas na Galeria Antônio Sibasolly - Anápolis/GO</h3>
-                            <h4>1º de junho a 7 de agosto de 2020</h4>
-                        </div>
-                        <div>
-                            <h3>Abertura da exposição no Centro Cultural da UFG - CCUFG - Goiânia/GO</h3>
-                            <h4>18 de agosto de 2020</h4>
-                        </div>
-                        <div>
-                            <h3>Período da exposição e ações educativas no Centro Cultural da UFG - CCUFG - Goiânia/GO</h3>
-                            <h4>19 de agosto a 30 de outubro de 2020</h4>
-                        </div>
-                        <div>
-                            <h3>Lançamento do catálogo e bate-papo com artista Prêmio Artista Convidado - no Auditório do CCUFG - Goiânia/GO</h4>
-                            <h4>27 de outubro de 2020</h4>
-                        </div>
+                <!--<div>
+                    <h3>Alguma informação aqui</h3>
+                    <div class="linha-divisao"></div>
+                </div>-->
+                <div class="main-calendario">
+                    <h1>Calendário</h1>
+                    <div>
+                        <h3>Inscrições</h3>
+                        <h4>21 de fevereiro a 24 de abril de 2020</h4>
+                    </div>
+                    <div>
+                        <h3>Seleção dos trabalhos</h3>
+                        <h4>2, 3 e 4 de maio de 2020</h4>
+                    </div>
+                    <div>
+                        <h3>Divulgação dos artistas selecionados</h3>
+                        <h4>5 de maio de 2020</h4>
+                    </div>
+                    <div>
+                        <h3>Recepção das obras na Galeria Antônio Sibasolly - Anápolis/GO</h3>
+                        <h4>5 a 20 de maio de 2020</h4>
+                    </div>
+                    <div>
+                        <h3>Premiação e abertura da exposição na Galeria Antônio Sibasolly - Anápolis/GO</h3>
+                        <h4>30 de maio de 2019</h4>
+                    </div>
+                    <div>
+                        <h3>Período da exposição e ações educativas na Galeria Antônio Sibasolly - Anápolis/GO</h3>
+                        <h4>1º de junho a 7 de agosto de 2020</h4>
+                    </div>
+                    <div>
+                        <h3>Abertura da exposição no Centro Cultural da UFG - CCUFG - Goiânia/GO</h3>
+                        <h4>18 de agosto de 2020</h4>
+                    </div>
+                    <div>
+                        <h3>Período da exposição e ações educativas no Centro Cultural da UFG - CCUFG - Goiânia/GO</h3>
+                        <h4>19 de agosto a 30 de outubro de 2020</h4>
+                    </div>
+                    <div>
+                        <h3>Lançamento do catálogo e bate-papo com artista Prêmio Artista Convidado - no Auditório do CCUFG - Goiânia/GO</h4>
+                        <h4>27 de outubro de 2020</h4>
                     </div>
                 </div>
             </div>

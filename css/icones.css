@@ -1,20 +1,23 @@
 /* Específica para ícones e animações deles */
 
+.arquivo-icon {
+    margin-left: var(--unidade);
+}
+
+
 /* ARQUIVO */
 div.arquivo {
     max-width: 100%;
     display: flex;
     align-items: center;
-    margin-top: var(--unit-1);
+    margin-top: var(--unidade);
     }
 
     /*Icone arquivo pag + informacoes */
     div.arquivo > div {
-        width: 48px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-right: var(--unit-1);
     }
     /* --- SVG ARQUIVO ICON --- */
     svg.arquivo-icon {
@@ -62,7 +65,7 @@ div.arquivo {
 
     /* último div.arquivo sem margem-bottom */
     div div.arquivo:last-of-type {
-        margin-bottom: var(--unit-1);
+        /*margin-bottom: var(--unidade);*/
     }
 
 /* === PÁGINA EDIÇÕES ANTERIORES === */

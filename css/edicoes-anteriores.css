@@ -1,7 +1,30 @@
+.option3 { 
+    border-top: var(--border-indicador) solid var(--color-azul-principal);
+    border-bottom: var(--border-indicador) solid var(--color-base-clara);
+}
+
+@media screen and (max-width:600px) {
+
+    .option3 {
+        border-top: none;
+        border-bottom: none;
+    }
+    #option3 {
+        background-color: var(--color-azul-hover);
+    }
+    
+    .menu-right {
+        border-top: var(--border-indicador) solid var(--color-azul-principal);
+        border-bottom: var(--border-indicador) solid var(--color-base-clara);
+    }
+
+}
+
 /* Variáveis */
 :root {
     /* Icones catalogos */
     --width-catalogo: 100px;
+    --size-submenu-ed-ant: 40px;
     /* Cores de Cada Edicao */
     --color-24ed: rgb(60, 15, 82);
     --color-23ed-a: rgb(74, 101, 97);
@@ -18,7 +41,70 @@
     --color-14ed: rgb(0,0,0);
 }
 
+.main-grid {
+    grid-template-areas:
+    "main-ed-anteriores"
+}
+
 /* Tipografia Específica desta página */
+/* Edições Anteriores */
+h1 {
+    /*outline: 1px solid blue;*/
+    margin-right: calc(2 * var(--unidade) + 40px);
+}
+h2 { margin-left: unset;
+}
+h3 { margin-left: unset; }
+
+/* Cores para os <h3> cada edição */
+.grid-ed-ant-section-24 h3 { color: var(--color-24ed); }
+.grid-ed-ant-section-23 h3 { color: var(--color-23ed-a); }
+.grid-ed-ant-section-22 h3 { color: var(--color-22ed-a); }
+.grid-ed-ant-section-21 h3 { color: var(--color-21ed); }
+.grid-ed-ant-section-20 h3 { color: var(--color-20ed); }
+.grid-ed-ant-section-19 h3 { color: var(--color-19ed); }
+
+p.data {
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 18px;
+    font-size: var(--unit-05);
+    line-height: initial;
+    font-weight: 500;
+}
+p:not(.menu-tipografia) { /* Título principal dentro de cada edição */
+    margin-left: 0;
+}
+
+li {
+    margin-left: 0;
+}
+ol {
+    margin-top: -8px; /* Alinhar topo x no topo catalogo-icon */
+}
+
+/* Zerar margens */
+.grid-ed-ant-titulo-edicao,
+.grid-ed-ant-titulo-principal-a,
+.grid-ed-ant-titulo-principal-b,
+.grid-ed-ant-titulo-principal-c,
+
+.grid-ed-ant-catalogo-icon-a svg,
+.grid-ed-ant-catalogo-icon-b svg,
+.grid-ed-ant-catalogo-icon-c svg {
+    margin: unset;
+}
+/*
+.grid-ed-ant-lista-1 ol,
+.grid-ed-ant-lista-2 ol,
+.grid-ed-ant-lista-3 ol,
+.grid-ed-ant-lista-4 ol,
+.grid-ed-ant-lista-5 ol,
+.grid-ed-ant-lista-6 ol {
+    color: blue;
+}*/
+
+
 /*Submenu Edicoes Anteriores */
 .submenu-ed-anteriores a {
     font-family: var(--font-normal);
@@ -37,23 +123,84 @@
     div#shortcut-ed-14:hover {
         font-size: 22px;
     }
-.sessao-ed-anteriores-grid-a h3,
-.sessao-ed-anteriores-grid-b h3 {
- font-family: var(--font-normal);
- font-size: var(--font-size-3);
- font-weight: 500;
- text-decoration: none;
+
+
+/* h3 */
+.grid-ed-ant-subtitulo-1 h3,
+.grid-ed-ant-lista-1 h3,
+
+.grid-ed-ant-subtitulo-2 h3,
+.grid-ed-ant-lista-2 h3,
+
+.grid-ed-ant-subtitulo-3 h3,
+.grid-ed-ant-lista-3 h3,
+
+.grid-ed-ant-subtitulo-4 h3,
+.grid-ed-ant-lista-4 h3,
+
+.grid-ed-ant-subtitulo-5 h3,
+.grid-ed-ant-lista-5 h3,
+
+.grid-ed-ant-subtitulo-6 h3,
+.grid-ed-ant-lista-6 h3,
+
+h3 {
+font-family: var(--font-normal);
+font-size: var(--font-size-3);
+font-weight: 500;
+text-decoration: none;
 }
 /* Nome das pessoas */    
 li {
     font-family: var(--font-normal);
-    font-size: var(--font-size-p); }
+    font-size: var(--font-size-p);
+}
 
     /* - "Prêmio" */    
     li.premiado::after {
         font-size: var(--font-size-p);
         color: rgb(128,128,128)
     }
+
+.main-ed-anteriores {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.grid-ed-ant-section-22 .linha-divisao,
+.grid-ed-ant-section-23 .linha-divisao,
+.grid-ed-ant-section-24 .linha-divisao {
+    height: 1px;
+    opacity: 0.5;
+    margin-top: var(--unidade);
+}
+
+
+/* Espaco antes de cada edição */
+#ed-24, #ed-23, #ed-22, #ed-21, #ed-20, #ed-19 {
+    height: 50px;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.main-ed-anteriores > h1,
+.main-ed-anteriores .section > h2,
+div ~ section > .linha-divisao,
+.grid-ed-ant-section-24,
+.grid-ed-ant-section-23,
+.grid-ed-ant-section-22,
+.grid-ed-ant-section-21,
+.grid-ed-ant-section-20,
+.grid-ed-ant-section-19 {
+    margin-left: var(--unidade);
+}
+div ~ section > .linha-divisao {
+    width: calc(100% - (1 * var(--unidade)));
+}
+
 
 /* ............................................ */
 /* Estrutura */
@@ -72,8 +219,8 @@ li {
         .submenu-ed-anteriores {
             float: right;
             position: sticky;
-            top: var(--unit-1);
-            margin-left: var(--unit-1);
+            top: var(--unidade);
+            margin: var(--unidade);
             display: flex;
             flex-direction: column;
             align-items: flex-end; 
@@ -90,8 +237,8 @@ li {
                      L <div> */
 
                 .submenu-ed-anteriores a div {
-                    width: 40px;
-                    height: 40px;
+                    width: var(--size-submenu-ed-ant);
+                    height: var(--size-submenu-ed-ant);
                     transition: all 3s ease-in-out;
                     display: flex;
                     justify-content: center;
@@ -127,90 +274,134 @@ li {
 
         /* SESSOES EDICOES ANTERIORES */
         .main-ed-anteriores section {
-            margin-right: 56px; /* Espaçamento para o submenu ao lado */
+            /* Margem submenu*/
+            margin-right: calc(var(--size-submenu-ed-ant) + 2 * var(--unidade));
         }
             .sessao-ed-anteriores-grid-a h3,
             .sessao-ed-anteriores-grid-b h3 {
-                margin-top: calc(var(--unit-1) + 10px);
+                /*margin-top: calc(var(--unidade) + 10px);*/
                 margin-bottom: 0;
             }
-            section > h3 {
+            .main-ed-anteriores ~ section > h3 {
                 margin-top: 0;
-                padding-top: calc(var(--unit-1) * 3);
+                padding-top: calc(var(--unidade) * 3);
                 margin-bottom: var(--unit-05);
-            }
-            .catalogo-icon svg {
-                margin-top: 25px;
-                margin-right: var(--unit-05);
             }
             /* .catalogo-icon div:nth-child(2) {
                 margin-bottom: -300px;
             } */
-
-        /* GRIDS */
-        .sessao-ed-anteriores-grid-a,
-        .sessao-ed-anteriores-grid-b {
-            display: grid;
-            /* border-top: 2px solid var(--color-azul-principal); */
-            grid-template-columns: calc(var(--width-catalogo) + var(--unit-1)) 1fr 1fr 1fr;
-        }
-        .sessao-ed-anteriores-grid-a { /* .... A .... ( A A A ) */
-            grid-template-areas:
-            ".        artistastituloa artistastituloa artistastituloa"
-            "catalogo artistaslistaa  artistaslistaa  artistaslistaa "
-            "catalogo comissaotituloa comissaotitulob curadoriatituloa"
-            "catalogo comissaoa       comissaob       curadoriaa";
-        }
-        .sessao-ed-anteriores-grid-b { /* .... B .... ( A A B ) */
-            grid-template-areas:
-            ".        artistastituloa artistastituloa artistastitulob"
-            "catalogo artistaslistaa  artistaslistaa  artistaslistab"
-            "catalogo comissaotituloa comissaotitulob curadoriatituloa"
-            "catalogo comissaoa       comissaob       curadoriaa";
-        }
-        /* .... GRID AREAS .... */
-            /* . Grid -----> A B
-            /* [ . - 2 - 2 - 2/4 ]
-            .. [ 1 - 3 - 3 - 3/5 ]
-            .. [ 1 - 6 - 8 - 10  ]
-            .. [ 1 - 7 - 9 - 11  ]
-            /* 1 */
-            .catalogo-icon { grid-area: catalogo;}
-            /* 2 e 3 */
-            .titulo-artistas-a { grid-area: artistastituloa; }
-            .titulo-artistas-ab { grid-area: artistastituloa; }
-            .lista-artistas-a { grid-area: artistaslistaa; }
-            .lista-artistas-ab { grid-area: artistaslistaa; }
-            /* 4 e 5 */
-            .titulo-artistas-b { grid-area: artistastitulob; }
-            .lista-artistas-b { grid-area: artistaslistab; }
-            /* 6 e 7 */
-            .titulo-comissao-a { grid-area: comissaotituloa; }
-            .lista-comissao-a { grid-area: comissaoa; }
-            /* 8 e 9 */
-            .titulo-comissao-b { grid-area: comissaotitulob; }
-            .lista-comissao-b { grid-area: comissaob; }
-            /* 10 e 11 */
-            .titulo-curadoria-a { grid-area: curadoriatituloa; }
-            .lista-curadoria { grid-area: curadoriaa; }
         
         li.premiado::after {
             content: "  Prêmio";
         }
 
-        .titulo-artistas-a,
-        .titulo-artistas-ab,
-        .titulo-artistas-b,
-        .titulo-comissao-a,
-        .titulo-comissao-b,
-        .titulo-curadoria-a { /* Alinhar por baixo */
+        /* Display: Flex - Lista para se alinhar por baixo da div */
+        .grid-ed-ant-titulo-principal-a,
+        .grid-ed-ant-titulo-principal-b,
+        .grid-ed-ant-titulo-principal-c {
+            display: flex;
+            flex-direction: column;
+            /*height: 120px;*/
+        }
+        .grid-ed-ant-subtitulo-1,
+        .grid-ed-ant-subtitulo-2,
+        .grid-ed-ant-subtitulo-3,
+        .grid-ed-ant-subtitulo-4,
+        .grid-ed-ant-subtitulo-5,
+        .grid-ed-ant-subtitulo-6 { /* Alinhar por baixo */
+            /*outline: 1px solid green;*/
             display: flex;
             flex-direction: column;
             justify-content: end;
         }
+/* #### Alinhar margem no alinhamento do elemento dentro de cada grid-area */
+        .grid-ed-ant-titulo-principal-a ~ h3,
+        .grid-ed-ant-titulo-principal-b h3,
+        .grid-ed-ant-titulo-principal-c h3,
+        .grid-ed-ant-titulo-principal-a li:first-child,
+        .grid-ed-ant-titulo-principal-b li:first-child,
+        .grid-ed-ant-titulo-principal-c li:first-child,
+        .grid-ed-ant-titulo-principal-a p:first-child,
+        .grid-ed-ant-titulo-principal-b p:first-child,
+        .grid-ed-ant-titulo-principal-c p:first-child,
+
+        .grid-ed-ant-subtitulo-1 h3:first-child,
+        .grid-ed-ant-subtitulo-2 h3:first-child,
+        .grid-ed-ant-subtitulo-3 h3:first-child,
+        .grid-ed-ant-subtitulo-4 h3:first-child,
+        .grid-ed-ant-subtitulo-5 h3:first-child,
+        .grid-ed-ant-subtitulo-6 h3:first-child,
+
+        .grid-ed-ant-lista-1 > :first-child,
+        .grid-ed-ant-lista-2 > :first-child,
+        .grid-ed-ant-lista-3 > :first-child,
+        .grid-ed-ant-lista-4 > :first-child,
+        .grid-ed-ant-lista-5 > :first-child,
+        .grid-ed-ant-lista-6 > :first-child {
+            /*color: green;*/
+        }        
 
 
+/* #### Limite do último elemento dentro de cada grid-area */
+        .grid-ed-ant-titulo-principal-a h3:last-child,
+        .grid-ed-ant-titulo-principal-b h3:last-child,
+        .grid-ed-ant-titulo-principal-c h3:last-child,
+        .grid-ed-ant-titulo-principal-a li:last-child,
+        .grid-ed-ant-titulo-principal-b li:last-child,
+        .grid-ed-ant-titulo-principal-c li:last-child,
+        .grid-ed-ant-titulo-principal-a p:last-child,
+        .grid-ed-ant-titulo-principal-b p:last-child,
+        .grid-ed-ant-titulo-principal-c p:last-child,
 
+        .grid-ed-ant-subtitulo-1 h3:last-child,
+        .grid-ed-ant-subtitulo-2 h3:last-child,
+        .grid-ed-ant-subtitulo-3 h3:last-child,
+        .grid-ed-ant-subtitulo-4 h3:last-child,
+        .grid-ed-ant-subtitulo-5 h3:last-child,
+        .grid-ed-ant-subtitulo-6 h3:last-child,
+
+        .grid-ed-ant-lista-1 li:last-child,
+        .grid-ed-ant-lista-2 li:last-child,
+        .grid-ed-ant-lista-3 li:last-child,
+        .grid-ed-ant-lista-4 li:last-child,
+        .grid-ed-ant-lista-5 li:last-child,
+        .grid-ed-ant-lista-6 li:last-child {
+            /*color: blue;*/
+            /* outline: 1px solid blue; */
+            /*margin-bottom: 0px;*/
+}
+
+
+/* #### Margens */
+/*      Margem positiva para cada grid-area */
+        .grid-ed-ant-titulo-principal-a,
+        .grid-ed-ant-titulo-principal-b,
+        .grid-ed-ant-titulo-principal-c,
+        .grid-ed-ant-catalogo-icon-a,
+        .grid-ed-ant-catalogo-icon-b,
+        .grid-ed-ant-catalogo-icon-c,
+        .grid-ed-ant-subtitulo-1,
+        .grid-ed-ant-subtitulo-2,
+        .grid-ed-ant-subtitulo-3,
+        .grid-ed-ant-subtitulo-4,
+        .grid-ed-ant-subtitulo-5,
+        .grid-ed-ant-subtitulo-6,
+        .grid-ed-ant-lista-1,
+        .grid-ed-ant-lista-2,
+        .grid-ed-ant-lista-3,
+        .grid-ed-ant-lista-4,
+        .grid-ed-ant-lista-5,
+        .grid-ed-ant-lista-6 {
+                /*margin-bottom: var(--unidade);*/
+                /*margin-right: var(--unidade);*/
+        }
+        /* Margem Negativa - indicador catalogo */
+        .grid-ed-ant-catalogo-icon-a,
+        .grid-ed-ant-catalogo-icon-b,
+        .grid-ed-ant-catalogo-icon-c {
+            /*margin-bottom: calc(0px -  var(--unidade));*/
+        }
+        
         .sessao-ed-anteriores-catalogos-antigos { /*última sessao, apenas Catalogos */
             border-top: 2px solid var(--color-azul-principal);
             padding-top: 16px;
@@ -219,32 +410,89 @@ li {
         .sessao-ed-anteriores-catalogos-antigos ol {
             margin-top: 0px;
         }
-/* TELAS PEQUENAS */
-@media screen and (max-width:560px) {
-    
-    .sessao-ed-anteriores-grid-a,
-    .sessao-ed-anteriores-grid-b,
-    .sessao-ed-anteriores-catalogos-antigos {
-        display: block;
-    }
 
-    .sessao-ed-anteriores-grid-a h3,
-    .sessao-ed-anteriores-grid-b h3 {
-        margin-top: var(--font-size-3);
-    }
         .catalogo-icon svg {
-            margin-top: var(--unit-1);
+            margin-top: var(--unidade);
         }
 
         .catalogo-icon {
             display: flex;
         }
+
+
+
+
+
+
+
+
+
+.grid-ed-ant-section-19,
+.grid-ed-ant-section-20,
+.grid-ed-ant-section-21,
+.grid-ed-ant-section-22 {
+    /*display: none;*/
 }
 
+
+
+
+
+
+
+
+
+/* Grid - 3 colunas */
+@media screen and (min-width: 720px) {
+
+    .grid-ed-ant-titulo-edicao,
+    .grid-ed-ant-titulo-principal-a,
+    .grid-ed-ant-titulo-principal-b,
+    .grid-ed-ant-titulo-principal-c,
+
+    .grid-ed-ant-catalogo-icon-a svg,
+    .grid-ed-ant-catalogo-icon-b svg,
+    .grid-ed-ant-catalogo-icon-c svg {
+        margin-left:
+        calc(50% - ((var(--width-catalogo) + var(--unidade))/ 2));
+        margin-right: 20px;
+    }
+
+
+    .grid-ed-ant-section-24 .linha-divisao,
+    .grid-ed-ant-section-23 .linha-divisao {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* TELAS LARGAS */
-@media screen and (min-width:1036px) {
-    .main-ed-anteriores {
-        min-width: 972px;
+@media screen and (min-width:960px) {
+    .main-grid {
+        /*grid-template-areas:*/
+        /*"main-ed-anteriores"*/
     }
 
     .titulo-artistas-a h3,
@@ -255,23 +503,14 @@ li {
         margin-bottom: 0px;
     }
 
-    /* ab ocupa 3 colunas
-    .. a  ocupa 2 colunas */
-    .lista-artistas-ab { column-count: 3; }
-    .lista-artistas-a { column-count: 2; }
-    .lista-artistas-ab,
-    .lista-artistas-a { /* Zerar gap */
-        column-gap: 0px;
-    }
 
-    .sessao-ed-anteriores-grid-a,
+
+
+
+    /* .sessao-ed-anteriores-grid-a,
     .sessao-ed-anteriores-grid-b {
-        padding-left: var(--unit-1);
-    }
-    .sessao-ed-anteriores-grid-a,
-    .sessao-ed-anteriores-grid-b {
-        grid-template-columns: calc(var(--width-catalogo) + (2 * var(--unit-1))) 1fr 1fr 1fr;
-    }
+        grid-template-columns: calc(var(--width-catalogo) + (2 * var(--unidade))) 1fr 1fr 1fr;
+    } */
 
 
     li.letter-spacing { letter-spacing: -1px; }

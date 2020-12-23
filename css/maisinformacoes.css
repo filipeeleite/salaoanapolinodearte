@@ -1,15 +1,62 @@
+/* Option1 - mais-informacoes
+/* Option2 - inscrever
+/* Option3 - ed-anteriores */
+
+.option1 {
+    border-top: var(--border-indicador) solid var(--color-azul-principal);
+    border-bottom: var(--border-indicador) solid var(--color-base-clara);
+}
+@media screen and (max-width:600px) {
+    .option1 {
+        border-top: none;
+        border-bottom: none;
+    }
+    #option1 {
+        background-color: var(--color-azul-hover);
+    }
+
+    .menu-right {
+        border-top: var(--border-indicador) solid var(--color-azul-principal);
+        border-bottom: var(--border-indicador) solid var(--color-base-clara);
+    }
+}
+
+.main-grid {
+    grid-template-areas:
+    "main-info"
+    "main-publicacoes"
+    "main-sobregaleria"
+    "main-equipe-tecnica"
+}
+@media screen and (min-width:800px) {
+    .main-grid {
+        grid-template-areas:
+        "main-info           main-sobregaleria"
+        "main-equipe-tecnica main-publicacoes"
+        "main-equipe-tecnica .";
+        grid-template-columns: 2fr 1fr; /* 1036 */
+    }
+    .main-grid {
+        max-width: 960px;
+    }
+}
+
 /* Tipografia */
-/* Lista nome das pessoas edição atual */
+.main-equipe-tecnica h3 { color: var(--color-azul-principal); }
+
+h3 {
+font-size: var(--font-size-3);
+font-weight: 500;
+text-decoration: none;
+}
+
 li {
     font-family: var(--font-normal);
-    font-size: var(--font-size-1); }
+    font-size: var(--font-size-p); }
 
 h5 { /* Para tirar espaçamento no topo - Equipe Técnica */
     margin-top: 0;
 }
-
-
-
 /*.main-center: */
 /*      MAIN-INFO */
 /*      MAIN-GALERIA-FOTOS */
@@ -32,7 +79,7 @@ img.banner-info {
     .galeria-item {
         max-width: 100%;
         height: 100%;
-        margin-bottom: var(--unit-1);
+        margin-bottom: var(--unidade);
     }
         .galeria-item > img {
             width: 100%;
@@ -68,23 +115,11 @@ img.banner-info {
                 50% { margin-top: -50px; }
                 100% { margin-top: -80px; }
             }
-
-
             .main-equipe-tecnica p {
                 margin-top: 0px;
             }
 
-/* TELAS PEQUENAS */
-@media screen and (max-width:560px) {
-    .galeria-fotos {
-        display: block;
-    }
-
-}
-
 @media screen and (min-width:1036px) {
-    .main-ed-anteriores {
-        min-width: 972px;
-    }
+
 
 }

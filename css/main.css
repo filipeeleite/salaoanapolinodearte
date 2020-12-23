@@ -1,14 +1,35 @@
+/* Grid areas */
+.main-texto               { grid-area: main-texto }
+.main-calendario          { grid-area: main-calendario }
+
+.main-info                { grid-area: main-info }
+.main-galeria-fotos       { grid-area: main-galeria-fotos }
+.main-publicacoes         { grid-area: main-publicacoes }
+.main-sobregaleria        { grid-area: main-sobregaleria }
+.main-equipe-tecnica      { grid-area: main-equipe-tecnica }
+
+.main-inscricao-etapa1    { grid-area: main-inscricao }
+.main-inscricao-downloads { grid-area: main-inscricao-downloads }
+
+.main-ed-anteriores       { grid-area: main-ed-anteriores }
+
 /* VARIÁVEIS */
 :root {
     /* UNIDADES: MARGINS E PADDINGS */
-    --unit-1: 16px;
-    --unit-05: 10px;
-    --height-header: 80px;
-    --border-indicador: 3px;
-    --height-footer: 128px;
+    --unidade: 16px;
+    --unit-05: 10px; /* descontinuar */
+
     --unit-min: 560px;
     --unit-ref: 640px;
     --unit-max: 1004px;
+
+    --height-menu-pc: 80px;
+    --height-menu-opened-mobile: 150px;
+    --border-indicador: 3px;
+
+    --height-footer-pc: 128px;
+    --height-footer-mobile: 270px;
+
     /* CORES */
     --color-azul-principal: #085273;
     --color-outline-menu-bar: #0b415a;
@@ -21,6 +42,10 @@
     --color-outline-folha: rgb(190, 190, 190);
     --box-shadow-folha: 0 0 68px -48px black;
 }
+
+* {
+    /* outline: 1px solid blue; */
+}
 /* GERAL */
 html {
     height: 100%;
@@ -30,67 +55,69 @@ html {
 body, img { display: block; margin: 0;}
 
 /* Mobiles com notch */
-body { background-color: var(--color-azul-principal);}
+body { background-color: var(--color-azul-principal); }
 
-.linha-divisao {
+/* Clase antiga linha-divisao */
+.grid-ed-ant-linha-divisao {
     height: 2px;
     width: 100%;
     background-color: var(--color-azul-principal);
 }
 
-/* -------------------------------------------------------------- --
-.. ...............|.<-..........(GRID AREAS NO)................-> ..
-.. PÁGINA:........|.main-center (  .MAIN-GRID ) .main-right ..... ..
-.. ============================================================== ==
-.. INDEX .........|.main-texto ................ .main-calendario  ..
-..
-.. +INFO .........|.main-info ................. .main-publicacoes ..
-.. ...............|.galeria-fotos.............. .main-sobre ..... ..
-.. 
-.. INSCRICAO .....|.main-inscricao .............................. ..
-..
-.. ED-ANTERIORES .|.main-ed-anteriores .......................... ..
--- -------------------------------------------------------------- */
-
 main {
-    min-height: calc(100vh - calc(var(--height-header)) - var(--height-footer));
-    padding: 0 var(--unit-05); /* [<--- e --->] */
+    background-size: 25vw;
+    min-height:
+    calc(100vh - (var(--height-menu-opened-mobile) + var(--height-footer-mobile)));
+    /*padding: 0 var(--unit-05); /* [<--- e --->] */
 }
-
+    /* Espacamento do main-grid entre header e footer */
     .main-grid {
-        padding: var(--unit-05) 0;
+        padding-top: var(--unidade);
+        padding-bottom: var(--unidade);
+
+        width: 320px;
+        /* padding: var(--unit-05) 0; */
         transition: padding 3s ease;
-        width: 100%;
-        max-width: 1004px;
         margin: 0 auto;
         display: grid;
-        grid-template-areas: "center";
-        grid-gap: var(--unit-05);
+        grid-gap: var(--unidade);
         min-height: calc(100% - 20px);
     }
-    /* Sem setar,
-    renderizam na ordem:
-     | .main-center
-     | (grid-gap)
-     V .main-right */
 
-        .main-center,
-        .main-right {
-            min-width: 300px;
-            width: 100%;
-            max-width: 672px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            /* Para quando estiverem assim:
-            .. ...... ^ .......... ^ ....
-            .. ...... | .......... | ....
-            .. .. main-center main-right.
-            .. ...... | .......... | ....
-            .. ...... v .......... v ..*/
-        }
+    /* Cada bloco de todas as páginas */
+    .main-texto,
+    .main-calendario,
+    .main-info,
+    .main-galeria-fotos,
+    .main-publicacoes,
+    .main-sobregaleria,
+    .main-equipe-tecnica,
+    .main-inscricao-etapa1,
+    .main-downloads,
+    .main-ed-anteriores {
+        background: white;
+    }
+
+    
+    h1 {
+        margin-left: var(--unidade);
+    }
+    /* Margens em cima e baixo - h1 e imagem de cada bloco */
+    h1 {
+        margin-top: calc((var(--unidade) * 1.6) - 12px); /* ajuste de baseline*/
+        margin-bottom: calc(var(--unidade) * 1.6);
+    }
+    img {
+        margin-top: calc(var(--unidade) * 1.6);
+        margin-bottom: calc(var(--unidade) * 1.6);
+    }
+
+            .main-ed-anteriores {
+                width: 100%;
+            }
+
+    
+
             /* Setando toda div que tem conteúdo para ocupar a altura max possivel na main-grid */
             .main-texto,
             .main-calendario,
@@ -99,44 +126,18 @@ main {
             .main-publicacoes,
             .main-sobregaleria,
         /*  .main-inscricao-etapa1, */
-        /* .main-downloads, */
+            .main-downloads,
             .main-ed-anteriores {
                 height: 100%;
             }
 
             /* BORDA INTERNA */
-            .main-center > div, /* Aplicando em toda div filha de main-center e de main-right */
-            .main-right > div:not(.main-calendario) { /* Com excessao do calendario */
-                padding-left: var(--unit-1);
-                padding-right: var(--unit-1);
-            }
-            .main-center > div,
-            .main-right > div {
-                padding-top: 1px;
-                padding-bottom: 1px;
-            }
-            /* Espacamento no topo de todo primeiro elemento das folhas */
-            .main-texto h2:first-of-type,
-            .main-texto img:first-of-type,
-            .main-calendario h2:first-of-type,
-            .main-calendario img:first-of-type,
+            /* .main-center > div, /* Aplicando em toda div filha de main-center e de main-right 
+            .main-right > div:not(.main-calendario) { /* Com excessao do calendario
+                padding-left: var(--unidade);
+                padding-right: var(--unidade);
+            } */
 
-            .main-info h2:first-of-type,
-            .main-info img:first-of-type,
-            .main-galeria-fotos h2:first-of-type,
-            .main-publicacoes h2:first-of-type,
-            .main-sobregaleria h2:first-of-type,
-            .main-sobregaleria img:first-of-type,
-            .main-equipe-tecnica h2:first-of-type,
-
-            .main-inscricao-etapa1 h2:first-of-type,
-            .main-inscricao-etapa1 img:first-of-type,
-            .main-downloads h2:first-of-type,
-
-            .main-ed-anteriores h2:first-of-type,
-            .main-ed-anteriores .submenu-ed-anteriores {
-                margin-top: var(--unit-1)
-            }
  
             /* ESPACAMENTO */
             /* Aplicando em baixo entre as divs
@@ -152,13 +153,6 @@ main {
                 outline: 1px solid var(--color-outline-folha);
                 box-shadow: var(--box-shadow-folha);
             }
-
-    /* Em 1004px vai para lá [---------->] */
-    .main-sobregaleria,
-    .main-calendario,
-    .main-publicacoes {
-        max-width: 672px;
-    }
     /* .MAIN-CALENDARIO ...... */
 
         /* Barra ao lado da data */
@@ -170,49 +164,53 @@ main {
         .main-calendario > div:nth-child(4) {
             border-left: var(--border-indicador) solid var(--color-azul-principal);
         }
+        
+/* Mobile
+@media screen and (max-width:620px) {
 
-/* TELAS PEQUENAS */
-@media screen and (max-width:560px) {
 
-    /* MAIN */
-    main {
-        background-size: 25vw;
-        min-height: 0;
-        /* height: 100%; */
-    }
-
-        /* Espaçar 1a div para ver o background */
+        Espaçar 1a div para ver o background
         .main-grid {
+            max-width: 300px;
             padding-top: 40px;
             transition: 2s padding-top ease-in-out;
         }
 
             .submenu-ed-anteriores {
                 top: calc(50vh - 180px);
-            }
+            } */
 
+/* Tela média */
+@media screen and (min-width:600px) {
+    main {
+        min-height: calc(100vh - calc(var(--height-menu-pc)) - var(--height-footer-pc));
+    }
+    .main-grid {
+        width: calc(100vw - 80px);
+    }
+    .main-ed-anteriores {
+        /*width: calc(100vw - 80px - (2 * var(--unidade)));*/
+    }
 }
 
-@media screen and (min-width:1036px) {
+
+
+
+
+
+/* Telas largas */
+@media screen and (min-width:960px) {
 
     /* MAIN */
     main {
         /* display: flex;
         align-items: stretch; */
-        min-height: calc(100vh - 80px - 128px);
+        /*min-height: calc(100vh - 80px - 128px);*/
     }
         .main-grid {
-            min-height: calc(100vh - 80px - 128px - 20px);
-            grid-template-areas:
-            "center right";
-            grid-template-columns: 672px 1fr;
-            grid-row-gap: 10px;
+            max-width: 960px;
         }
-            .main-center { grid-area: center; }
-            .main-right { grid-area: right; }
 }
-
-
-#ed-18 {
-    display: none;
-}
+            .main-ed-anteriores {
+                margin: 0 auto;
+            }
