@@ -32,6 +32,7 @@
     .main-grid {
         grid-template-areas:
         "main-info           main-sobregaleria"
+        "main-equipe-tecnica main-sobregaleria"
         "main-equipe-tecnica main-publicacoes"
         "main-equipe-tecnica .";
         grid-template-columns: 2fr 1fr; /* 1036 */

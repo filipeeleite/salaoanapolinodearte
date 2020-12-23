@@ -96,6 +96,8 @@ main {
     .main-downloads,
     .main-ed-anteriores {
         background: white;
+
+        height: 100%;
     }
 
     
@@ -186,7 +188,7 @@ main {
         min-height: calc(100vh - calc(var(--height-menu-pc)) - var(--height-footer-pc));
     }
     .main-grid {
-        width: calc(100vw - 80px);
+        width: calc(100vw - 180px);
     }
     .main-ed-anteriores {
         /*width: calc(100vw - 80px - (2 * var(--unidade)));*/
