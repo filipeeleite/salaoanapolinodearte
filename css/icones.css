@@ -1,28 +1,35 @@
 /* Específica para ícones e animações deles */
 
-.arquivo-icon {
-    margin-left: var(--unidade);
+svg.arquivo-icon.icon {
+    width: 48px;
 }
 
-
-/* ARQUIVO */
-div.arquivo {
-    max-width: 100%;
-    display: flex;
-    align-items: center;
+.arquivo-icon.icon {
     margin-top: var(--unidade);
-    }
+}
 
-    /*Icone arquivo pag + informacoes */
-    div.arquivo > div {
+    /* --- SVG ARQUIVO ICON --- */
+
+    .arquivo-item div {
+        width: 48px;
         display: flex;
         flex-direction: column;
+        align-items: center; /* Alinhar indicador junto*/
+
+        margin-left: var(--unidade);
+    }
+    .arquivo-item {
+        display: flex;
+        flex-direction: row;
         align-items: center;
     }
-    /* --- SVG ARQUIVO ICON --- */
-    svg.arquivo-icon {
-        width: 48px;
+
+        .arquivo-icon.icon {
         }
+
+
+
+
         /* ESTILIZAÇÃO */
         svg .fundo { fill: red; }
         svg .dobra { fill: rgb(167, 0, 0); /* Vermelho um pouco mais escuro */
@@ -46,6 +53,8 @@ div.arquivo {
         /* INDICADOR */
         svg.arquivo-icon.indicador {
             width: 15px;
+
+            margin-bottom: calc(var(--unidade) - 12px);
         }
         svg.arquivo-icon polyline.indicador {
             fill: none;

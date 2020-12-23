@@ -106,6 +106,14 @@ ol {
 
 
 /*Submenu Edicoes Anteriores */
+    #shortcut-ed-18,
+    #shortcut-ed-17,
+    #shortcut-ed-14 {   /*ocultar as opções de
+                        /* edicoes não prontas ainda */
+        display: none;
+}
+
+
 .submenu-ed-anteriores a {
     font-family: var(--font-normal);
     font-size: 14px;
@@ -225,6 +233,12 @@ div ~ section > .linha-divisao {
             flex-direction: column;
             align-items: flex-end; 
             }
+
+        @media screen and (max-width:600px) {
+            .submenu-ed-anteriores {
+                top: calc(50vh - ((6 * 40px)/ 2));
+            }
+        }
 
             /* OS LINKS QUE ESTÃO DENTRO DESTE MENU */
             .submenu-ed-anteriores a {
