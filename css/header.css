@@ -1,32 +1,34 @@
-:root {
-    /*--height-menu-opened-mobile: 150px;*/
-    --alinhamento-menu-y: 7px;
-}
 /* <header>
      < .menu-bar>
-       <nav .menu-left>
+       <nav.menu-left>
        <nav.menu-right> */
 
 header {
+    width: 100%;
+    height: var(--height-header-expanded);
+
     margin: 0 auto;
-    height: var(--height-menu-opened-mobile);
     transition: height 2s ease;
 
-    /*transition: height 2s ease-in-out;*/
-    background-color: var(--color-azul-principal);
+    background-color: var(--color-main-primary);
 }
     .menu-bar {
-        width: 320px;
+        width: calc(var(--width-mobile) - 2 * var(--margem));
         display: flex;                        /* <nav> para os lados    */
         align-items: center;                  /* centralizar elas ^ e V */
         /*transition: all 2s ease-in-out;*/
         height: 100%;
-        margin: 0 auto;                       /* --> |320px| <-- center */
+        margin: 0 auto;                       /* --> |--width-mobile| <-- center */
         }
 
+        /* Proporção entre cada lado do menu */
+        .menu-left  { width: 100%; }
+        .menu-right { width: 100%; }
+
+        /* Altura deles */
         .menu-left,
         .menu-right {
-            width: 50%;
+            height: calc(100% - (2 * var(--border-indicador)));
         }
         .menu-left {
             display: flex;
@@ -38,18 +40,11 @@ header {
             transition: display 3s ease;
         }
 
-
-        .menu-left,
-        .menu-right {
-            /*outline: 1px solid white;*/
-            height: calc(100% - (2 * var(--border-indicador)));
-        }
             .menu-left a {
                 display: flex;
                 justify-content: center;
-                width:100%;
+                width: 100%;
                 height: 100%;
-                /*background-color: green;*/
             }
             .menu-right a {
                 display: flex;
@@ -57,42 +52,40 @@ header {
                 align-items: center;
             }
 
+            .menu-left a {
+                padding: 0 var(--margem);
+            }
+
             .menu-left a,
             .menu-right a {
-                padding: 0 var(--unidade);
-               
-
+                
                 background-color: unset;
                 transition: background-color 2s ease;
             }
             .menu-right a {
-                height: calc((var(--height-menu-opened-mobile) / 3) - ((2 * var(--border-indicador) / 3)));
+                height:
+                calc((var(--height-header-expanded) / 3) - ((2 * var(--border-indicador) / 3)));
                 /* = (height máx) - (height que --border-indicador ocupam / # de options) */
-                /* transition: height 2s ease; */
 
-                width: calc((320px / 2) - (2 * var(--unidade)));
+                /*width: calc((var(--width-mobile) / 2) - (2 * var(--margem)));*/
+                width: 100%;
             }
 
             .menu-left a:hover,
             .menu-right a:hover {
-                background-color: var(--color-azul-hover);
+                background-color: var(--color-main-primary-hover);
                 transition: background-color 2s ease;
             }
                 .option1, .option2, .option3 {
                     width: 100%;
-
                 }
 
                 .menu-right p { /* Cada <p> */
                     margin: auto 0 auto auto;
+                    padding-right: var(--margem);
                 }
 
-
-
-
-
-
-            a.menu-icon { /* Icone do Menu */
+            a.menu-icon { /* Icone do Menu - Em desenvolvimento */
                     display: none;
                 }
 
@@ -100,20 +93,18 @@ header {
                 fill-rule: evenodd;
                 clip-rule: evenodd;
                 width: 100%;
-                /*height: 48px;*/
+                /* Tamanho se define pelo width do menu */
                 }
                 .logo-norte,
                 .logo-nordeste,
                 .logo-centro-oeste,
                 .logo-sudeste,
                 .logo-sul { /* Mapas - Linhas */
-                    stroke: var(--color-laranja-principal);
+                    fill: none;
+                    stroke: var(--color-main-secondary);
                     stroke-width: 11;
                 }
-                .fill_1 { /* Contornos */
-                    fill: none;
-                }
-                .fill_2 { /* Título na logo */
+                .logo-tipografia {
                     fill: white;
                 }
 
@@ -122,38 +113,23 @@ header {
             a.menu-option {
                 color: white;
             }
-            a.menu-option:hover {
-                /*background-color: red;*/
-            }
+
                 .hover-menu {
                     display: flex;
                     align-items: center;
                     height: 100%;
                 }
 
-                    p#option1 {
-
-                    }
-                    p#option2 {
-
-                    }
-                    p#option3 {
-
-                    }
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 640px) {
 
     header {
-        height: var(--height-menu-pc);
-        /*transition: height 2s ease-in-out;*/
+        height: var(--height-header-desktop);
     }
-
         .menu-bar {
             justify-content: space-between;
-            width: calc(100vw - 180px);
+            width: calc(100% - 18 * var(--margem));
             height: 100%;
         }
-
             /* Cada pagina substitui este valor se tiver o border no menu */
             .menu-left,
             .menu-right {
@@ -162,15 +138,14 @@ header {
             /* revisar */
             .menu-left {
                 display: flex;
-                width: 160px;
+                width: var(--width-menu-left-desktop);
 
                 flex-shrink: 0;
 
-                /*padding-right: var(--unidade); /* < ----- Espaço da logo */
-                /*padding-left: var(--unidade);  /* e ----> da logo salao  */
-
             }
-            .menu-left:hover { 
+            .menu-left:hover {
+                background-color: var(--color-main-primary-hover);
+                transition: background-color 2s ease;
             }
                 .menu-left a {
                     display: flex;
@@ -180,13 +155,12 @@ header {
                     padding: 0;
                 }
                     .logo-salao {
-                        width: calc(100% - 2 * var(--unidade));
+                        width: calc(100% - 2 * var(--margem));
                         height: 100%;
                     }
             
-
             .menu-right {
-                width: 360px;
+                width: var(--width-menu-right-desktop);
                 height: 100%;
 
                 display: flex;
@@ -200,35 +174,17 @@ header {
                 }
                 .menu-right a {
                     width: calc(100% / 3);
-                    /* transition: height 2s ease;  */
                     height: 100%;
-                    /*height: calc((100%) - (2 * var(--border-indicador)))*/;
                 }
 
-
-
-                a.menu-option {
-                    
-                }
-
-                    .menu-right p { /* options no menu */
-                        margin: auto;
-                    }    
-        
-
-
-
-            .option1,
-            .option2,
-            .option3 {
-                /*width: calc(100% - 2* var(--unidade));*/
-            }
-            
-        }
-
+                .menu-right p { /* options no menu */
+                    margin: auto;
+                    padding: unset;
+                }    
+}
 
 @media screen and (min-width: 960px) {
     .menu-bar {
-        max-width: 960px;
+        max-width: var(--width-desktop);
     }
 }

@@ -1,74 +1,96 @@
-/* --height-footer-pc: 128px;
---height-footer-mobile: 270px; */
-
-footer {
-    background-color: var(--color-base-clara);
-    width: 100%;
-    height: var(--height-footer-pc);
-    outline: var(--color-outline-folha);
-    }
-
-    div.footer {
-        max-width: 1024px;
-        margin: 0 auto;
-        padding: 10px 0;
-        }
-
-        div.logomarcas {
-            display: flex;
-            justify-content: space-evenly;
-            max-width: 512px;
-            margin: 0 auto auto auto;
-            }
-            div.realizacao {
-                max-width: 250px;
-                margin: 0 auto;
-                }
-                p.logomarcas-h6 { /* Realizacao / Apresentacao */
-                    text-align: center;
-                }
-                div.footer-logos { /*DIV DAS LOGOS*/
-                        display: flex;
-                        justify-content: space-between;
-                        flex-direction: row;
-                        margin: 10px 0;
-                    }
-                    img.footer-logo {
-                        margin: 0 10px;
-                        height: 40px;
-                    }
-            div.apresentacao {
-                max-width: 250px;
-                margin: 0 auto;
-            }
-
-        p.logomarcas,
-        p.rodape-pc,
-        p.rodape-mobile {
-            margin: 0;
-            padding: 0 var(--unit-05);
-        }
-        p.rodape-mobile { /* Só aparece vw menor que 560vw */
-            display: none;
-        }
-            
-        
-/* TELAS PEQUENAS */
-@media screen and (max-width:600px) {
-    footer {
-        height: var(--height-footer-mobile);
-    }
-
-    div.logomarcas { display: block; }
-
-    div.footer-logos { justify-content: space-evenly; }
-
-    /* Exibir ropabe mobile */
-    p.rodape-mobile { display: block; }
-    /*Ocultar rodape para pc*/
-    p.rodape-pc { display: none; }
+footer img {
+    margin-top: 0;
 }
 
-@media screen and (min-width:1036px) {
-    /* Reservado */
+/* === Tipografia === */
+/* Até 640px wide - Ocultar "Este projeto foi..." para pc */
+p.rodape-desktop { display: none; }
+
+p.rodape-mobile,
+p.rodape-desktop {
+    margin-bottom: auto;
+}
+div.apresentacao {
+    margin-top: auto;
+}
+
+p.logomarcas,
+p.rodape-desktop,
+p.rodape-mobile {
+    margin: var(--margem) auto;
+}
+
+/* === Footer === */
+footer {
+    width: 100%;
+    height: var(--height-footer-mobile);
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--color-bright);
+}
+
+    .logomarcas {
+        width: 100%;
+        max-width: 320px;
+        margin: auto auto 0 auto;
+    }
+
+.footer-logos {
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer-logo {
+    height: 40px;
+}
+
+
+
+
+@media screen and (min-width: 640px) {
+
+    /* Tipografia - Exibir "Este projeto foi..." para pc */
+    p.rodape-desktop { display: block; }
+    p.rodape-mobile { display: none; }
+
+    footer {
+        width: calc(100% - 18 * var(--margem));
+        height: 100%;
+
+        padding-left: calc(9 * var(--margem));
+        padding-right: calc(9 * var(--margem));
+        
+        height: var(--height-footer-desktop);
+
+        flex-direction: column;
+    }
+    .logomarcas {
+        display: flex;
+        justify-content: center;
+        max-width: unset;
+        }
+        div.realizacao {
+            max-width: 250px;
+            margin: 0 auto;
+            }
+            div.footer-logos { /*DIV DAS LOGOS*/
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    margin: 10px 0;
+                }
+                img.footer-logo {
+                    margin: 0 10px;
+                    height: 40px;
+                }
+        div.apresentacao {
+            max-width: 250px;
+            margin: 0 auto;
+        }
+    .rodape-desktop,
+    .rodape-mobile {
+        margin: auto;
+    }
+
 }

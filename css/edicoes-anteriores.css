@@ -1,21 +1,21 @@
 .option3 { 
     border-top: var(--border-indicador) solid var(--color-azul-principal);
-    border-bottom: var(--border-indicador) solid var(--color-base-clara);
+    border-bottom: var(--border-indicador) solid var(--color-bright);
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:640px) {
 
     .option3 {
         border-top: none;
         border-bottom: none;
     }
     #option3 {
-        background-color: var(--color-azul-hover);
+        background-color: var(--color-main-primary-hover);
     }
     
     .menu-right {
-        border-top: var(--border-indicador) solid var(--color-azul-principal);
-        border-bottom: var(--border-indicador) solid var(--color-base-clara);
+        border-top: var(--border-indicador) solid var(--color-main-primary);
+        border-bottom: var(--border-indicador) solid var(--color-bright);
     }
 
 }
@@ -50,7 +50,7 @@
 /* Edições Anteriores */
 h1 {
     /*outline: 1px solid blue;*/
-    margin-right: calc(2 * var(--unidade) + 40px);
+    margin-right: calc(2 * var(--margem) + 40px);
 }
 h2 { margin-left: unset;
 }
@@ -94,29 +94,19 @@ ol {
 .grid-ed-ant-catalogo-icon-c svg {
     margin: unset;
 }
-/*
-.grid-ed-ant-lista-1 ol,
-.grid-ed-ant-lista-2 ol,
-.grid-ed-ant-lista-3 ol,
-.grid-ed-ant-lista-4 ol,
-.grid-ed-ant-lista-5 ol,
-.grid-ed-ant-lista-6 ol {
-    color: blue;
-}*/
 
-
-/*Submenu Edicoes Anteriores */
+/* Em desenvolvimento: Ocultando opcoes de edições não prontas ainda */
     #shortcut-ed-18,
     #shortcut-ed-17,
-    #shortcut-ed-14 {   /*ocultar as opções de
-                        /* edicoes não prontas ainda */
+    #shortcut-ed-14 {
         display: none;
 }
 
-
+/* Tipografia Submenu */
 .submenu-ed-anteriores a {
-    font-family: var(--font-normal);
-    font-size: 14px;
+    font-family: var(--font-family-standard);
+    text-decoration: none;
+    font-size: calc(var(--font-size-p) * 1);
     color: white;
     }
     /* Hover */
@@ -125,13 +115,9 @@ ol {
     div#shortcut-ed-22:hover,
     div#shortcut-ed-21:hover,
     div#shortcut-ed-20:hover,
-    div#shortcut-ed-19:hover,
-    div#shortcut-ed-18:hover,
-    div#shortcut-ed-17:hover,
-    div#shortcut-ed-14:hover {
+    div#shortcut-ed-19:hover {
         font-size: 22px;
     }
-
 
 /* h3 */
 .grid-ed-ant-subtitulo-1 h3,
@@ -153,14 +139,14 @@ ol {
 .grid-ed-ant-lista-6 h3,
 
 h3 {
-font-family: var(--font-normal);
+font-family: var(--font-family-standard);
 font-size: var(--font-size-3);
 font-weight: 500;
 text-decoration: none;
 }
 /* Nome das pessoas */    
 li {
-    font-family: var(--font-normal);
+    font-family: var(--font-family-standard);
     font-size: var(--font-size-p);
 }
 
@@ -181,7 +167,7 @@ li {
 .grid-ed-ant-section-24 .linha-divisao {
     height: 1px;
     opacity: 0.5;
-    margin-top: var(--unidade);
+    margin-top: var(--margem);
 }
 
 
@@ -203,10 +189,10 @@ div ~ section > .linha-divisao,
 .grid-ed-ant-section-21,
 .grid-ed-ant-section-20,
 .grid-ed-ant-section-19 {
-    margin-left: var(--unidade);
+    margin-left: var(--margem);
 }
 div ~ section > .linha-divisao {
-    width: calc(100% - (1 * var(--unidade)));
+    width: calc(100% - (1 * var(--margem)));
 }
 
 
@@ -227,14 +213,14 @@ div ~ section > .linha-divisao {
         .submenu-ed-anteriores {
             float: right;
             position: sticky;
-            top: var(--unidade);
-            margin: var(--unidade);
+            top: var(--margem);
+            margin: var(--margem);
             display: flex;
             flex-direction: column;
             align-items: flex-end; 
             }
 
-        @media screen and (max-width:600px) {
+        @media screen and (max-width:640px) {
             .submenu-ed-anteriores {
                 top: calc(50vh - ((6 * 40px)/ 2));
             }
@@ -289,16 +275,16 @@ div ~ section > .linha-divisao {
         /* SESSOES EDICOES ANTERIORES */
         .main-ed-anteriores section {
             /* Margem submenu*/
-            margin-right: calc(var(--size-submenu-ed-ant) + 2 * var(--unidade));
+            margin-right: calc(var(--size-submenu-ed-ant) + 2 * var(--margem));
         }
             .sessao-ed-anteriores-grid-a h3,
             .sessao-ed-anteriores-grid-b h3 {
-                /*margin-top: calc(var(--unidade) + 10px);*/
+                /*margin-top: calc(var(--margem) + 10px);*/
                 margin-bottom: 0;
             }
             .main-ed-anteriores ~ section > h3 {
                 margin-top: 0;
-                padding-top: calc(var(--unidade) * 3);
+                padding-top: calc(var(--margem) * 3);
                 margin-bottom: var(--unit-05);
             }
             /* .catalogo-icon div:nth-child(2) {
@@ -328,96 +314,9 @@ div ~ section > .linha-divisao {
             flex-direction: column;
             justify-content: end;
         }
-/* #### Alinhar margem no alinhamento do elemento dentro de cada grid-area */
-        .grid-ed-ant-titulo-principal-a ~ h3,
-        .grid-ed-ant-titulo-principal-b h3,
-        .grid-ed-ant-titulo-principal-c h3,
-        .grid-ed-ant-titulo-principal-a li:first-child,
-        .grid-ed-ant-titulo-principal-b li:first-child,
-        .grid-ed-ant-titulo-principal-c li:first-child,
-        .grid-ed-ant-titulo-principal-a p:first-child,
-        .grid-ed-ant-titulo-principal-b p:first-child,
-        .grid-ed-ant-titulo-principal-c p:first-child,
-
-        .grid-ed-ant-subtitulo-1 h3:first-child,
-        .grid-ed-ant-subtitulo-2 h3:first-child,
-        .grid-ed-ant-subtitulo-3 h3:first-child,
-        .grid-ed-ant-subtitulo-4 h3:first-child,
-        .grid-ed-ant-subtitulo-5 h3:first-child,
-        .grid-ed-ant-subtitulo-6 h3:first-child,
-
-        .grid-ed-ant-lista-1 > :first-child,
-        .grid-ed-ant-lista-2 > :first-child,
-        .grid-ed-ant-lista-3 > :first-child,
-        .grid-ed-ant-lista-4 > :first-child,
-        .grid-ed-ant-lista-5 > :first-child,
-        .grid-ed-ant-lista-6 > :first-child {
-            /*color: green;*/
-        }        
-
-
-/* #### Limite do último elemento dentro de cada grid-area */
-        .grid-ed-ant-titulo-principal-a h3:last-child,
-        .grid-ed-ant-titulo-principal-b h3:last-child,
-        .grid-ed-ant-titulo-principal-c h3:last-child,
-        .grid-ed-ant-titulo-principal-a li:last-child,
-        .grid-ed-ant-titulo-principal-b li:last-child,
-        .grid-ed-ant-titulo-principal-c li:last-child,
-        .grid-ed-ant-titulo-principal-a p:last-child,
-        .grid-ed-ant-titulo-principal-b p:last-child,
-        .grid-ed-ant-titulo-principal-c p:last-child,
-
-        .grid-ed-ant-subtitulo-1 h3:last-child,
-        .grid-ed-ant-subtitulo-2 h3:last-child,
-        .grid-ed-ant-subtitulo-3 h3:last-child,
-        .grid-ed-ant-subtitulo-4 h3:last-child,
-        .grid-ed-ant-subtitulo-5 h3:last-child,
-        .grid-ed-ant-subtitulo-6 h3:last-child,
-
-        .grid-ed-ant-lista-1 li:last-child,
-        .grid-ed-ant-lista-2 li:last-child,
-        .grid-ed-ant-lista-3 li:last-child,
-        .grid-ed-ant-lista-4 li:last-child,
-        .grid-ed-ant-lista-5 li:last-child,
-        .grid-ed-ant-lista-6 li:last-child {
-            /*color: blue;*/
-            /* outline: 1px solid blue; */
-            /*margin-bottom: 0px;*/
-}
-
-
-/* #### Margens */
-/*      Margem positiva para cada grid-area */
-        .grid-ed-ant-titulo-principal-a,
-        .grid-ed-ant-titulo-principal-b,
-        .grid-ed-ant-titulo-principal-c,
-        .grid-ed-ant-catalogo-icon-a,
-        .grid-ed-ant-catalogo-icon-b,
-        .grid-ed-ant-catalogo-icon-c,
-        .grid-ed-ant-subtitulo-1,
-        .grid-ed-ant-subtitulo-2,
-        .grid-ed-ant-subtitulo-3,
-        .grid-ed-ant-subtitulo-4,
-        .grid-ed-ant-subtitulo-5,
-        .grid-ed-ant-subtitulo-6,
-        .grid-ed-ant-lista-1,
-        .grid-ed-ant-lista-2,
-        .grid-ed-ant-lista-3,
-        .grid-ed-ant-lista-4,
-        .grid-ed-ant-lista-5,
-        .grid-ed-ant-lista-6 {
-                /*margin-bottom: var(--unidade);*/
-                /*margin-right: var(--unidade);*/
-        }
-        /* Margem Negativa - indicador catalogo */
-        .grid-ed-ant-catalogo-icon-a,
-        .grid-ed-ant-catalogo-icon-b,
-        .grid-ed-ant-catalogo-icon-c {
-            /*margin-bottom: calc(0px -  var(--unidade));*/
-        }
         
         .sessao-ed-anteriores-catalogos-antigos { /*última sessao, apenas Catalogos */
-            border-top: 2px solid var(--color-azul-principal);
+            border-top: 2px solid var(--color-main-primary);
             padding-top: 16px;
             display: flex;
         }
@@ -425,38 +324,7 @@ div ~ section > .linha-divisao {
             margin-top: 0px;
         }
 
-        .catalogo-icon svg {
-            margin-top: var(--unidade);
-        }
-
-        .catalogo-icon {
-            display: flex;
-        }
-
-
-
-
-
-
-
-
-
-.grid-ed-ant-section-19,
-.grid-ed-ant-section-20,
-.grid-ed-ant-section-21,
-.grid-ed-ant-section-22 {
-    /*display: none;*/
-}
-
-
-
-
-
-
-
-
-
-/* Grid - 3 colunas */
+/* Dividir em 3 colunas */
 @media screen and (min-width: 720px) {
 
     .grid-ed-ant-titulo-edicao,
@@ -468,7 +336,7 @@ div ~ section > .linha-divisao {
     .grid-ed-ant-catalogo-icon-b svg,
     .grid-ed-ant-catalogo-icon-c svg {
         margin-left:
-        calc(50% - ((var(--width-catalogo) + var(--unidade))/ 2));
+        calc(50% - ((var(--width-catalogo) + var(--margem))/ 2));
         margin-right: 20px;
     }
 
@@ -523,7 +391,7 @@ div ~ section > .linha-divisao {
 
     /* .sessao-ed-anteriores-grid-a,
     .sessao-ed-anteriores-grid-b {
-        grid-template-columns: calc(var(--width-catalogo) + (2 * var(--unidade))) 1fr 1fr 1fr;
+        grid-template-columns: calc(var(--width-catalogo) + (2 * var(--margem))) 1fr 1fr 1fr;
     } */
 
 

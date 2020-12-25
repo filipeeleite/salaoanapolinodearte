@@ -1,26 +1,21 @@
 .menu-left {
     height: calc((100%) - (2 * var(--border-indicador)));
 
-    border-top: var(--border-indicador) solid var(--color-azul-principal);
-    border-bottom: var(--border-indicador) solid var(--color-base-clara);
+    /*Indicador página atual mobile*/
+    background-color: var(--color-main-primary-hover);
+    border-top: var(--border-indicador) solid var(--color-main-primary);
+    border-bottom: var(--border-indicador) solid var(--color-bright);
+}
+@media screen and (min-width: 640px) {
+    .menu-left{
+        background-color: var(--color-main-primary);
+    }
 }
 
-/* Calendario */
-/* h3, h4 {
-    margin-left: 0;
-} */
-
-
-.main-equipe-tecnica h3 { color: var(--color-azul-principal); }
-
-h3 {
-font-size: var(--font-size-3);
-font-weight: 500;
-text-decoration: none;
-}
+.main-equipe-tecnica h3 { color: var(--color-main-primary); }
 
 li {
-    font-family: var(--font-normal);
+    font-family: var(--font-family-standard);
     font-size: var(--font-size-p); }
 
 h5 { /* Para tirar espaçamento no topo - Equipe Técnica */
@@ -30,7 +25,6 @@ h5 { /* Para tirar espaçamento no topo - Equipe Técnica */
 img.banner-texto {
     width: 100%;
 }
-
 
 .main-grid {
     grid-template-areas:
@@ -49,15 +43,8 @@ img.banner-texto {
 }
 
 
-
-
-
 /* ESPACAMENTOS INTERNOS DAS FOLHAS */
 
-    /* Espaço na ultima linha */
-    /* .main-calendario > div:last-child > p {
-        padding-bottom: var(--unit-1);
-    } */
 /* Tirando nas que não precisam */
 div.main-publicacoes {
     padding: 0;

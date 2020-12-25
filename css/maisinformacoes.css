@@ -1,26 +1,52 @@
+/* === Barra do menu === */
 /* Option1 - mais-informacoes
 /* Option2 - inscrever
 /* Option3 - ed-anteriores */
-
 .option1 {
-    border-top: var(--border-indicador) solid var(--color-azul-principal);
-    border-bottom: var(--border-indicador) solid var(--color-base-clara);
+    border-top: var(--border-indicador) solid var(--color-main-primary);
+    border-bottom: var(--border-indicador) solid var(--color-bright);
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:640px) {
     .option1 {
         border-top: none;
         border-bottom: none;
     }
     #option1 {
-        background-color: var(--color-azul-hover);
+        background-color: var(--color-main-primary-hover);
     }
 
     .menu-right {
-        border-top: var(--border-indicador) solid var(--color-azul-principal);
-        border-bottom: var(--border-indicador) solid var(--color-base-clara);
+        border-top: var(--border-indicador) solid var(--color-main-primary);
+        border-bottom: var(--border-indicador) solid var(--color-bright);
     }
 }
 
+/* === Tipografia === */
+.main-equipe-tecnica p {
+    margin-top: 0px;
+}
+.interrogacao {
+    display: flex;
+    justify-content: flex-end;
+    height: 0px;
+}
+.interrogacao h1:first-of-type {
+    font-size: calc(var(--font-size-h1) * 3);
+    transform: rotate(15deg);
+    transform-origin: 0px 85px;
+    animation-name: interrogacao;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    text-shadow: white 1px 1px;
+}
+@keyframes interrogacao {
+    0% { margin-top: -80px; }
+    50% { margin-top: -50px; }
+    100% { margin-top: -80px; }
+}
+
+/* === Grid === */
 .main-grid {
     grid-template-areas:
     "main-info"
@@ -37,44 +63,20 @@
         grid-template-columns: 1fr 0.75fr; /* 1036 */
     }
     .main-grid {
-        max-width: 960px;
+        max-width: var(--width-desktop);
     }
 }
 
+/* === Elementos === */
 .main-info-video {
-    padding-top: var(--unidade);
+    padding-top: var(--margem);
 }
-
-/* Tipografia */
-/* .main-equipe-tecnica h3 { color: var(--color-azul-principal); }
-
-h3 {
-font-size: var(--font-size-3);
-font-weight: 500;
-text-decoration: none;
-}
-
-li {
-    font-family: var(--font-normal);
-    font-size: var(--font-size-p); }
-
-h5 { /* Para tirar espaçamento no topo - Equipe Técnica */
-    /* margin-top: 0;
-} */
-/*.main-center: */
-/*      MAIN-INFO */
-/*      MAIN-GALERIA-FOTOS */
-
-/* .main-right: */
-/*      MAIN-PUBLICACOES */
-/*      MAIN-SOBRE-GALERIA */
-/*      MAIN-EQUIPE-TECNICA */
 
 img.banner-info {
     width: 100%;
 }
 
-/* GALERIA DE FOTOS */
+/* === Galeria de Fotos - Em desenvolvimento === */
 .galeria-fotos {
     display: flex;
     max-width: 640px;
@@ -83,7 +85,7 @@ img.banner-info {
     .galeria-item {
         max-width: 100%;
         height: 100%;
-        margin-bottom: var(--unidade);
+        margin-bottom: var(--margem);
     }
         .galeria-item > img {
             width: 100%;
@@ -94,36 +96,3 @@ img.banner-info {
             filter: brightness(150%);
             transition: filter 1.5s;
         }
-
-        /* .main-publicacoes
-        .. L .publicacoes
-        ..   L .arquivo */
-
-            .interrogacao {
-                display: flex;
-                justify-content: flex-end;
-                height: 0px;
-            }
-            .interrogacao h1:first-of-type {
-                font-size: calc(var(--font-size-h1) * 3);
-                transform: rotate(15deg);
-                transform-origin: 0px 85px;
-                animation-name: interrogacao;
-                animation-duration: 3s;
-                animation-iteration-count: infinite;
-                animation-timing-function: ease-in-out;
-                text-shadow: white 1px 1px;
-            }
-            @keyframes interrogacao {
-                0% { margin-top: -80px; }
-                50% { margin-top: -50px; }
-                100% { margin-top: -80px; }
-            }
-            .main-equipe-tecnica p {
-                margin-top: 0px;
-            }
-
-@media screen and (min-width:1036px) {
-
-
-}

@@ -1,14 +1,18 @@
-/* Específica para ícones e animações deles */
+/* Folha de estilos específica para:
+   Ícones e suas animações */
 
-svg.arquivo-icon.icon {
+/* Ícones de arquivos */
+/* classes (tipos):
+- .arquivo-pdf-icon
+- .arquivo-word-icon (para os templates baixáveis - em construção)
+- .icon-catalogo
+*/
+
+/* --- Todo ícone de arquivo --- */
+.icon-arquivo {
     width: 48px;
+    margin-top: var(--margem);
 }
-
-.arquivo-icon.icon {
-    margin-top: var(--unidade);
-}
-
-    /* --- SVG ARQUIVO ICON --- */
 
     .arquivo-item div {
         width: 48px;
@@ -16,7 +20,7 @@ svg.arquivo-icon.icon {
         flex-direction: column;
         align-items: center; /* Alinhar indicador junto*/
 
-        margin-left: var(--unidade);
+        margin-left: var(--margem);
     }
     .arquivo-item {
         display: flex;
@@ -24,41 +28,34 @@ svg.arquivo-icon.icon {
         align-items: center;
     }
 
-        .arquivo-icon.icon {
-        }
-
-
-
-
         /* ESTILIZAÇÃO */
-        svg .fundo { fill: red; }
-        svg .dobra { fill: rgb(167, 0, 0); /* Vermelho um pouco mais escuro */
+        .icon-pdf .fundo { fill: red; }
+        .icon-pdf .dobra { fill: rgb(167, 0, 0); /* Vermelho um pouco mais escuro */
                      stroke-width: 0; }
-        svg .recorte-dobra { fill:white; }
-        svg path.lupa,
-        svg polygon.lupa { fill: white;
+        .icon-pdf .recorte-dobra { fill:white; }
+        .icon-arquivo .lupa { fill: white;
                            animation: lupa 2s infinite alternate ease; }
         /* Escrito PDF */
-        .arquivo-icon-hover .rotulo { fill: white; }
+        .icon-arquivo .rotulo { fill: white; }
             
         /* HOVER */
-        g.arquivo-icon-hover {
+        .icon-arquivo g.hover {
             transform: translateX(0);
             transition: transform 1s ease;
         }
-        g.arquivo-icon-hover:hover {
+        .icon-arquivo g.hover:hover {
             transform: translateX(47px); /* ~ Metade viewbox do svg */
         }
         
-        /* INDICADOR */
-        svg.arquivo-icon.indicador {
+        /* SVG INDICADOR */
+        .indicador {
             width: 15px;
 
-            margin-bottom: calc(var(--unidade) - 12px);
+            margin-bottom: calc(var(--margem) - 12px);
         }
-        svg.arquivo-icon polyline.indicador {
+        polyline.indicador {
             fill: none;
-            stroke: var(--color-base);
+            stroke: var(--color-dark);
             stroke-width: 1.5;
             transform: translateY(0px);
             animation-name: indicadorarquivo;
@@ -72,31 +69,20 @@ svg.arquivo-icon.icon {
             }
         }
 
-    /* último div.arquivo sem margem-bottom */
-    div div.arquivo:last-of-type {
-        /*margin-bottom: var(--unidade);*/
-    }
-
-/* === PÁGINA EDIÇÕES ANTERIORES === */
-/* Icones dos catalogos */
-svg.catalogo-24,
-svg.catalogo-23a,
-svg.catalogo-23b,
-svg.catalogo-23c,
-svg.catalogo-22a,
-svg.catalogo-22b,
-svg.catalogo-21,
-svg.catalogo-20,
-svg.catalogo-19,
-svg.catalogo-18 {
+/* === .icon-catalogo === */
+/* Ícones dos catalogos */
+.icon-catalogo {
     width: var(--width-catalogo);
+    margin-top: var(--margem);
+
+    display: flex; /* Indicador ficar em baixo */
 }
-    .catalogohover {
-        transform: translateY(0px); /* Posicao inicial hover */
-        transition: transform 2s cubic-bezier(.79,0,1,1); /* Transicao para esta posicao inicial */
+    .icon-catalogo .hover {
+        transform: translateY(0px); /* Posição inicial hover */
+        transition: transform 2s cubic-bezier(.79,0,1,1); /* Transição para esta posiçã inicial */
     }
     /* Hover */
-    .catalogohover:hover {
+    .icon-catalogo .hover:hover {
         transform: translateX(100px);
         transition: transform 1s ease;
         }
@@ -104,41 +90,41 @@ svg.catalogo-18 {
             fill: white;
         }
     /* Capa */
-    .catalogo-24 .capacatalogo { fill: var(--color-24ed); }
-    .catalogo-23a .capacatalogo { fill: var(--color-23ed-a); }
-    .catalogo-23b .capacatalogo { fill: var(--color-23ed-b); } 
-    .catalogo-23c .capacatalogo { fill: var(--color-23ed-c); }
-    .catalogo-22a .capacatalogo { fill: var(--color-22ed-a); }
-    .catalogo-22b .capacatalogo { fill: var(--color-22ed-b); }
-    .catalogo-21 .capacatalogo { fill: var(--color-21ed); }
-    .catalogo-20 .capacatalogo { fill: var(--color-20ed); }
-    .catalogo-19 .capacatalogo { fill: var(--color-19ed); }
-    .catalogo-18 .capacatalogo { fill: var(--color-18ed); }
-    .catalogo-17 .capacatalogo { fill: var(--color-17ed); }
-    .catalogo-14 .capacatalogo { fill: var(--color-14ed); }
+    .icon-catalogo.ed24 .capa { fill: var(--color-24ed); }
+    .icon-catalogo.ed23a .capa { fill: var(--color-23ed-a); }
+    .icon-catalogo.ed23b .capa { fill: var(--color-23ed-b); } 
+    .icon-catalogo.ed23c .capa { fill: var(--color-23ed-c); }
+    .icon-catalogo.ed22a .capa { fill: var(--color-22ed-a); }
+    .icon-catalogo.ed22b .capa { fill: var(--color-22ed-b); }
+    .icon-catalogo.ed21 .capa { fill: var(--color-21ed); }
+    .icon-catalogo.ed20 .capa { fill: var(--color-20ed); }
+    .icon-catalogo.ed19 .capa { fill: var(--color-19ed); }
+    .icon-catalogo.ed18 .capa { fill: var(--color-18ed); }
+    .icon-catalogo.ed17 .capa { fill: var(--color-17ed); }
+    .icon-catalogo.ed14 .capa { fill: var(--color-14ed); }
 
     /* Rótulos na capa */
     /* Stroke */
-    svg.catalogo-24 > .rotulo { stroke: white; }
-    svg.catalogo-23a > .rotulo { stroke: var(--color-23ed-b); }
-    svg.catalogo-23b > .rotulo { stroke: var(--color-23ed-a); }
-    svg.catalogo-23c > .rotulo { stroke: var(--color-23ed-d); }
-    svg.catalogo-22a > .rotulo { stroke: white; }
-    svg.catalogo-22b > .rotulo { stroke: white; }
-    svg.catalogo-21 > .rotulo { stroke: white; }
-    svg.catalogo-20 > .rotulo { stroke: white; }
-    svg.catalogo-19 > .rotulo { stroke: white; }
-    svg.catalogo-18 > .rotulo { stroke: white; }
-    svg.catalogo-17 > .rotulo { stroke: white; }
-    svg.catalogo-14 > .rotulo { stroke: white; }
-    .catalogo-14 svg polygon {stroke: white; }
+    .icon-catalogo.ed24 .rotulo { stroke: white; }
+    .icon-catalogo.ed23a .rotulo { stroke: var(--color-23ed-b); }
+    .icon-catalogo.ed23b .rotulo { stroke: var(--color-23ed-a); }
+    .icon-catalogo.ed23c .rotulo { stroke: var(--color-23ed-d); }
+    .icon-catalogo.ed22a .rotulo { stroke: white; }
+    .icon-catalogo.ed22b .rotulo { stroke: white; }
+    .icon-catalogo.ed21 .rotulo { stroke: white; }
+    .icon-catalogo.ed20 .rotulo { stroke: white; }
+    .icon-catalogo.ed19 .rotulo { stroke: white; }
+    .icon-catalogo.ed18 .rotulo { stroke: white; }
+    .icon-catalogo.ed17 .rotulo { stroke: white; }
+    .icon-catalogo.ed14 .rotulo { stroke: white; }
+    .icon-catalogo.ed14 svg polygon {stroke: white; }
     /* FILL - NONE */
     .rotulo { fill: none; }
 
     /* INDICADOR EMBAIXO DO CATALOGO E ANIMACAO */
-    .indicadorcatalogo {
+    svg .indicador {
     fill: none;
-    stroke: var(--color-base);
+    stroke: var(--color-dark);
     stroke-width: 1.5;
     transform: translateY(0px);
     animation-name: indicadorcatalogo;

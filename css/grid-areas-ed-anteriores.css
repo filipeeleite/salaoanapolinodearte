@@ -5,22 +5,20 @@
 .grid-ed-ant-section-21,
 .grid-ed-ant-section-20,
 .grid-ed-ant-section-19 {
-    grid-template-columns: calc(var(--width-catalogo) + var(--unit-1)) 1fr 1fr;
     grid-template-columns: 0.75fr 1fr 1fr;
 }
 
 /* Lista de artistas - tirar gap entre colunas */
-.grid-ed-ant-section-19 .grid-ed-ant-lista-1,
-.grid-ed-ant-section-20 .grid-ed-ant-lista-1,
-.grid-ed-ant-section-21 .grid-ed-ant-lista-1,
-.grid-ed-ant-section-23 .grid-ed-ant-lista-1,
+.grid-ed-ant-section-24 .grid-ed-ant-lista-1,
 .grid-ed-ant-section-23 .grid-ed-ant-lista-6, /* 2ª lista de artistas */
-.grid-ed-ant-section-24 .grid-ed-ant-lista-1 {
+.grid-ed-ant-section-23 .grid-ed-ant-lista-1,
+.grid-ed-ant-section-21 .grid-ed-ant-lista-1,
+.grid-ed-ant-section-20 .grid-ed-ant-lista-1,
+.grid-ed-ant-section-19 .grid-ed-ant-lista-1 {
     column-gap: 0;
 }
 
-
-/* Grid de 3 colunas (Ref Mobile: <--- 600px ---->  */
+/* Grid de 3 colunas (Ref Tablet: <--- 640px ---->  */
 @media screen and (min-width: 720px) {
 
     .grid-ed-ant-section-19,
@@ -46,28 +44,28 @@
     .grid-ed-ant-section-19 > .grid-ed-ant-titulo-principal-a
                               { grid-area: titulo-principal-a }
     /* Tem 1 Catalogo */
-    .grid-ed-ant-section-24 > .grid-ed-ant-catalogo-icon-a,
-    .grid-ed-ant-section-23 > .grid-ed-ant-catalogo-icon-a,
-    .grid-ed-ant-section-22 > .grid-ed-ant-catalogo-icon-a,
-    .grid-ed-ant-section-21 > .grid-ed-ant-catalogo-icon-a,
-    .grid-ed-ant-section-20 > .grid-ed-ant-catalogo-icon-a,
-    .grid-ed-ant-section-19 > .grid-ed-ant-catalogo-icon-a
-                            { grid-area: catalogo-icon-a }
+    .grid-ed-ant-section-24 > .grid-ed-ant-icon-catalogo-a,
+    .grid-ed-ant-section-23 > .grid-ed-ant-icon-catalogo-a,
+    .grid-ed-ant-section-22 > .grid-ed-ant-icon-catalogo-a,
+    .grid-ed-ant-section-21 > .grid-ed-ant-icon-catalogo-a,
+    .grid-ed-ant-section-20 > .grid-ed-ant-icon-catalogo-a,
+    .grid-ed-ant-section-19 > .grid-ed-ant-icon-catalogo-a
+                            { grid-area: icon-catalogo-a }
     /* Tem 2 Titulos principais */
     .grid-ed-ant-section-23 > .grid-ed-ant-titulo-principal-b,
     .grid-ed-ant-section-22 > .grid-ed-ant-titulo-principal-b         
                             { grid-area: titulo-principal-b }
     /* Tem 2 Catalogos */
-    .grid-ed-ant-section-23 > .grid-ed-ant-catalogo-icon-b,
-    .grid-ed-ant-section-22 > .grid-ed-ant-catalogo-icon-b
-                            { grid-area: catalogo-icon-b }
+    .grid-ed-ant-section-23 > .grid-ed-ant-icon-catalogo-b,
+    .grid-ed-ant-section-22 > .grid-ed-ant-icon-catalogo-b
+                            { grid-area: icon-catalogo-b }
 
     /* Tem 3 Titulos principais */                        
     .grid-ed-ant-section-23 .grid-ed-ant-titulo-principal-c
                             { grid-area: titulo-principal-c }
     /* Tem 3 Catalogos */
-    .grid-ed-ant-section-23 .grid-ed-ant-catalogo-icon-c
-                            { grid-area: catalogo-icon-c }
+    .grid-ed-ant-section-23 .grid-ed-ant-icon-catalogo-c
+                            { grid-area: icon-catalogo-c }
     /* Subtitulos e Listas */                      
     .grid-ed-ant-section-24 > .grid-ed-ant-subtitulo-1,
     .grid-ed-ant-section-23 > .grid-ed-ant-subtitulo-1,
@@ -175,7 +173,7 @@
         "titulo-edicao                 .             ."
         "linha-divisao     linha-divisao linha-divisao"
         "titulo-principal-a  subtitulo-1   subtitulo-2"
-        "catalogo-icon-a         lista-1       lista-2"
+        "icon-catalogo-a         lista-1       lista-2"
         ".                       lista-1   subtitulo-3"
         ".                       lista-1       lista-3"
         ".                       lista-1   subtitulo-4"
@@ -194,14 +192,14 @@
         "titulo-edicao                 .             ."
         "linha-divisao     linha-divisao linha-divisao"
         "titulo-principal-a  subtitulo-1   subtitulo-3"
-        "   catalogo-icon-a      lista-1       lista-3"
-        "   catalogo-icon-a      lista-1             ."
-        "   catalogo-icon-a      lista-1             ."
+        "   icon-catalogo-a      lista-1       lista-3"
+        "   icon-catalogo-a      lista-1             ."
+        "   icon-catalogo-a      lista-1             ."
         "titulo-principal-b  subtitulo-4   subtitulo-5"
-        "   catalogo-icon-b      lista-4       lista-5"
-        "   catalogo-icon-b      .                   ."
+        "   icon-catalogo-b      lista-4       lista-5"
+        "   icon-catalogo-b      .                   ."
         "titulo-principal-c  subtitulo-6   subtitulo-2"
-        "   catalogo-icon-c      lista-6       lista-2"
+        "   icon-catalogo-c      lista-6       lista-2"
     }
 
     .grid-ed-ant-section-22 { /* 1-artistas
@@ -212,11 +210,11 @@
         "titulo-edicao                 .             ."
         "linha-divisao     linha-divisao linha-divisao"
         "titulo-principal-a  subtitulo-1   subtitulo-2"
-        "catalogo-icon-a         lista-1       lista-2"
-        "catalogo-icon-a         lista-1   subtitulo-3"
-        "catalogo-icon-a         lista-1       lista-3"
+        "icon-catalogo-a         lista-1       lista-2"
+        "icon-catalogo-a         lista-1   subtitulo-3"
+        "icon-catalogo-a         lista-1       lista-3"
         "titulo-principal-b      lista-1   subtitulo-4"
-        "catalogo-icon-b         lista-1       lista-4"
+        "icon-catalogo-b         lista-1       lista-4"
     }
     .grid-ed-ant-section-22 .grid-ed-ant-lista-1 {
         column-count: 1;
@@ -228,12 +226,12 @@
         "titulo-edicao                 .             ."
         "linha-divisao     linha-divisao linha-divisao"
         "titulo-principal-a  subtitulo-1   subtitulo-2"
-        "catalogo-icon-a         lista-1       lista-2"
-        "catalogo-icon-a         lista-1   subtitulo-3"
-        "catalogo-icon-a         lista-1       lista-3"
-        "catalogo-icon-a         lista-1   subtitulo-4"
-        "catalogo-icon-a         lista-1       lista-4"
-        "catalogo-icon-a         lista-1             ."
+        "icon-catalogo-a         lista-1       lista-2"
+        "icon-catalogo-a         lista-1   subtitulo-3"
+        "icon-catalogo-a         lista-1       lista-3"
+        "icon-catalogo-a         lista-1   subtitulo-4"
+        "icon-catalogo-a         lista-1       lista-4"
+        "icon-catalogo-a         lista-1             ."
     }
     .grid-ed-ant-section-20,
     .grid-ed-ant-section-19 { /* 1-artistas
@@ -243,10 +241,10 @@
         "titulo-edicao                 .             ."
         "linha-divisao     linha-divisao linha-divisao"
         "titulo-principal-a  subtitulo-1   subtitulo-2"
-        "catalogo-icon-a         lista-1       lista-2"
-        "catalogo-icon-a         lista-1   subtitulo-3"
-        "catalogo-icon-a         lista-1       lista-3"
-        "catalogo-icon-a         lista-1             ."
+        "icon-catalogo-a         lista-1       lista-2"
+        "icon-catalogo-a         lista-1   subtitulo-3"
+        "icon-catalogo-a         lista-1       lista-3"
+        "icon-catalogo-a         lista-1             ."
     }
 
 }
@@ -267,7 +265,7 @@
         "titulo-edicao                 .             .             ."
         "linha-divisao     linha-divisao linha-divisao linha-divisao"
         "titulo-principal-a  subtitulo-1   subtitulo-1   subtitulo-2"
-        "catalogo-icon-a         lista-1       lista-1       lista-2"
+        "icon-catalogo-a         lista-1       lista-1       lista-2"
         ".                       lista-1       lista-1       lista-2"
         ".                       lista-1       lista-1       lista-2"
         ".                   subtitulo-3   subtitulo-4   subtitulo-5"
@@ -286,11 +284,11 @@
         "titulo-edicao                 .             .             ."
         "linha-divisao     linha-divisao linha-divisao linha-divisao"
         "titulo-principal-a  subtitulo-1   subtitulo-1   subtitulo-1"
-        "   catalogo-icon-a      lista-1       lista-1       lista-1"
+        "   icon-catalogo-a      lista-1       lista-1       lista-1"
         "titulo-principal-b  subtitulo-5   subtitulo-3   subtitulo-4"
-        "   catalogo-icon-b      lista-5       lista-3       lista-4"
+        "   icon-catalogo-b      lista-5       lista-3       lista-4"
         "titulo-principal-c  subtitulo-6   subtitulo-6   subtitulo-2"
-        "   catalogo-icon-c      lista-6       lista-6       lista-2"
+        "   icon-catalogo-c      lista-6       lista-6       lista-2"
     }
     .grid-ed-ant-section-23 .grid-ed-ant-lista-1 {
         column-count: 3;
@@ -307,9 +305,9 @@
         "titulo-edicao                 .             .             ."
         "linha-divisao     linha-divisao linha-divisao linha-divisao"
         "titulo-principal-a  subtitulo-1   subtitulo-1   subtitulo-1"
-        "catalogo-icon-a         lista-1       lista-1       lista-1"
+        "icon-catalogo-a         lista-1       lista-1       lista-1"
         "titulo-principal-b  subtitulo-2   subtitulo-3   subtitulo-4"
-        "catalogo-icon-b         lista-2       lista-3       lista-4"
+        "icon-catalogo-b         lista-2       lista-3       lista-4"
         "catatogo-icon-b               .             .             ."
     }
     .grid-ed-ant-section-22 .grid-ed-ant-lista-1 {
@@ -323,9 +321,9 @@
         "titulo-edicao                 .             .             ."
         "linha-divisao     linha-divisao linha-divisao linha-divisao"
         "titulo-principal-a  subtitulo-1   subtitulo-1   subtitulo-1"
-        "catalogo-icon-a         lista-1       lista-1       lista-1"
-        "catalogo-icon-a     subtitulo-2   subtitulo-3   subtitulo-4"
-        "catalogo-icon-a         lista-2       lista-3       lista-4"
+        "icon-catalogo-a         lista-1       lista-1       lista-1"
+        "icon-catalogo-a     subtitulo-2   subtitulo-3   subtitulo-4"
+        "icon-catalogo-a         lista-2       lista-3       lista-4"
     }
     .grid-ed-ant-section-21 .grid-ed-ant-lista-1 {
         column-count: 3;
@@ -338,20 +336,14 @@
     "titulo-edicao                 .             .             ."
     "linha-divisao     linha-divisao linha-divisao linha-divisao"
     "titulo-principal-a  subtitulo-1   subtitulo-1   subtitulo-2"
-    "catalogo-icon-a         lista-1       lista-1       lista-2"
-    "catalogo-icon-a         lista-1       lista-1   subtitulo-3"
-    "catalogo-icon-a         lista-1       lista-1       lista-3"
-    "catalogo-icon-a         lista-1       lista-1             ."
+    "icon-catalogo-a         lista-1       lista-1       lista-2"
+    "icon-catalogo-a         lista-1       lista-1   subtitulo-3"
+    "icon-catalogo-a         lista-1       lista-1       lista-3"
+    "icon-catalogo-a         lista-1       lista-1             ."
     }
     .grid-ed-ant-section-20 .grid-ed-ant-lista-1,
     .grid-ed-ant-section-19 .grid-ed-ant-lista-1 {
         column-count: 2;
-    }
-
-    /* ir corrigindo elementos que ficam em grid areas erradas nesta configuracao */
-
-    .grid-ed-ant-lista-1 li {
-        /*outline: 1px solid blue;*/
     }
 
 }

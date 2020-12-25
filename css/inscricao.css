@@ -1,32 +1,31 @@
 .option2 { 
-    border-top: var(--border-indicador) solid var(--color-azul-principal);
-    border-bottom: var(--border-indicador) solid var(--color-base-clara);
+    border-top: var(--border-indicador) solid var(--color-main-primary);
+    border-bottom: var(--border-indicador) solid var(--color-bright);
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:640px) {
 
     .option2 {
         border-top: none;
         border-bottom: none;
     }
     #option2 {
-        background-color: var(--color-azul-hover);
+        background-color: var(--color-main-primary-hover);
     }
 
     .menu-right {
-        border-top: var(--border-indicador) solid var(--color-azul-principal);
-        border-bottom: var(--border-indicador) solid var(--color-base-clara);
+        border-top: var(--border-indicador) solid var(--color-main-primary);
+        border-bottom: var(--border-indicador) solid var(--color-bright);
     }
 
 }
-
 
 .main-grid {
     grid-template-areas:
     "main-inscricao"
     "main-downloads"
 }
-@media screen and (min-width:800px) {
+@media screen and (min-width:640px) {
     .main-grid {
         grid-template-areas:
         "main-inscricao main-downloads";
@@ -37,21 +36,6 @@
     }
 }
 
-
-
-
-
-
-
-
-.main-inscricao-etapa1 {
-    /*display: flex;
-    flex-direction: column;
-    justify-content: space-between;*/
-
-}
-
-
 .button-incricao-etapa1 {
     display: flex;
     justify-content: end;
@@ -61,22 +45,29 @@
 /* buttons */
 button {
     border-width: 0;
-    margin-bottom: var(--unidade);
+    margin-bottom: var(--margem);
     transition: background-color 1s ease;
-    background-color: var(--color-laranja-principal);
+    background-color: var(--color-main-secondary);
     height: 48px;
     padding: 0;
 }
     button p {
-        color: var(--color-base-clara);
-        font-size: var(--font-size-2);
+        color: var(--color-bright);
+        font-size: var(--font-size);
         letter-spacing: 2px;
         margin: 0;
     }
     button:hover {
-        background-color: var(--color-azul-principal);
+        background-color: var(--color-main-primary);
         transition: background-color 1s ease;
     }
-    .para-pag-inscricao {
-        /* Reservado para especificar */
-    }
+
+/* === Em desenvolvimento === */
+.para-pag-inscricao {
+    /* Reservado para especificar */
+}
+.main-inscricao-etapa1 {
+    /*display: flex;
+    flex-direction: column;
+    justify-content: space-between;*/
+}

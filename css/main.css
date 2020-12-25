@@ -1,4 +1,4 @@
-/* Grid areas */
+/* === <div> Classes -----> Grid areas === */
 .main-texto               { grid-area: main-texto }
 .main-calendario          { grid-area: main-calendario }
 
@@ -13,73 +13,78 @@
 
 .main-ed-anteriores       { grid-area: main-ed-anteriores }
 
-/* VARIÁVEIS */
+/* Setando 1rem = 10px */
+html { font-size: 10px; }
+
 :root {
     /* UNIDADES: MARGINS E PADDINGS */
-    --unidade: 16px;
-    --unit-05: 10px; /* descontinuar */
+    --margem: 16px; /* Unidade de margem */
 
-    --unit-min: 560px;
-    --unit-ref: 640px;
-    --unit-max: 1004px;
+    --width-mobile: 320px;
+    --width-tablet: 640px;
+    --width-desktop: 960px;
 
-    --height-menu-pc: 80px;
-    --height-menu-opened-mobile: 150px;
-    --border-indicador: 3px;
+    --height-header-expanded: 15.00rem;
+    --height-header-desktop: 8.00rem;
+    --width-menu-left-desktop: 160px;
+    --width-menu-right-desktop: 360px;
+    --border-indicador: 0.3rem; /* 3px */
 
-    --height-footer-pc: 128px;
+    --height-footer-desktop: 140px;
     --height-footer-mobile: 270px;
 
     /* CORES */
-    --color-azul-principal: #085273;
-    --color-outline-menu-bar: #0b415a;
-    --color-azul-hover: #1b6588;
-    --color-laranja-principal: #D49100;
+    --color-main-primary: #085273;
+    --color-main-primary-hover: #1b6588;
+    --color-main-secondary: #D49100;
     --color-background: #bdcfd8;
-    --color-base: black;
-    --color-base-clara: white;
+    --color-dark: black;
+    --color-bright: white;
+
     /* DETALHES */
-    --color-outline-folha: rgb(190, 190, 190);
-    --box-shadow-folha: 0 0 68px -48px black;
+    --box-shadow-bloco: 0 0 68px -48px black;
 }
 
-* {
-    /* outline: 1px solid blue; */
-}
-/* GERAL */
+/* === Geral === */
 html {
     height: 100%;
-    min-width: 320px;
-    scroll-behavior: smooth; }
+    min-width: var(--width-mobile);
+}
 
-body, img { display: block; margin: 0;}
+body, img { display: block; margin: 0px;}
 
-/* Mobiles com notch */
-body { background-color: var(--color-azul-principal); }
+img {
+    margin-top: var(--margem);
+}
+
+
+/* Mobiles com notch - cor de fundo */
+body { background-color: var(--color-main-primary); }
 
 /* Clase antiga linha-divisao */
 .grid-ed-ant-linha-divisao {
     height: 2px;
     width: 100%;
-    background-color: var(--color-azul-principal);
+    background-color: var(--color-main-primary);
 }
 
 main {
-    background-size: 25vw;
+    background-size: 20rem;
     min-height:
-    calc(100vh - (var(--height-menu-opened-mobile) + var(--height-footer-mobile)));
-    /*padding: 0 var(--unit-05); /* [<--- e --->] */
+    calc(100vh - (var(--height-header-expanded) + var(--height-footer-mobile)));
+
+    width: 100%;
 }
     /* Espacamento do main-grid entre header e footer */
     .main-grid {
-        padding-top: var(--unidade);
-        padding-bottom: var(--unidade);
+        padding-top: var(--margem);
+        padding-bottom: var(--margem);
 
-        width: 320px;
+        width: calc(var(--width-mobile) - 2 * var(--margem));
         margin: 0 auto;
         display: grid;
-        grid-gap: var(--unidade);
-        min-height: calc(100% - 20px);
+        grid-gap: var(--margem);
+        min-height: calc(100% - (2 * var(--margem)));
     }
 
     /* Cada bloco de todas as páginas */
@@ -100,23 +105,18 @@ main {
 
     
     h1 {
-        margin-left: var(--unidade);
+        margin-left: var(--margem);
     }
     /* Margens em cima e baixo - h1 e imagem de cada bloco */
     h1 {
-        margin-top: calc((var(--unidade) * 1.6) - 12px); /* ajuste de baseline*/
-        margin-bottom: calc(var(--unidade) * 1.6);
-    }
-    img {
-        margin-top: calc(var(--unidade) * 1.6);
-        margin-bottom: calc(var(--unidade) * 1.6);
+        /* Revisar margin-top */
+        margin-top: calc((var(--margem) * 1.6) - 12px); /* ajuste de baseline*/
+        margin-bottom: calc(var(--margem) * 1.6);
     }
 
             .main-ed-anteriores {
                 width: 100%;
-            }
-
-    
+            } 
 
             /* Setando toda div que tem conteúdo para ocupar a altura max possivel na main-grid */
             .main-texto,
@@ -131,50 +131,15 @@ main {
                 height: 100%;
             }
 
-            /* BORDA INTERNA */
-            /* .main-center > div, /* Aplicando em toda div filha de main-center e de main-right 
-            .main-right > div:not(.main-calendario) { /* Com excessao do calendario
-                padding-left: var(--unidade);
-                padding-right: var(--unidade);
-            } */
-
- 
-            /* ESPACAMENTO */
-            /* Aplicando em baixo entre as divs
-            Excessao: última */
-            .main-center > div:not(:last-child),
-            .main-right > div:not(:last-child) {
-                margin-bottom: var(--unit-05);
-            }
-            /* ESTILIZACAO  DAS DIVS */
-            .main-center > div,
-            .main-right > div {
-                background-color: var(--color-base-clara);
-                outline: 1px solid var(--color-outline-folha);
-                box-shadow: var(--box-shadow-folha);
-            }
-    /* .MAIN-CALENDARIO ...... */
-
-        /* Barra ao lado da data */
-        /* Aplica em todas as datas com a cor do fundo */
-        .main-calendario > div {
-            border-left: var(--border-indicador) solid var(--color-base-clara);
-        }
-        /* Com a cor em uso, aplicar só na data ativa */
-        .main-calendario > div:nth-child(4) {
-            border-left: var(--border-indicador) solid var(--color-azul-principal);
-        }
-
 /* Tela média */
-@media screen and (min-width:600px) {
+@media screen and (min-width:640px) {
     main {
-        min-height: calc(100vh - calc(var(--height-menu-pc)) - var(--height-footer-pc));
+        min-height: calc(100vh - calc(var(--height-header-desktop)) - var(--height-footer-desktop));
     }
     .main-grid {
-        width: calc(100vw - 180px);
+        width: calc(100% - 18 * var(--margem));
     }
     .main-ed-anteriores {
-        /*width: calc(100vw - 80px - (2 * var(--unidade)));*/
     }
 }
 
@@ -183,12 +148,9 @@ main {
 
     /* MAIN */
     main {
-        /* display: flex;
-        align-items: stretch; */
-        /*min-height: calc(100vh - 80px - 128px);*/
     }
         .main-grid {
-            max-width: 960px;
+            max-width: var(--width-desktop);
         }
 }
             .main-ed-anteriores {
