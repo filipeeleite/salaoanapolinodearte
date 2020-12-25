@@ -16,13 +16,13 @@ a {
 :root {
     --font-family-standard: 'Jost';
     --font-size-menu: 1.20rem; /* Menu */
-    --font-size-h1:   4.00rem; /* Titulo do bloco em cada página */
-    --font-size-h2:   2.50rem; /* Usando apenas na página ed-anteriores - Número da edição*/
-    --font-size-h3:   2.00rem; /* Títulos das datas do calendario - Subtitulo ed-anteriores */
-    --font-size-h4:   1.80rem; /* Datas no calendário */
-    --font-size-h5:   1.60rem;
+    --font-size-h1:   3.20rem; /* Titulo do bloco em cada página */
+    --font-size-h2:   2.30rem; /* Usando apenas na página ed-anteriores - Número da edição*/
+    --font-size-h3:   1.90rem; /* Títulos das datas do calendario - Subtitulo ed-anteriores */
+    --font-size-h4:   1.60rem; /* Datas no calendário */
+    --font-size-h5:   unset;
 
-    --font-size-p:    1.30rem;
+    --font-size-p:    1.32rem;
 
     --font-size-h6:   1.10rem; /* Rodapé */
     /* OUTRAS CORES */
@@ -60,16 +60,16 @@ p.menu-tipografia {
 h1 {
     font-size: var(--font-size-h1);
     font-weight: 500;
-    margin-bottom: -16px;
+    margin-bottom: -11px; /* Alinhar Baseline com margem de outros elementos */
     margin-right: calc(var(--margem) * 2);
 }
 h2 {
     font-size: var(--font-size-h2);
-    font-weight: 500;
+    font-weight: 400;
 }
 h3 {
     font-size: var(--font-size-h3);
-    font-weight: 300;
+    font-weight: 400;
 }
 h4 {
     font-size: var(--font-size-h4);
@@ -80,7 +80,7 @@ h5 {
 }
 
 /* <p> e tipografia semelhante (links e outros) */
-.menu-right p               { font-size: var(--font-size-menu); } /* Menu */
+.menu-right p { font-size: var(--font-size-menu); } /* Menu */
 p, li { font-weight: 400; }
 
 p {
