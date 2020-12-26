@@ -45,9 +45,6 @@ footer {
     height: 40px;
 }
 
-
-
-
 @media screen and (min-width: 640px) {
 
     /* Tipografia - Exibir "Este projeto foi..." para pc */
@@ -60,19 +57,18 @@ footer {
 
         padding-left: calc(9 * var(--margem));
         padding-right: calc(9 * var(--margem));
-        
-        height: var(--height-footer-desktop);
 
         flex-direction: column;
     }
     .logomarcas {
         display: flex;
         justify-content: center;
-        max-width: unset;
+        max-width: 480px;
         }
         div.realizacao {
             max-width: 250px;
-            margin: 0 auto;
+            margin-left: 0;
+            margin-right: auto;
             }
             div.footer-logos { /*DIV DAS LOGOS*/
                     display: flex;
@@ -86,7 +82,8 @@ footer {
                 }
         div.apresentacao {
             max-width: 250px;
-            margin: 0 auto;
+            margin-left: auto;
+            margin-right: 0;
         }
     .rodape-desktop,
     .rodape-mobile {

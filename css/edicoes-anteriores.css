@@ -1,3 +1,8 @@
+/* === Barra do menu === */
+/* Option1 - mais-informacoes
+/* Option2 - inscrever
+/* Option3 - ed-anteriores */
+
 .option3 { 
     border-top: var(--border-indicador) solid var(--color-azul-principal);
     border-bottom: var(--border-indicador) solid var(--color-bright);
@@ -119,7 +124,11 @@ ol {
         font-size: 22px;
     }
 
-/* h3 */
+/* h1 - h6 */
+.main-ed-anteriores > h1,
+.main-ed-anteriores .section > h2 {
+    margin-left: var(--margem);
+}
 .grid-ed-ant-subtitulo-1 h3,
 .grid-ed-ant-lista-1 h3,
 
@@ -162,39 +171,20 @@ li {
 }
 
 
-.grid-ed-ant-section-22 .linha-divisao,
-.grid-ed-ant-section-23 .linha-divisao,
-.grid-ed-ant-section-24 .linha-divisao {
+.linha-divisao-subedicoes {
     height: 1px;
     opacity: 0.5;
     margin-top: var(--margem);
+    background-color: var(--color-main-primary);
 }
-
 
 /* Espaco antes de cada edição */
 #ed-24, #ed-23, #ed-22, #ed-21, #ed-20, #ed-19 {
     height: 50px;
 }
-
 section {
     margin-bottom: 50px;
 }
-
-.main-ed-anteriores > h1,
-.main-ed-anteriores .section > h2,
-div ~ section > .linha-divisao,
-.grid-ed-ant-section-24,
-.grid-ed-ant-section-23,
-.grid-ed-ant-section-22,
-.grid-ed-ant-section-21,
-.grid-ed-ant-section-20,
-.grid-ed-ant-section-19 {
-    margin-left: var(--margem);
-}
-div ~ section > .linha-divisao {
-    width: calc(100% - (1 * var(--margem)));
-}
-
 
 /* ............................................ */
 /* Estrutura */
@@ -214,7 +204,7 @@ div ~ section > .linha-divisao {
             float: right;
             position: sticky;
             top: var(--margem);
-            margin: var(--margem);
+            margin: var(--margem) var(--margem) 0 0;
             display: flex;
             flex-direction: column;
             align-items: flex-end; 
@@ -274,8 +264,10 @@ div ~ section > .linha-divisao {
 
         /* SESSOES EDICOES ANTERIORES */
         .main-ed-anteriores section {
-            /* Margem submenu*/
+            
+            margin-left: var(--margem);
             margin-right: calc(var(--size-submenu-ed-ant) + 2 * var(--margem));
+
         }
             .sessao-ed-anteriores-grid-a h3,
             .sessao-ed-anteriores-grid-b h3 {
@@ -325,57 +317,25 @@ div ~ section > .linha-divisao {
         }
 
 /* Dividir em 3 colunas */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1024px) {
 
     .grid-ed-ant-titulo-edicao,
     .grid-ed-ant-titulo-principal-a,
     .grid-ed-ant-titulo-principal-b,
     .grid-ed-ant-titulo-principal-c,
-
-    .grid-ed-ant-catalogo-icon-a svg,
-    .grid-ed-ant-catalogo-icon-b svg,
-    .grid-ed-ant-catalogo-icon-c svg {
+    .icon-catalogo {
         margin-left:
         calc(50% - ((var(--width-catalogo) + var(--margem))/ 2));
         margin-right: 20px;
     }
 
-
-    .grid-ed-ant-section-24 .linha-divisao,
-    .grid-ed-ant-section-23 .linha-divisao {
+    .linha-divisao-subedicoes {
         display: none;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* TELAS LARGAS */
-@media screen and (min-width:960px) {
-    .main-grid {
-        /*grid-template-areas:*/
-        /*"main-ed-anteriores"*/
-    }
+@media screen and (min-width:1024px) {
 
     .titulo-artistas-a h3,
     .titulo-artistas-b h3,
@@ -385,15 +345,5 @@ div ~ section > .linha-divisao {
         margin-bottom: 0px;
     }
 
-
-
-
-
-    /* .sessao-ed-anteriores-grid-a,
-    .sessao-ed-anteriores-grid-b {
-        grid-template-columns: calc(var(--width-catalogo) + (2 * var(--margem))) 1fr 1fr 1fr;
-    } */
-
-
-    li.letter-spacing { letter-spacing: -1px; }
+    /*li.letter-spacing { letter-spacing: -1px; }*/
 }

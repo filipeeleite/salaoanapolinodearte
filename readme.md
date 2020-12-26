@@ -34,7 +34,7 @@ e a toda carga cultural que suas diversas edições até o momento produziram.
 ## B) Conexão entre as páginas:
 ![](https://dl.dropbox.com/s/4sdsdvuyb6cdifc/readme_1%20-%20conexao%20entras%20paginas.jpg)
 
-## C) Classes e grid areas:
+## C) Todas as classes e suas grid areas:
 ```==== index.html:
 <main>
  └.main-grid

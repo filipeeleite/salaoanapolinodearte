@@ -2,6 +2,7 @@
 /* Option1 - mais-informacoes
 /* Option2 - inscrever
 /* Option3 - ed-anteriores */
+
 .option1 {
     border-top: var(--border-indicador) solid var(--color-main-primary);
     border-bottom: var(--border-indicador) solid var(--color-bright);
@@ -38,7 +39,7 @@
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
-    text-shadow: white 1px 1px;
+    text-shadow: white 0 0 12px;
 }
 @keyframes interrogacao {
     0% { margin-top: -80px; }

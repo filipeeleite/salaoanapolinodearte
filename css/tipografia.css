@@ -17,10 +17,10 @@ a {
     --font-family-standard: 'Jost';
     --font-size-menu: 1.20rem; /* Menu */
     --font-size-h1:   3.20rem; /* Titulo do bloco em cada página */
-    --font-size-h2:   2.30rem; /* Usando apenas na página ed-anteriores - Número da edição*/
-    --font-size-h3:   1.90rem; /* Títulos das datas do calendario - Subtitulo ed-anteriores */
+    --font-size-h2:   2.30rem; /* Subtítulo em cada bloco */
+    --font-size-h3:   1.90rem; /* Títulos menores */
     --font-size-h4:   1.60rem; /* Datas no calendário */
-    --font-size-h5:   unset;
+    --font-size-h5:   unset;   /* Reservado - sem uso */
 
     --font-size-p:    1.32rem;
 
@@ -56,7 +56,7 @@ p.menu-tipografia {
     text-decoration: none;
 }
 
-/* <h1 a h6> */
+/* === <h1 a h6> === */
 h1 {
     font-size: var(--font-size-h1);
     font-weight: 500;
@@ -79,7 +79,7 @@ h5 {
     font-weight: 300;
 }
 
-/* <p> e tipografia semelhante (links e outros) */
+/* === <p> e tipografia semelhante (links e outros) === */
 .menu-right p { font-size: var(--font-size-menu); } /* Menu */
 p, li { font-weight: 400; }
 
@@ -92,8 +92,6 @@ p {
 .link-arquivo {
     text-decoration: underline var(--color-main-primary);
 }
-
-/* Listas */
 ol { list-style: none; /* (Usando: .main-ed-anteriores) */
    padding: unset; /* Tirar espaco da esquerda na lista */
 }
@@ -101,7 +99,7 @@ li {
     font-size: var(--font-size-p);
 }
 
-/* textos no footer */
+/* === textos no footer === */
 p.logomarcas,
 p.rodape-desktop,
 p.rodape-mobile {

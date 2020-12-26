@@ -1,4 +1,4 @@
-/* Divisoes das 3 colunas da grid */
+/* Dividir todas as seções em 3 colunas (Qtde mínima) */
 .grid-ed-ant-section-24,
 .grid-ed-ant-section-23,
 .grid-ed-ant-section-22,
@@ -8,7 +8,9 @@
     grid-template-columns: 0.75fr 1fr 1fr;
 }
 
-/* Lista de artistas - tirar gap entre colunas */
+/* Lista de artistas
+<ol> com column count >= 2
+Tirar gap entre colunas */
 .grid-ed-ant-section-24 .grid-ed-ant-lista-1,
 .grid-ed-ant-section-23 .grid-ed-ant-lista-6, /* 2ª lista de artistas */
 .grid-ed-ant-section-23 .grid-ed-ant-lista-1,
@@ -18,9 +20,9 @@
     column-gap: 0;
 }
 
-/* Grid de 3 colunas (Ref Tablet: <--- 640px ---->  */
-@media screen and (min-width: 720px) {
-
+@media screen and (min-width: 1024px) {
+    
+    /* display: grid em todo mundo */
     .grid-ed-ant-section-19,
     .grid-ed-ant-section-20,
     .grid-ed-ant-section-21,
@@ -249,7 +251,7 @@
 
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1200px) {
     /* Divisoes das 3 colunas da grid */
     .grid-ed-ant-section-24,
     .grid-ed-ant-section-23,
@@ -259,7 +261,8 @@
     .grid-ed-ant-section-19 {
     grid-template-columns: calc(var(--width-catalogo) + calc(4 * var(--unit-1))) 1fr 1fr 1fr;
     grid-template-columns: 0.75fr 1fr 1fr 1fr;
-}
+    }
+    /* ==== Grid-area - 24a Edição ==== */
     .grid-ed-ant-section-24 {
         grid-template-areas:
         "titulo-edicao                 .             .             ."

@@ -1,8 +1,7 @@
 /* Folha de estilos específica para:
-   Ícones e suas animações */
+   Ícones e suas animações
 
-/* Ícones de arquivos */
-/* classes (tipos):
+== classes (tipos):
 - .arquivo-pdf-icon
 - .arquivo-word-icon (para os templates baixáveis - em construção)
 - .icon-catalogo
@@ -73,7 +72,7 @@
 /* Ícones dos catalogos */
 .icon-catalogo {
     width: var(--width-catalogo);
-    margin-top: var(--margem);
+    /*margin-top: var(--margem);*/
 
     display: flex; /* Indicador ficar em baixo */
 }

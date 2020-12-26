@@ -110,11 +110,12 @@ main {
     /* Margens em cima e baixo - h1 e imagem de cada bloco */
     h1 {
         /* Revisar margin-top */
-        margin-top: calc((var(--margem) * 1.6) - 12px); /* ajuste de baseline*/
+        margin-top: calc((var(--margem) * 1.6) - 12px); /* ajuste de baseline */
         margin-bottom: calc(var(--margem) * 1.6);
     }
 
             .main-ed-anteriores {
+                margin: 0 auto;
                 width: 100%;
             } 
 
@@ -139,20 +140,12 @@ main {
     .main-grid {
         width: calc(100% - 18 * var(--margem));
     }
-    .main-ed-anteriores {
-    }
 }
 
 /* Telas largas */
 @media screen and (min-width:960px) {
 
-    /* MAIN */
-    main {
-    }
         .main-grid {
             max-width: var(--width-desktop);
         }
 }
-            .main-ed-anteriores {
-                margin: 0 auto;
-            }

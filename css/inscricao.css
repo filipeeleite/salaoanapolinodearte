@@ -1,3 +1,8 @@
+/* === Barra do menu === */
+/* Option1 - mais-informacoes
+/* Option2 - inscrever
+/* Option3 - ed-anteriores */
+
 .option2 { 
     border-top: var(--border-indicador) solid var(--color-main-primary);
     border-bottom: var(--border-indicador) solid var(--color-bright);
