@@ -22,20 +22,20 @@
 /* A) Insere-se border-left "transparente" em
         todas as divs com a cor do fundo */
 .main-calendario > div {
-    border-left: var(--border-indicador) solid var(--color-bright);
+    /*border-left: var(--border-indicador) solid var(--color-bright);*/
 }
 /* B) Com a cor primária, aplicar só na data ativa */
-.main-calendario > div:nth-child(4) {
+/*.main-calendario > div:nth-child(4) {
     border-left: var(--border-indicador) solid var(--color-main-primary);
-}
+}*/
 
 /* C) Aplica-se cinza nas datas inativas (h3 e h4) */
 .main-calendario h3,
 .main-calendario h4 {
-    color: var(--color-texto-oculto);
+    /*color: var(--color-texto-oculto);*/
 }
 /* D) Aplica-se preto nas datas ativas (h3 e h4) */
 .main-calendario > div:nth-child(n+4) > h3,
 .main-calendario > div:nth-child(n+4) > h4 {
-    color: var(--color-dark);
+    /*color: var(--color-dark);*/
 }
