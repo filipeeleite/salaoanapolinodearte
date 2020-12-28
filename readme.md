@@ -2,6 +2,9 @@
 #### Desenvolvimento: Secretaria Municipal de Cultura
 #### Concepção: Outubro de 2020
 
+Página de testes: 
+https://salaoanapolinotestes.netlify.app/
+
 ## Propósito:
 Apresentar o Salão Anapolino de Arte em sua edição atual, situar
 os artistas anapolinos interessados no contexto artístico de seu município,
