@@ -8,6 +8,4 @@ e tem também como propósito promover à toda população o acesso à informaç
 e a toda carga cultural que suas diversas edições até o momento produziram.
 
 Toda a construção do site até o momento, está sendo documentado nesta plataforma.
-Esta documentação e maiores informações, você encontra na wiki do projeto:
-
-![Wiki - Site Salão Anapolino de Arte](https://github.com/filipeeleite/salaoanapolinodearte/wiki)
+Esta documentação e maiores informações, você encontra na wiki do projeto: [https://github.com/filipeeleite/salaoanapolinodearte/wiki]:
