@@ -50,22 +50,37 @@
 /* === Grid === */
 .main-grid {
     grid-template-areas:
+    "main-info-title-a"
     "main-info"
     "main-calendario"
-    "main-sobregaleria"
     "main-publicacoes"
+    "main-info-title-b"
+    "main-sobregaleria"
 }
 @media screen and (min-width:800px) {
     .main-grid {
         grid-template-areas:
-        "main-info         main-calendario"
-        "main-sobregaleria main-calendario"
-        "main-publicacoes  main-calendario";
+        "main-info-title-a main-info-title-b"
+        "main-info         main-sobregaleria"
+        " main-calendario                  ."
+        "main-publicacoes                  .";
         grid-template-columns: 1fr 0.75fr; /* 1036 */
     }
     .main-grid {
         max-width: var(--width-desktop);
     }
+}
+
+.main-info-title-a,
+.main-info-title-b {
+    background-color: white;
+    /*opacity: .4;*/
+    border-bottom: 3px solid var(--color-main-primary);
+}
+
+.main-info-title-a h4,
+.main-info-title-b h4 {
+    color: black;
 }
 
 /* === Elementos === */
