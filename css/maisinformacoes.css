@@ -64,7 +64,7 @@
         "main-info         main-sobregaleria"
         " main-calendario                  ."
         "main-publicacoes                  .";
-        grid-template-columns: 1fr 0.75fr; /* 1036 */
+        grid-template-columns: 1fr 0.75fr;
     }
     .main-grid {
         max-width: var(--width-desktop);

@@ -1,33 +1,37 @@
 console.log("mais-informacoes-calendario.js OK");
 
-/*** CSS ***/
-var corTextoOculto = "var(--color-texto-oculto)";
-var corIndicadorOculto = "var(--border-indicador) solid var(--color-bright)";
-var corIndicadorAtivo = "var(--border-indicador) solid var(--color-main-primary)";
+//document.write('<p>Olá</p>');
 
-/*** Selecionando cada tag ***/
-/* HTML Collection { 0:div, 1:div..., lenght: 9 } */
+// CSS
+var corTextoOculto = 'var(--color-texto-oculto)';
+var corIndicadorOculto = 'var(--border-indicador) solid var(--color-bright)';
+var corIndicadorAtivo = 'var(--border-indicador) solid var(--color-main-primary)';
+
+// Selecionando cada tag
+// HTML Collection { 0:div, 1:div..., lenght: 9 }
 var divsCalendario = document.getElementsByClassName("calendario-estagio");
+// Para colocar border-left
 
 var h3sCalendario = document.getElementsByClassName("calendario-evento");
 var h4sCalendario = document.getElementsByClassName("calendario-data");
+// Para colocar a letra esmaecida
 
 var qtdeEventos = 9;
 
 var eventosCalendario = {};
-/*** Etiquetar cada evento ***/
-eventosCalendario.inicio = new Array(qtdeEventos); /* Datas de inicio destes eventos */
-eventosCalendario.fim = new Array(qtdeEventos); /* Datas de fim destes eventos */
-eventosCalendario.isLate = new Array(qtdeEventos); /* Se evento passou ou não */
-eventosCalendario.isFuture = new Array(qtdeEventos); /* Se evento ainda vai chegar */
+// Etiquetar cada evento
+eventosCalendario.inicio = new Array(qtdeEventos); // Datas de inicio destes eventos
+eventosCalendario.fim = new Array(qtdeEventos); // Datas de fim destes eventos
+eventosCalendario.isLate = new Array(qtdeEventos); // Se evento passou ou não
+eventosCalendario.isFuture = new Array(qtdeEventos); // Se evento ainda vai chegar
 
-/* Definindo títulos de cada evento  e strings das datas */
+// Definindo títulos de cada evento  e strings das datas
 h3sCalendario[0].innerHTML = "Data 1";
 h4sCalendario[0].innerHTML = "2020 09 01";
 eventosCalendario.inicio[0]  = new Date(2020, 09, 01);
 eventosCalendario.fim[0] = new Date(2020, 09, 30);
-/*console.log(eventosCalendario.inicio[0]);
-/*console.log(eventosCalendario.fim[0]);*/
+//console.log(eventosCalendario.inicio[0]);
+//console.log(eventosCalendario.fim[0]);
 
 h3sCalendario[1].innerHTML = "Data 2";
 h4sCalendario[1].innerHTML = "2020 10 01";
@@ -69,60 +73,61 @@ h4sCalendario[8].innerHTML = "2021 05 01";
 eventosCalendario.inicio[8] = new Date(2021, 05, 01);
 eventosCalendario.fim[8]    = new Date(2021, 05, 30);
 
-/*** Data atual ***/
+// Data atual
 var dataAtual = new Date();
 
-/*** Etiquetando cada Evento, situar cada data ***/
+// Etiquetando cada Evento, situar cada data
+//       i[0 a ...] qtdeEventos[1 a ...]
 for (let i = 0; i < qtdeEventos; i++) {
     
-    /* Se evento está no passado */
+    // Se evento está no passado 
     if (dataAtual > eventosCalendario.inicio[i]) {
 
-        eventosCalendario.isFuture[i] = false; /* Passado */
+        eventosCalendario.isFuture[i] = false; // Passado
 
     } else {
 
-        eventosCalendario.isFuture[i] = true; /* Futuro */
+        eventosCalendario.isFuture[i] = true; // Futuro
 
     }
 
-    /* Se evento acabou ou não */
+    // Se evento acabou ou não
     if (dataAtual < eventosCalendario.fim[i]) {
 
-        eventosCalendario.isLate[i] = false; /* Não, ainda não */
+        eventosCalendario.isLate[i] = false; // Não, ainda não
 
     } else {
 
-        eventosCalendario.isLate[i] = true; /* Sim */
+        eventosCalendario.isLate[i] = true; // Sim
     }
 
     console.log("Evento " + i + " -> isLate: " + eventosCalendario.isLate[i] + " | isFuture: " + eventosCalendario.isFuture[i]);
     
 }
 
-/*** Estilizar cada div e h3 e h4 ***/
+// Estilizar cada div e h3 e h4
 for (let i = 0; i < qtdeEventos; i++) {
 
     if (eventosCalendario.isLate[i] === true && eventosCalendario.isFuture[i] === false) {
 
-        /* Evento é antigo */
+        // Antigo - > Sem borda e texto oculto
+        divsCalendario[i].style.borderLeft = corIndicadorOculto;
+        
         h3sCalendario[i].style.color = corTextoOculto;
         h4sCalendario[i].style.color = corTextoOculto;
 
-        divsCalendario[i].style.borderLeft = corIndicadorOculto;
-
     } else if (eventosCalendario.isLate[i] === false && eventosCalendario.isFuture[i] === false) {
 
-        /* Evento é atual */
+        // Atual - > Com border
         divsCalendario[i].style.borderLeft = corIndicadorAtivo;
         
     } else {
-        
-         divsCalendario[i].style.borderLeft = corIndicadorOculto;
+        // Futuro - > Sem borda
+        divsCalendario[i].style.borderLeft = corIndicadorOculto;
 
     }
 
 
 }
 
-console.log("mais-informacoes-calendario.js FIM");
+console.log("All Fine here");
