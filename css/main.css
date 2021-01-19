@@ -122,7 +122,7 @@ main {
             /* Setando toda div que tem conteúdo para ocupar a altura max possivel na main-grid */
             .main-texto,
             .main-calendario,
-        /*  .main-info, */
+            .main-info, 
         /*  .main-galeria-fotos, */
             .main-publicacoes,
             .main-sobregaleria,
