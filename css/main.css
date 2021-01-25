@@ -122,7 +122,7 @@ main {
             /* Setando toda div que tem conteúdo para ocupar a altura max possivel na main-grid */
             .main-texto,
             .main-calendario,
-        /*  .main-info, */
+            .main-info, 
         /*  .main-galeria-fotos, */
             .main-publicacoes,
             .main-sobregaleria,
@@ -143,7 +143,7 @@ main {
 }
 
 /* Telas largas */
-@media screen and (min-width:960px) {
+@media screen and (min-width:1200px) {
 
         .main-grid {
             max-width: var(--width-desktop);
