@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Salão Anapolino de Arte - Desenvolvimento: Secretaria Municipal de Cultura 2020 -->
+<!-- Salão Anapolino de Arte -->
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
@@ -27,7 +27,6 @@
         <link rel="stylesheet" href="/css/tipografia.css" >
         <link rel="stylesheet" href="/css/header.css">
         <link rel="stylesheet" href="/css/index.css"><!-- Específica da página-->
-        <link rel="stylesheet" href="/css/footer.css">
         <link rel="stylesheet" href="/css/icones.css">
 
         <title>25º Salão Anapolino de Artes</title>
@@ -71,19 +70,19 @@
                     </a>
                 </nav>
                 <nav class="menu-right">
-                    <a href="#" class="menu-icon" href="#">=</a>
-                    <a id="option1" class="menu-option" href="mais-informacoes.html" >
+                    <a onclick="mainMenu();" class="menu-icon" href="*">=</a>
+                    <a onclick="changeToPage('mais-info');" id="option1" class="menu-option" href="mais-informacoes.html" >
                         <div class="hover-menu option1">
                             <p class="menu-tipografia">+Informações</p>
                         </div>
                     </a>
-                    <a id="option2" class="menu-option" href="edicoes-anteriores.html" >
-                        <div class="hover-menu option2">
+                    <a id="option2" class="menu-option" href="." >
+                        <div class="hover-menu ed-anteriores">
                             <p class="menu-tipografia">Edições Anteriores</p>
                         </div>
                     </a>
                     <a id="option3" class="menu-option" href="inscricao.html" >
-                        <div class="hover-menu option3">
+                        <div class="hover-menu inscrever">
                             <p class="menu-tipografia">Inscrever</p>
                         </div>
                     </a>
@@ -92,6 +91,7 @@
         </header>
         <main>
             <div class="main-grid">
+                <div class="left-side"></div>
                 <div class="main-texto">
                     <h1>25º Edição</h1>
                     <h2>Seja bem vind@!</h2>
@@ -176,5 +176,8 @@
             <p class="rodape-desktop">Este projeto foi contemplado pelo Edital de Fomento às Artes Visuais do Fundo de Arte e Cultura do Estado de Goiás 2018</p>
             <p class="rodape-mobile">Este projeto foi contemplado pelo Edital de<br> Fomento às Artes Visuais do Fundo de Arte e Cultura<br>do Estado de Goiás 2018</p>
         </footer>
+        <script>
+
+        </script>
     </body>
 </html>
