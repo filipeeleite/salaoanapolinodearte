@@ -13,3 +13,9 @@ carga cultural que suas diversas edições até o momento produziram.
 
 Toda a construção do site até o momento, está sendo documentads nesta plataforma.
 Esta documentação e maiores informações, você encontra na wiki do projeto: [https://github.com/filipeeleite/salaoanapolinodearte/wiki]:
+
+
+## Hashs utilizadas como links para páginas:
+- `#mais-informacoes`
+- `#edicoes-anteriores`
+- `#inscrever`
