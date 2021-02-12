@@ -1,59 +1,67 @@
-edicao23 = [
-    artista = 'blue',
-]
+// DADOS DE PESSOAS
+
+edicao24 = {
+    artistas: [
+        // Nome do artista - tag - classe - / onclick para pagina
+        ['Adriana Vignoli - DF', ''],
+        ['Andréa Hygino - RJ', '']
+        ['Claudio Trindade - SC', '']
+        ['Cristiana Nogueira - AP', '']
+        ['Danielle Fonseca - PA', '']
+        ['Daré - SP', '']
+        ['Élcio Miazaki - SP', '']
+        ['Eriel Araújo - BA', '']
+        ['Estefânia Young - RS', 'premiado']
+        ['Fernanda Adamski - GO', '']
+        ['Fernanda Azou - DF', 'premiado']
+        ['Guerreiro do Divino Amor - RJ', 'premiado nome-longo']
+        ['Hariel Revignet - GO', '']
+        ['Joardo Filho - GO', 'premiado']
+        ['Júlia Milward - SP', '']
+        ['Mano Penalva - SP', '']
+        ['Marcelo Amorim - SP', '']
+        ['Maurício Pokemon - PI', '']
+        ['Renato Rios - SP', '']
+        ['Yara Pina - GO', '']
+    ],
+    artistaHomenageado: [
+        ['Nazareno Pereira Filho - Napefi', '']
+    ],
+    premioArtistaConvidado: [
+        ['Dalton Paula - GO', '']
+        ['Marcelo Solá - GO', '']
+        ['Selma Parreira - GO', '']
+    ],
+    comissaoPremiacao: [
+
+    ],
+}
+
+<h3>Comissão de<br>Seleção:</h3>
+</div>
+<ol class="grid-ed-ant-lista-3">
+    <li>Josué Mattos</li>
+    <li>Ralph Gehre</li>
+    <li>Vânia Leal</li>
+</ol>
+<div class="grid-ed-ant-subtitulo-4">
+    <h3>Comissão de<br>Premiação:</h3>
+</div>
+<ol class="grid-ed-ant-lista-4">
+    <li>Ana Luisa Lima</li>
+    <li>Nilton Campos</li>
+    <li>Orlando Maneschy</li>
+</ol>
 
 
-edicao24 = [
-    artistas = {
-        [ // Nome do artista - tag - classe - / onclick para pagina
-            ['Adriana Vignoli - DF', 'p', 'nome']
-            ['Andréa Hygino - RJ', 'p', 'nome']
-            ['Claudio Trindade - SC', 'p', 'nome']
-            ['Cristiana Nogueira - AP', 'p', 'nome']
-            ['Danielle Fonseca - PA', 'p', 'nome']
-            ['Daré - SP', 'p', 'nome']
-            ['Élcio Miazaki - SP', 'p', 'nome']
-            ['Eriel Araújo - BA', 'p', 'nome']
-            ['Estefânia Young - RS', 'p', 'nome premiado']
-            ['Fernanda Adamski - GO', 'p', 'nome']
-            ['class="premiado">Fernanda Azou - DF', 'p', 'nome']
-            ['class="premiado nome-longo">Guerreiro do Divino Amor - RJ', 'p', 'nome']
-            ['Hariel Revignet - GO', 'nome']
-            ['class="premiado">Joardo Filho - GO', 'p', 'nome']
-            ['Júlia Milward - SP', 'p', 'nome']
-            ['Mano Penalva - SP', 'p', 'nome']
-            ['Marcelo Amorim - SP', 'p', 'nome']
-            ['Maurício Pokemon - PI', 'p', 'nome']
-            ['Renato Rios - SP', 'p', 'nome']
-            ['Yara Pina - GO', 'p', 'nome']
+
+
+
+
+
+    artistas : {
+
         ]
     }
 
-]
-
-
-
-<h3>Artistas:</h3>
-</div>
-<ol class="grid-ed-ant-lista-1">
-    <li>Adriana Vignoli - DF</li>
-    <li>Andréa Hygino - RJ</li>
-    <li>Claudio Trindade - SC</li>
-    <li>Cristiana Nogueira - AP</li>
-    <li>Danielle Fonseca - PA</li>
-    <li>Daré - SP</li>
-    <li>Élcio Miazaki - SP</li>
-    <li>Eriel Araújo - BA</li>
-    <li class="premiado">Estefânia Young - RS</li>
-    <li>Fernanda Adamski - GO</li>
-    <li class="premiado">Fernanda Azou - DF</li>
-    <li class="premiado nome-longo">Guerreiro do Divino Amor - RJ</li>
-    <li>Hariel Revignet - GO</li>
-    <li class="premiado">Joardo Filho - GO</li>
-    <li>Júlia Milward - SP</li>
-    <li>Mano Penalva - SP</li>
-    <li>Marcelo Amorim - SP</li>
-    <li>Maurício Pokemon - PI</li>
-    <li>Renato Rios - SP</li>
-    <li>Yara Pina - GO</li>
-</ol>
+}
