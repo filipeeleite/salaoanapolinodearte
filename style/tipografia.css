@@ -16,11 +16,12 @@ a {
 :root {
     --font-family-standard: 'Jost';
     --font-size-menu: 1.20rem; /* Menu */
-    --font-size-h1:   3.20rem; /* Titulo do bloco em cada página */
-    --font-size-h2:   2.30rem; /* Subtítulo em cada bloco */
-    --font-size-h3:   1.90rem; /* Títulos menores */
-    --font-size-h4:   1.60rem; /* Datas no calendário */
-    --font-size-h5:   unset;   /* Reservado - sem uso */
+    --font-size-h2:   3.20rem; /* Titulo do bloco em cada página */
+    --font-size-h3:   2.30rem; /* Subtítulo em cada bloco */
+    
+    --font-size-h4:   1.90rem; /* Títulos menores */
+    --font-size-h5:   1.60rem; /* Datas no calendário */
+    --font-size-h6:   unset;   /* Reservado - sem uso */
 
     --font-size-p:    1.32rem;
 
@@ -32,19 +33,19 @@ a {
 /* === Geral === */
 a { font-size: 0rem; } /* Zerar a margem destas tags */
 
-h1, h2, h3, h4, h5, h6, p, li {
+h2, h3, h4, h5, h6, p, li {
     font-family: var(--font-family-standard);
     text-decoration: none;
 }
 /* Todos menos links */
-h1, h2, h3, h4, h5, h6, li, p:not(.menu-tipografia) {
+h2, h3, h4, h5, h6, li, p:not(.menu-tipografia) {
     /*color: red;*/
     margin-left: var(--margem);
     margin-right: var(--margem);
 }
 
 /* padding-bottom: - white space controlado */
-h1, h2, h3, h4, h5, h6, p {
+h2, h3, h4, h5, h6, p {
     /*outline: 1px solid black;*/
     padding-bottom: 0px; /* Revisar */
     padding-top: 0px; /* Revisar */
@@ -56,13 +57,8 @@ p.menu-tipografia {
     text-decoration: none;
 }
 
-/* === <h1 a h6> === */
-h1 {
-    font-size: var(--font-size-h1);
-    font-weight: 500;
-    margin-bottom: -11px; /* Alinhar Baseline com margem de outros elementos */
-    margin-right: calc(var(--margem) * 2);
-}
+/* === <h2 a h6> === */
+
 h2 {
     font-size: var(--font-size-h2);
     font-weight: 400;

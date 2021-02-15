@@ -23,75 +23,17 @@
         <meta property="og:image:url" content="/img/logos/thumbnail988.png">
         <link rel="icon" type="image/x-icon" href="/img/icons/favicon.ico"/>
 
-        <link rel="stylesheet" href="/css/main.css"><!-- Estrutura Geral -->
-        <link rel="stylesheet" href="/css/tipografia.css" >
-        <link rel="stylesheet" href="/css/header.css">
-        <link rel="stylesheet" href="/css/index.css"><!-- Específica da página-->
-        <link rel="stylesheet" href="/css/icones.css">
-
         <title>25º Salão Anapolino de Artes</title>
 
     </head>
     <body>
-        <header>
-            <div class="menu-bar">
-                <nav onclick="changeToPage('index');" id="main-Menu-option1" class="menu-left" >
-                    <!-- LOGO DO SALAO -->
-                    <a href=""><!-- talvez tirar - inserrir svg dentro da nav -->
-                    </a>
-                </nav>
-                <nav class="menu-right">
-                    <a href="#mais-informacoes" onclick="changeToPage('mais-info');" id="mainMenu-option2" class="menu-option"  >
-                        <div class="hover-menu option1">
-                            <p class="menu-tipografia">+Informações</p>
-                        </div>
-                    </a>
-                    <a href="#edicoes-anteriores" onclick="changeToPage('ed-anteriores');" id="mainMenu-option3" class="menu-option"  >
-                        <div class="hover-menu ed-anteriores">
-                            <p class="menu-tipografia">Edições Anteriores</p>
-                        </div>
-                    </a>
-                    <a href="#inscrever" onclick="changeToPage('inscrever'); " id="mainMenu-option4" class="menu-option" >
-                        <div class="hover-menu inscrever">
-                            <p class="menu-tipografia">Inscrever</p>
-                        </div>
-                    </a>
-                </nav>
-            </div>
-        </header>
-        <main>
-            <div id="main-background"></div>
-            <div class="main-grid">
-                <div id="main-grid-left-side"></div>
-                <div id="main-grid-right-side"></div>
-            </div>
-        </main>
-        <footer>
-            <div class="logomarcas">
-                <div class="realizacao">
-                    <p class="logomarcas">Realização:</p>
-                    <div class="footer-logos">
-                        <!--a1-Associacao-AmigosMapa.png-->
-                        <img class="footer-logo" src="/img/logos/a1-Associacao-AmigosMapa.png" alt="">
-                        <!--a2-Galeria.png-->
-                        <img class="footer-logo" src="/img/logos/a2-Galeria.png" alt="">
-                        <!--a3-Prefeitura.png-->
-                        <img class="footer-logo" src="/img/logos/a3-Prefeitura.png" alt="">
-                    </div>
-                </div>
-                <div class="apresentacao">
-                    <p class="logomarcas">Apresentação:</p>
-                    <div class="footer-logos">
-                        <!--b1-FundodeArteeCultura.png-->
-                        <img class="footer-logo" src="/img/logos/b1-FundodeArteeCultura.png" alt="">
-                        <!--b2-Secult-Goias.png-->
-                        <img class="footer-logo" src="/img/logos/b2-Secult-Goias.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <p class="rodape-desktop">Este projeto foi contemplado pelo Edital de Fomento às Artes Visuais do Fundo de Arte e Cultura do Estado de Goiás 2018</p>
-            <p class="rodape-mobile">Este projeto foi contemplado pelo Edital de<br> Fomento às Artes Visuais do Fundo de Arte e Cultura<br>do Estado de Goiás 2018</p>
-        </footer>
+        <!-- 0) Data -->
+        <script src="textos.js"></script>
+        <script src="pessoas.js"></script>
+        <script src="svgicons.js"></script>
+        <!-- 1) Constructor -->
+        <script src="render.js"></script>
+        <!-- 2) React to actions -->
         <script src="app.js"></script>
         <noscript>Este aplicativo Web utiliza Javascript. Favor habilitar em seu browser ou utilizar navegador compatível.</noscript>
     </body>

@@ -1,0 +1,257 @@
+@import url(https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500&display=swap);
+
+:root {
+    /* CORES */
+    --color-main-primary: #085273;
+    --color-main-primary-disabled: #77a1b6;
+    --color-main-primary-hover: #1b6588;
+    --color-main-secondary: #D49100;
+    --color-background: #bdcfd8;
+    --color-dark: black;
+    --color-bright: white;
+
+    --font-family: 'Jost';
+
+    --margin: 20px;
+    --menu-opened: 200px;
+    --menu-heigth-mobile: 200px;
+}
+* {
+    margin: 0;
+    /* outline: 1px solid; */
+}
+html {
+    -webkit-text-size-adjust: 100%; /* Escala se manter em mobiles */
+    font-family: var(--font-family);
+    font-weight: 300;
+}
+/*
+1) Tipografia
+2) Imagens
+3) Header
+4) Main
+5) Footer
+*/
+.display-none {
+    display: none;
+}
+.menu-right p {
+    color: var(--color-bright);
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.button-disabled p {
+    color: var(--color-main-primary-disabled);
+}
+h2 {
+    font-size: 42px;
+    font-weight: 400;
+}
+h3 {
+    font-size: 25px;
+    font-weight: 400;
+
+}
+
+p {
+    font-size: 17px;
+    padding-bottom: 3px;
+}
+footer .center-area {
+    text-align: center;
+
+}
+.welcome img {
+    border-radius: 4px;
+}
+
+.main-grid {
+    padding-top: 40px;
+    padding-bottom: var(--margin);
+}
+
+.block > * {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+.maintenance {
+    width: calc(100% - calc(2 * var(--margin)));
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    margin-bottom: var(--margin);
+
+    border-radius: 4px;
+    height: 100px;
+    background-color: rgb(126, 0, 0);
+}
+
+
+.welcome-img {
+    display: block;
+    width: calc(100% - calc(2 * var(--margin)));
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    margin-bottom: var(--margin);
+
+    border-radius: 4px;
+}
+
+/*
+Apresentação:
+Realização:
+*/
+footer div p {
+    font-size: 14px;
+    padding-bottom: 3px;
+}
+/* Este Projeto foi contemplado... */
+footer > p {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 2px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 2) Imagens */
+svg {
+    display: block;
+}
+
+header svg {
+    max-height: 80px;
+    height: 100%;
+
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+}
+header svg .logo-norte,
+header svg .logo-nordeste,
+header svg .logo-centro-oeste,
+header svg .logo-sudeste,
+header svg .logo-sul {
+    fill: none;
+    stroke: var(--color-main-secondary);
+    stroke-width: 11;
+}
+.logo-tipografia {
+    fill: white;
+}
+
+
+footer img {
+    height: 50px;
+    margin: 0 10px;
+    /* outline: 1px solid; */
+}
+.footer-logos {
+    display: flex;
+    margin-bottom: 10px;
+    /* flex-wrap: wrap; */
+}
+
+/* BODY */
+body {
+    --mainMinHeight: 0px;
+}
+/* 3) Header */
+header {
+    background-color: var(--color-main-primary);
+}
+
+.menu-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+}
+#main-menu-option1 {
+    display: flex;
+    background-color: var(--color-main-primary);
+}
+.logo-salao {
+    margin: auto;
+}
+
+#main-menu-option2,
+#main-menu-option3,
+#main-menu-option4 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* 4) Main */
+main {
+    /* background-color: rgb(255, 193, 193); */
+    background-color: rgb(233, 233, 233);
+    min-height: var(--mainMinHeight);
+
+    display: flex;
+    justify-content: center;
+}
+.main-grid {
+    display: grid;
+    grid-gap: var(--margin);
+    max-width: 800px;
+    /* grid-template-rows: 480px 1fr; */
+
+
+
+
+    /* outline: 1px dashed blue; */
+    /* margin: 0 var(--margin); */
+}
+
+
+/* 5) Footer */
+footer {
+    /* border: 1px solid blue; */
+    /* max-width: 900px; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer .center-area {
+    /* background-color: rgb(255, 182, 182); */
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
+.footer-logos {
+    height: 50px;
+}
+
+
+
+.center-area > div {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    /* background-color: rgb(230, 203, 255); */
+
+}
+
+@media screen and (min-width: 1048px) {
+    .main-grid {
+        max-width: 1024px;
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    footer .center-area {
+        flex-direction: row;
+    }
+}

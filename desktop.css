@@ -1,0 +1,148 @@
+:root {
+    --borderMainMenu: 3px solid var(--color-main-primary);
+    --borderMainMenuBright: 3px solid white;
+}
+/*
+1) Typography
+2) Images
+3) Header
+4) Main
+5) Footer
+*/
+/* 1) Typography */
+/* This Edition List First Element */
+.this-edition-list > h3:nth-of-type(1),
+.this-edition-list > h3:nth-of-type(2) {
+margin-top: -14px;
+}
+h2 {
+    font-size: 38px;
+    font-weight: 400;
+}
+h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 14px;
+    margin-bottom: 12px;
+}
+p {
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+
+.welcome p {
+    margin-top: 10px;
+}
+
+
+/* 2) Images */
+
+
+/* 3) Header */
+header {
+    height: 100px;
+}
+#main-menu-option1 {
+    height: 94px;
+}
+
+#main-menu-option1,
+#main-menu-option2,
+#main-menu-option3,
+#main-menu-option4 {
+    border-top: var(--borderMainMenu);
+    border-bottom: var(--borderMainMenu);
+}
+
+.menu-bar {
+    justify-content: center;
+    max-width: 800px;
+}
+.menu-right {
+    display: flex;
+}
+
+.menu-right p {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+header svg {
+    max-height: 60px;
+}
+.logo-salao {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+}
+
+/* 4) Main */
+
+#main-menu-option1 {
+    /* width: 30%; */
+    width: 207px;
+}
+.menu-right {
+    /* width: 70%; */
+}
+#main-menu-option2 {
+    margin-left: auto;
+}
+
+#main-menu-option2,
+#main-menu-option3,
+#main-menu-option4 {
+    height: 94px; /* 100px - 6px */
+}
+#main-menu-option1:hover,
+#main-menu-option2:hover,
+#main-menu-option3:hover,
+#main-menu-option4:hover {
+    background-color: var(--color-main-primary-hover);
+    cursor: pointer;
+}
+#main-menu-option2.button-disabled:hover,
+#main-menu-option3.button-disabled:hover,
+#main-menu-option4.button-disabled:hover {
+    background-color: var(--color-main-primary);
+    cursor: not-allowed;
+}
+
+#main-menu-option2 div,
+#main-menu-option3 div,
+#main-menu-option4 div {
+    display: flex;
+}
+
+
+
+@media screen and (min-width:1024px) {
+
+
+
+
+
+
+    
+}
+
+@media screen and (min-width:1048px) {
+    .menu-bar {
+        max-width: 1024px;
+    }
+    .main-grid {
+        grid-template-columns: 680px 1fr;
+    }
+    .maintenance {
+        width: calc(100% - var(--margin));
+        margin-left: var(--margin);
+        margin-right: 0;
+        margin-bottom: var(--margin);
+    }
+
+    .welcome-img {
+        display: block;
+        width: calc(100% - var(--margin));
+        margin-left: var(--margin);
+        margin-right: 0;
+        margin-bottom: var(--margin);
+    }
+}
