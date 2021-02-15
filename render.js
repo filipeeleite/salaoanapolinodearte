@@ -11,19 +11,32 @@ styleSheetToHead.setAttribute('rel', 'stylesheet');
 styleSheetToHead.setAttribute('href', 'common.css');
 document.head.appendChild(styleSheetToHead);
 
-if (window.innerWidth > 1024) {
-    mobile = false;
-    styleSheetToHead = document.createElement('link');
-    styleSheetToHead.setAttribute('rel', 'stylesheet');
-    styleSheetToHead.setAttribute('href', 'desktop.css');
-    document.head.appendChild(styleSheetToHead);
-} else {
-    mobile = true;
-    styleSheetToHead = document.createElement('link');
-    styleSheetToHead.setAttribute('rel', 'stylesheet');
-    styleSheetToHead.setAttribute('href', 'mobile.css');
-    document.head.appendChild(styleSheetToHead);
+setStyleSheet();
+function setStyleSheet() {
+    // Checks first
+    while (document.head.getElementsByClassName('specificStylesheet')[0]) {
+        linkNodeToRemove = document.head.getElementsByClassName('specificStylesheet')[0];
+        document.head.removeChild(linkNodeToRemove);
+    }
+
+    if (window.innerWidth > 1024) {
+        mobile = false;
+        styleSheetToHead = document.createElement('link');
+        styleSheetToHead.setAttribute('class', 'specificStylesheet');
+        styleSheetToHead.setAttribute('rel', 'stylesheet');
+        styleSheetToHead.setAttribute('href', 'desktop.css');
+        document.head.appendChild(styleSheetToHead);
+    } else {
+        mobile = true;
+        styleSheetToHead = document.createElement('link');
+        styleSheetToHead.setAttribute('class', 'specificStylesheet');
+        styleSheetToHead.setAttribute('rel', 'stylesheet');
+        styleSheetToHead.setAttribute('href', 'mobile.css');
+        document.head.appendChild(styleSheetToHead);
+    }
 }
+
+
 
 // FIRST LOAD ::::::::::
 appendOnBody('header');

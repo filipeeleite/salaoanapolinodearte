@@ -1,8 +1,6 @@
 // 2) Actions, changes on the screen, how app will react
 // Prepare html to receive what to be shown on screen
 
-
-
 // State of the Menu
 var MenuOpened = false;
 var mainMenuHeight = '100px';
@@ -143,4 +141,11 @@ function setMinHeightMain() {
     setCssVariable('--mainMinHeight', mainMinHeight + "px");
 }
 // setMinHeightMain();
-setTimeout(function () { setMinHeightMain() }, 1000) ;
+setTimeout(function () { setMinHeightMain() }, 1000);
+
+// ::::::::::::::
+
+// Clock Functions ( Functions that Repeats )
+window.addEventListener('resize', setStyleSheet, false);
+
+//setInterval(function () { setStyleSheet() }, 10000);
