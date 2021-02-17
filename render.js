@@ -1,3 +1,8 @@
+// 0) Debugging
+function consoleLog(string) {
+    console.log(string);
+}
+
 // 1) What to be draw on screen and how
 
 // Main State of the application
@@ -5,12 +10,16 @@ var RunningState = location.hash;
 //RunningState == "" -> # (false)
 //RunningState == "#talpagina"
 
+// Indicates destination
+var WhereToGo = RunningState;
+
 // Reading Screen Format to Set Variable -> mobile = true / false
 styleSheetToHead = document.createElement('link');
 styleSheetToHead.setAttribute('rel', 'stylesheet');
 styleSheetToHead.setAttribute('href', 'common.css');
 document.head.appendChild(styleSheetToHead);
 
+// Set to use mobile or desktop stylesheet
 setStyleSheet();
 function setStyleSheet() {
     // Checks first
@@ -35,8 +44,6 @@ function setStyleSheet() {
         document.head.appendChild(styleSheetToHead);
     }
 }
-
-
 
 // FIRST LOAD ::::::::::
 appendOnBody('header');
@@ -264,12 +271,12 @@ function removeBlocks() {
     numberOfblocksTagToRemove = mainGridLeftSideTag.getElementsByClassName('block').length;
     if (numberOfblocksTagToRemove) {
         for (let i = 0; i < numberOfblocksTagToRemove; i++) {
-            console.log(':: XX left length: '+ mainGridLeftSideTag.getElementsByClassName('block').length + ' :: ' + 'Removed! i=' + i);
+            consoleLog(':: XX left length: '+ mainGridLeftSideTag.getElementsByClassName('block').length + ' :: ' + 'Removed! i=' + i);
+            //console.log();
 
             blockToRemove = document.querySelectorAll('#main-grid-left-side .block')[0];
 
             mainGridLeftSideTag.removeChild(blockToRemove);
-    
         }
     }
 
@@ -278,16 +285,15 @@ function removeBlocks() {
     if (numberOfblocksTagToRemove) {
         for (let i = 0; i < numberOfblocksTagToRemove; i++) {
             
-            console.log(':: XX right length: '+ mainGridRightSideTag.getElementsByClassName('block').length + ' :: ' + 'Removed! i=' + i)
+            consoleLog(':: XX right length: '+ mainGridRightSideTag.getElementsByClassName('block').length + ' :: ' + 'Removed! i=' + i);
+            //console.log()
             
             blockToRemove = document.querySelectorAll('#main-grid-right-side .block')[0];
     
             mainGridRightSideTag.removeChild(blockToRemove);
-
         }
     }
 }
-
 
 // Append on main the blocks of the page
 function renderPage(page) {
@@ -297,7 +303,8 @@ function renderPage(page) {
 
     // Constructs the <div class="block .tal-pagina"> complete
     function construct(blockName) {
-        console.log(':: -> construct(' + blockName + ')');
+        consoleLog(':: -> construct(' + blockName + ')');
+        //console.log();
 
         blockToRender = document.createElement("div");
         let element; // reusing this variable on each element to plot
@@ -360,21 +367,21 @@ function renderPage(page) {
             blockToRender.appendChild(element); //:::
 
             // Text in Portuguese
-            let elementCount = texto25edicao.pt.length;
+            let elementCount = edicao25.texto.pt.length;
             for (let i = 0; elementCount > 0; i++) {
                 element = document.createElement('p');
                 element.setAttribute('class', 'pt');
-                element.innerHTML = texto25edicao.pt[i];
+                element.innerHTML = edicao25.texto.pt[i];
                 blockToRender.appendChild(element); //:::
                 elementCount--;
             }
 
             // Text in English
-            elementCount = texto25edicao.en.length;
+            elementCount = edicao25.texto.en.length;
             for (let i = 0; elementCount > 0; i++) {
                 element = document.createElement('p');
                 element.setAttribute('class', 'en');
-                element.innerHTML = texto25edicao.en[i];
+                element.innerHTML = edicao25.texto.en[i];
                 blockToRender.appendChild(element); //:::
                 elementCount--;
             }
@@ -500,16 +507,14 @@ function renderPage(page) {
         // OUTPUT
         return blockToRender;
     }
+    if (page === 'maintenance') {
+        construct('maintenance');
+        document.getElementById('main-grid-left-side').appendChild(blockToRender);
+    }
 
     if (page === 'index') {
 
-        construct('maintenance');
-        document.getElementById('main-grid-left-side').appendChild(blockToRender);
 
-        document.getElementById('elementocomid').style.outline = '1px solid blue';
-
-
-        
         construct('welcome');
         document.getElementById('main-grid-left-side').appendChild(blockToRender);
 

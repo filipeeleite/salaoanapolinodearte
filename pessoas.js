@@ -1,55 +1,11 @@
+
+
+
 // Estrutura das Edicoes / Dados
 // Pessoas [ ID, 'Nome', 'premiado xx']
 // Exposicao.nome/abertura/fim/local/cidade
 // catalogo = 'url'
 
-edicao25 = {
-    artistas: [
-        // Nome do artista - tag - classe - / onclick para pagina
-        [00000, 'Aggripina R. Manhattan - RJ', ''],
-        [00000, 'Aline Brune - BA', ''],
-        [00000, 'Aline Luppi Grossi - PR', ''],
-        [00000, 'Ana Sabiá - SC', ''],
-        [00000, 'Diambe da Silva – RJ', ''],
-        [00000, 'Eneida Sanches – SP', ''],
-        [00000, 'Erinaldo Cirino – PA', ''],
-        [00000, 'Estevão Parreiras – GO', ''],
-        [00000, 'Gê Viana – MA', ''],
-        [00000, 'João Trevisan – DF', ''],
-        [00000, 'Luiz 83 – SP', ''],
-        [00000, 'Pamella Anderson – DF', ''],
-        [00000, 'Renan Teles – SP', ''],
-        [00000, 'Renata Felinto – CE', ''],
-        [00000, 'Rodrigo D’Alcantra – DF', ''],
-        [00000, 'Sophia Pinheiro – GO', ''],
-        [00000, 'Ueliton Santana – AC', ''],
-        [00000, 'Vic Macedo – RS', ''],
-        [00000, 'Xadalu Tupã Jekupé – RS', ''],
-        [00000, 'Ziel Karapotó – PE', '']
-    ],
-    premioFomentoProducaoAnapolina: [
-        [00000, 'Ana Paula Faria', ''],
-        [00000, 'Diego Oliveira', ''],
-        [00000, 'Joardo Filho', ''],
-        [00000, 'Rei Souza', ''],
-    ],
-    premioArtistaConvidado: [
-        [00000, 'Siron Franco', '']
-    ],
-    comissaoSelecao: [
-        [00000, 'Adelaide Pontes', ''],
-        [00000, 'Clarissa Diniz', ''],
-        [00000, 'Wagner Barja', '']
-    ],
-    comissaoPremiacao: [
-        [00000, 'Claudinei Roberto da Silva',''],
-        [00000, 'Samantha Moreira',''],
-        [00000, 'Vânia Leal','']
-    ],
-    curadoria: [
-        [00000, 'Paulo Henrique Silva','']
-    ]
-}
 edicao24 = {
     artistas: [
         [00000, 'Adriana Vignoli - DF', ''],
