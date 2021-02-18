@@ -11,7 +11,7 @@ var RunningState = location.hash;
 //RunningState == "#talpagina"
 
 // Indicates destination
-var WhereToGo = RunningState;
+var whereToGo = RunningState;
 
 // Reading Screen Format to Set Variable -> mobile = true / false
 styleSheetToHead = document.createElement('link');
@@ -28,7 +28,7 @@ function setStyleSheet() {
         document.head.removeChild(linkNodeToRemove);
     }
 
-    if (window.innerWidth > 1024) {
+    if (window.innerWidth > 1100) {
         mobile = false;
         styleSheetToHead = document.createElement('link');
         styleSheetToHead.setAttribute('class', 'specificStylesheet');
@@ -78,19 +78,18 @@ function appendOnBody(tag) {
                 div1.appendChild(sideR);
                 sideR.setAttribute("class", "menu-right");
 
-                    // Open / Close Button will Render on Mobile
-                    if (mobile) {
-                        let openCloseMenuButton = document.createElement("div");
-                        sideR.appendChild(openCloseMenuButton);
-                        openCloseMenuButton.setAttribute("onclick", "clickMainMenu('open-close');");
-                        openCloseMenuButton.setAttribute("class", "open-close-menu-button");
-                        openCloseMenuButton.innerHTML = 'X';
-                    }
+                    // Open / Close Button
+                    let openCloseMenuButton = document.createElement("div");
+                    sideR.appendChild(openCloseMenuButton);
+                    openCloseMenuButton.setAttribute("onclick", "clickMainMenu('open-close');");
+                    openCloseMenuButton.setAttribute("class", "open-close-menu-button");
+                    openCloseMenuButton.innerHTML = 'X';
 
                     let div2 = document.createElement("div");
                     sideR.appendChild(div2);
                     div2.setAttribute("onclick", "clickMainMenu('mais-info');");
                     div2.setAttribute("id", "main-menu-option2");
+                    div2.setAttribute("class", "button-disabled");
                     
                         // pt - Mais info
                         let option1pt = document.createElement("p");
@@ -126,18 +125,19 @@ function appendOnBody(tag) {
                     sideR.appendChild(div4);
                     div4.setAttribute("onclick", "clickMainMenu('inscrever');");
                     div4.setAttribute("id", "main-menu-option4");
+                    div4.setAttribute("class", "button-disabled");
                         
                         // pt - Inscrever
                         let option3pt = document.createElement("p");
                         div4.appendChild(option3pt);
                         option3pt.setAttribute("class", "pt");
-                        option3pt.innerHTML = 'Inscrever';
+                        option3pt.innerHTML = 'Inscrição';
                         
                         // en - Subscribe
                         let option3en = document.createElement("p");
                         div4.appendChild(option3en);
                         option3en.setAttribute("class", "en");
-                        option3en.innerHTML = 'Subscribe';
+                        option3en.innerHTML = '';
                         
         document.body.appendChild(header);
 
@@ -392,53 +392,60 @@ function renderPage(page) {
         if (blockName === 'this-edition-list') {
             blockToRender.setAttribute("class", "block " + blockName);
 
+            setArraysRefPessoas(25);
+
+
             // Renders This Edition List
             // This Edition Structure
             thisEditionList = [
                 // Each line is a step (StepsToRender)
                 ['h3', 'class', 'pt', 'Artistas Selecionados'],
                 ['h3', 'class', 'en', 'Selected Artists'],
-                ['p', 'class', '', edicao25.artistas],
+                ['p', 'class', '', edicao25.refPessoas.artistasSelecionados],
                 
                 ['h3', 'class', 'pt', 'Prêmio Fomento à Produção Anapolina'],
                 ['h3', 'class', 'en', 'Premio Fomento à Produção (EN)'],
-                ['p', 'class', '', edicao25.premioFomentoProducaoAnapolina],
+                ['p', 'class', '', edicao25.refPessoas.artistasPremioFomentoProdAnapolina],
                 
                 ['h3', 'class', 'pt', 'Prêmio Artista Convidado'],
                 ['h3', 'class', 'en', 'Premio Artista Convidado (EN)'],
-                ['p', 'class', '', edicao25.premioArtistaConvidado[0][1]], // ONLY ONE
+                ['p', 'class', '', edicao25.refPessoas.premioArtistaConvidado],
                 
                 ['h3', 'class', 'pt', 'Comissão de Seleção'],
                 ['h3', 'class', 'en', 'Comissão de Seleção (EN)'],
-                ['p', 'class', '', edicao25.comissaoSelecao],
+                ['p', 'class', '', edicao25.refPessoas.comissaoSelecao],
                 
                 ['h3', 'class', 'pt', 'Comissão de Premiação'],
                 ['h3', 'class', 'en', 'Comissão de Premiação (EN)'],
-                ['p', 'class', '', edicao25.comissaoPremiacao],
+                ['p', 'class', '', edicao25.refPessoas.comissaoPremiacao],
                 
                 ['h3', 'class', 'pt', 'Curadoria'],
                 ['h3', 'class', 'en', '(Curadoria (EN)'],
-                ['p', 'class', '', edicao25.curadoria[0][1]] // ONLY ONE
+                ['p', 'class', '', edicao25.refPessoas.curador]
             ]
 
             // Render
-            stepsToRender = thisEditionList.length
-            for (let i = 0; i < stepsToRender; i++) {
+            steps = thisEditionList.length
+            for (let i = 0; i < steps; i++) {
                 //  Run each time to Each line of the array thisEditionList
-                if (typeof(thisEditionList[i][3]) == "string") {
+                obj = thisEditionList[i][3];
+
+                if (typeof(thisEditionList[i][3]) == 'string') {
                     // Single String
                     element = document.createElement(thisEditionList[i][0]);
                     element.setAttribute(thisEditionList[i][1], thisEditionList[i][2]);
                     element.innerHTML = thisEditionList[i][3];
                     blockToRender.appendChild(element);
 
-                } else if (typeof(thisEditionList[i][3]) == "object") {
+                } else if (typeof(thisEditionList[i][3]) == 'object') {
                     // Multiple Strings
                     let NamesToRender = thisEditionList[i][3].length;
                     for (let j = 0; NamesToRender > 0; j++) {
+
+                        //['p', 'class', '', edicao25.refPessoas.curador]
                         element = document.createElement(thisEditionList[i][0]);
                         element.setAttribute(thisEditionList[i][1], thisEditionList[i][2]);
-                        element.innerHTML = thisEditionList[i][3][j][1]; // [j][1] = what name
+                        element.innerHTML = thisEditionList[i][3][j]; // [j] = what name
                         blockToRender.appendChild(element);
                         NamesToRender--;
                     }
@@ -548,49 +555,35 @@ function bordersMainMenu() {
 
     // Reset Color
     for (let i = 0; i < 4; i++) {
-        if (mobile) {
-            document.getElementById('main-menu-option' + (i + 1)).style.backgroundColor = 'var(--color-main-primary)';
-            document.getElementById('main-menu-option' + (i + 1)).style.borderRight = 'var(--borderMainMenu)';
-        } else {
-            document.getElementById('main-menu-option' + (i + 1)).style.borderBottom = 'var(--borderMainMenu)';
+        document.getElementById('main-menu-option' + (i + 1)).style.backgroundColor = 'var(--color-main-primary)';
+        document.getElementById('main-menu-option' + (i + 1)).style.borderBottom = 'var(--border-bottom-main-menu-off)';
+        if (i != 0) {
+            // none on main logo (#main-menu-option1)
+            document.getElementById('main-menu-option' + (i + 1)).style.borderLeft = 'var(--border-left-main-menu-off)';
         }
     }
 
     // Set Color Based RunningState (page)
 
-    if (mobile) {
-
-        if (RunningState) {
-            // On Page Different than index
-            if (RunningState == '#mais-info') {
-                document.getElementById('main-menu-option2').style.backgroundColor = 'var(--color-main-primary-hover)';
-                document.getElementById('main-menu-option2').style.borderRight = 'var(--borderMainMenuBright)';
-            } else if (RunningState == '#edicoes-anteriores') {
-                document.getElementById('main-menu-option3').style.backgroundColor = 'var(--color-main-primary-hover)';
-                document.getElementById('main-menu-option3').style.borderRight = 'var(--borderMainMenuBright)';
-            } else if (RunningState == '#inscrever') {
-                document.getElementById('main-menu-option4').style.backgroundColor = 'var(--color-main-primary-hover)';
-                document.getElementById('main-menu-option4').style.borderRight = 'var(--borderMainMenuBright)';
-            }
-            
+    if (RunningState) {
+        // On Page Different than index
+        if (RunningState == '#mais-info') {
+            document.getElementById('main-menu-option2').style.backgroundColor = 'var(--main-menu-button-background)';
+            document.getElementById('main-menu-option2').style.borderLeft = 'var(--border-left-main-menu)';
+            document.getElementById('main-menu-option2').style.borderBottom = 'var(--border-bottom-main-menu)';
+        } else if (RunningState == '#edicoes-anteriores') {
+            document.getElementById('main-menu-option3').style.backgroundColor = 'var(--main-menu-button-background)';
+            document.getElementById('main-menu-option3').style.borderLeft = 'var(--border-left-main-menu)';
+            document.getElementById('main-menu-option3').style.borderBottom = 'var(--border-bottom-main-menu)';
+        } else if (RunningState == '#inscrever') {
+            document.getElementById('main-menu-option4').style.backgroundColor = 'var(--main-menu-button-background)';
+            document.getElementById('main-menu-option4').style.borderLeft = 'var(--border-left-main-menu)';
+            document.getElementById('main-menu-option4').style.borderBottom = 'var(--border-bottom-main-menu)';
         }
 
-    } else { // Desktop Environment
-
-        if (RunningState) {
-            // On Page Different than index
-            if (RunningState == '#mais-info') {
-                document.getElementById('main-menu-option2').style.borderBottom = 'var(--borderMainMenuBright)';
-            } else if (RunningState == '#edicoes-anteriores') {
-                document.getElementById('main-menu-option3').style.borderBottom = 'var(--borderMainMenuBright)';
-            } else if (RunningState == '#inscrever') {
-                document.getElementById('main-menu-option4').style.borderBottom = 'var(--borderMainMenuBright)';
-            }
-
-        } else {
-            document.getElementById('main-menu-option1').style.borderBottom = 'var(--borderMainMenuBright)';
-        }
-
+    } else {
+        // Index (main logo)
+        document.getElementById('main-menu-option1').style.borderBottom = 'var(--border-bottom-main-menu)';
     }
 
 }

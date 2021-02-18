@@ -36,19 +36,19 @@ function clickMainMenu(option) {
     // Conditionals, Action to What option Selected
     if (option == 'index') {
         whereToGo = '';
-        router(WhereToGo);
+        router(whereToGo);
     }
     if (option == 'mais-info') {
         whereToGo = '#mais-info';
-        router(WhereToGo);
+        router(whereToGo);
     }
     if (option == 'ed-anteriores') {
-        whereToGo = '#ed-anteriores';
-        router(WhereToGo);
+        whereToGo = '#edicoes-anteriores';
+        router(whereToGo);
     }
     if (option == 'inscrever') {
         whereToGo = '#inscrever';
-        router(WhereToGo);
+        router(whereToGo);
 
     }
 
@@ -110,24 +110,24 @@ function changeLang(appLoading) {
 // WhereToGo = RunningState;
 
 router(whereToGo);
-function router(WhereToGo) {
+function router(whereToGo) {
 
-    if (WhereToGo == '') {
+    if (whereToGo == '') {
         renderPage('index');
         // :::: State of the application
         document.location.hash = '';
 
-    } else if (WhereToGo === '#mais-info') {
+    } else if (whereToGo === '#mais-info') {
         renderPage('mais-info');
         // :::: State of the application
         document.location.hash = 'mais-info';
 
-    } else if (WhereToGo === '#edicoes-anteriores') {
+    } else if (whereToGo === '#edicoes-anteriores') {
         renderPage('ed-anteriores');
         // :::: State of the application
         document.location.hash = 'edicoes-anteriores';
 
-    } else if(WhereToGo === '#inscrever') {
+    } else if (whereToGo === '#inscrever') {
         renderPage('inscrever');
         // :::: State of the application
         document.location.hash = 'inscrever';

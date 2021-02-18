@@ -1,6 +1,17 @@
 :root {
-    --borderMainMenu: 3px solid var(--color-main-primary);
-    --borderMainMenuBright: 3px solid white;
+    /* --borderMainMenu: 3px solid var(--color-main-primary); */
+    /* --borderMainMenuBright: 3px solid white; */
+
+    --main-menu-button-background: var(--color-main-primary);
+
+    --border-left-main-menu: none;
+    --border-left-main-menu-off: none;
+    --border-bottom-main-menu: 3px solid white;
+    --border-bottom-main-menu-off: 3px solid var(--color-main-primary);
+}
+
+main {
+    background-color: rgb(230, 247, 255);
 }
 /*
 1) Typography
@@ -13,7 +24,8 @@
 /* This Edition List First Element */
 .this-edition-list > h3:nth-of-type(1),
 .this-edition-list > h3:nth-of-type(2) {
-margin-top: -14px;
+margin-top: -14px; /* x TOP */
+margin-top: -10px;
 }
 h2 {
     font-size: 38px;
@@ -45,14 +57,23 @@ header {
 #main-menu-option1 {
     height: 94px;
 }
-
+.open-close-menu-button {
+    display: none;
+}
 #main-menu-option1,
 #main-menu-option2,
 #main-menu-option3,
 #main-menu-option4 {
-    border-top: var(--borderMainMenu);
-    border-bottom: var(--borderMainMenu);
+    border-top: 3px solid var(--color-main-primary);
+    border-bottom: var(--border-bottom-main-menu-off);
+    /* Javascript will set on element the --border-bottom-main-menu value */
+
+    border-left: none;
 }
+
+
+
+
 
 .menu-bar {
     justify-content: center;
@@ -113,36 +134,36 @@ header svg {
 }
 
 
-
-@media screen and (min-width:1024px) {
-
-
-
-
-
-
-    
+.menu-bar {
+    max-width: 1024px;
+}
+.main-grid {
+    grid-template-columns: 680px 1fr;
+    max-width: 1024px;
+}
+.maintenance {
+    width: calc(100% - var(--margin));
+    margin-left: var(--margin);
+    margin-right: 0;
+    margin-bottom: var(--margin);
 }
 
-@media screen and (min-width:1048px) {
-    .menu-bar {
-        max-width: 1024px;
-    }
-    .main-grid {
-        grid-template-columns: 680px 1fr;
-    }
-    .maintenance {
-        width: calc(100% - var(--margin));
-        margin-left: var(--margin);
-        margin-right: 0;
-        margin-bottom: var(--margin);
-    }
+.welcome-img {
+    display: block;
+    width: calc(100% - var(--margin));
+    margin-left: var(--margin);
+    margin-right: 0;
+    margin-bottom: var(--margin);
+}
 
-    .welcome-img {
-        display: block;
-        width: calc(100% - var(--margin));
-        margin-left: var(--margin);
-        margin-right: 0;
-        margin-bottom: var(--margin);
-    }
+
+.block {
+    padding-top: var(--margin);
+    padding-bottom: var(--margin);
+    padding-right: var(--margin);
+    border-radius: 4px;
+    background-color: white;
+}
+.block * {
+    margin-right: 0;
 }

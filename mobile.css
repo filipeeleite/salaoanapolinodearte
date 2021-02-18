@@ -1,9 +1,17 @@
 /* Rules Mobile */
 :root {
-    --borderMainMenu: 3px solid var(--color-main-primary);
-    --borderMainMenuBright: 3px solid white;
-}
+    /* Always hover */
+    --main-menu-button-background: var(--color-main-primary-hover);
 
+    --border-left-main-menu: 3px solid white;
+    --border-left-main-menu-off: 3px solid var(--color-main-primary);
+    --border-bottom-main-menu: none;
+    --border-bottom-main-menu-off: none;
+
+}
+main {
+    background-color: rgb(230, 247, 255);
+}
 /*
 1) Tipografia
 2) Imagens
@@ -23,6 +31,10 @@
 
 
     /* margin-top: -9px; */
+}
+
+h3 {
+    margin-top: 5px;
 }
 
 .menu-bar {
@@ -116,4 +128,9 @@ header svg {
     margin-right: var(--margin);
 }
 
+
+.this-edition-list > h3:nth-of-type(1),
+.this-edition-list > h3:nth-of-type(2) {
+margin-top: -9px;
+}
 
