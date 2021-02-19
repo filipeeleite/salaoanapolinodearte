@@ -8,6 +8,8 @@
     --border-bottom-main-menu: none;
     --border-bottom-main-menu-off: none;
 
+    --main-title-area: 600px;
+
 }
 main {
     background-color: rgb(230, 247, 255);

@@ -259,10 +259,55 @@ function setMinHeightMain() {
 }
 
 // Clock Functions ( Functions that Repeats )
-window.addEventListener('resize', eventListenerResize, false);
-// Each pixel resized on window will call this function
-function eventListenerResize() {
-    setMinHeightMain();
-    setStyleSheet();
-    //console.log('Resized!');
+
+// Set opacity inline on the first img
+//document.getElementById('slideshow-img_1').style.opacity = 1;
+// Set variable to initialize Slideshow ( 4 will be 1 on counter )
+var imgShowing = 4;
+
+
+document.getElementById('slideshow-img_1').style.display = 'block';
+
+var displayFirstImgSlideshow = function() {setTimeout(function() {animateSlideshowPanoramicas();}, 1)};
+displayFirstImgSlideshow();
+
+setInterval(function() {animateSlideshowPanoramicas();}, 8000);
+function animateSlideshowPanoramicas() {
+    clearTimeout(displayFirstImgSlideshow);
+
+    // counter
+    if (imgShowing === 4) {
+        imgShowing = 1;
+    } else {
+        imgShowing = imgShowing + 1;
+    }
+
+    //document.getElementById('slideshow-img_' + imgShowing).style.display = 'block';
+    
+    // Reseting all
+    for(let i = 1; i <= 4; i++) {
+        document.getElementById('slideshow-img_' + i).style.opacity = 0;
+    }
+
+    // Set
+    document.getElementById('slideshow-img_' + imgShowing).style.opacity = 1;
+    console.log('Set : ' + imgShowing);
+}
+
+setMinHeightMain();
+setStyleSheet();
+
+//window.addEventListener("resize", refreshBody, false);
+
+function refreshBody() {
+
+    var setTimeout;
+    if (setTimeout) {
+        setTimeout(function() {
+            setTimeout = false;
+            setMinHeightMain();
+            setStyleSheet();
+        },66) 
+    }
+
 }

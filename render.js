@@ -148,6 +148,20 @@ function appendOnBody(tag) {
             let mainBackground = document.createElement("div");
             main.appendChild(mainBackground);
             mainBackground.setAttribute("id", "mainbackground");
+    
+            // This is for the main page
+            let mainTitleArea = document.createElement('div');
+            mainTitleArea.setAttribute('class', 'main-title-area');
+        
+                // Creating for the main page
+                tagElement = document.createElement('h2');
+                tagElement.innerHTML = '25º Edição';
+                mainTitleArea.appendChild(tagElement);
+        
+                tagElement = document.createElement('hr');
+                mainTitleArea.appendChild(tagElement);
+        
+            main.appendChild(mainTitleArea);
 
             let mainGrid = document.createElement("div");
             main.appendChild(mainGrid);
@@ -295,13 +309,16 @@ function removeBlocks() {
     }
 }
 
+
+
+
 // Append on main the blocks of the page
 function renderPage(page) {
 
 
     var blockToRender;
 
-    // Constructs the <div class="block .tal-pagina"> complete
+    // Constructs the <div class="block .tal-pagina"> With all tags (structure)
     function construct(blockName) {
         consoleLog(':: -> construct(' + blockName + ')');
         //console.log();
@@ -340,11 +357,18 @@ function renderPage(page) {
         // Bloco Seja Bem vindo - Panoramica e Texto
         if (blockName === 'welcome') {
             blockToRender.setAttribute("class", "block " + blockName);
-            element = document.createElement("img");
-            element.setAttribute("src", "/img/panoramica-index-a.jpg");
-            element.setAttribute("class", "welcome-img");
 
-            blockToRender.appendChild(element);
+                element = document.createElement("div");
+                element.setAttribute("class", 'slideshow-imgs');
+                    let qtdeImgs = 4;
+                    for (i = 1; i <= qtdeImgs; i++) {
+                        let el = document.createElement('img');
+                        el.setAttribute('src', '/img/edicao25-pano' + i +'.jpg');
+                        el.setAttribute('id', 'slideshow-img_' + i);
+                        element.appendChild(el);
+                    }
+
+                blockToRender.appendChild(element);
 
             element = document.createElement('h2');
             element.setAttribute("class", 'pt');
@@ -518,7 +542,6 @@ function renderPage(page) {
         construct('maintenance');
         document.getElementById('main-grid-left-side').appendChild(blockToRender);
     }
-
     if (page === 'index') {
 
 
@@ -585,5 +608,27 @@ function bordersMainMenu() {
         // Index (main logo)
         document.getElementById('main-menu-option1').style.borderBottom = 'var(--border-bottom-main-menu)';
     }
+
+}
+
+//setSlideshowImgsPosition();
+function setSlideshowImgsPosition() {
+
+    setTimeout( function() {
+        console.log('renderWWWW');
+
+        heightOfPanoramica = document.querySelector("#slideshow-img_1").height;
+
+        heightOfPanoramica =  Math.round(heightOfPanoramica);
+
+        document.querySelector("#slideshow-img_2").style.marginTop = - heightOfPanoramica + "px";
+        document.querySelector("#slideshow-img_3").style.marginTop = - heightOfPanoramica + "px";
+        document.querySelector("#slideshow-img_4").style.marginTop = - heightOfPanoramica + "px";
+
+        
+
+    }, 1);
+
+    clearTimeout();
 
 }

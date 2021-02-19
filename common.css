@@ -62,12 +62,10 @@ footer .center-area {
     text-align: center;
 
 }
-.welcome img {
-    border-radius: 4px;
-}
+
 
 .main-grid {
-    padding-top: 40px;
+    padding-top: var(--margin);
     padding-bottom: var(--margin);
 }
 
@@ -86,9 +84,61 @@ footer .center-area {
     background-color: rgb(126, 0, 0);
 }
 
+.welcome div {
+    /* outline: 1px solid blue; */
+    border-radius: 4px;
+}
 
-.welcome-img {
+
+.slideshow-imgs {
     display: block;
+    width: calc(100% - calc(2 * var(--margin)));
+
+}
+
+
+.slideshow-imgs img {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#slideshow-img_1,
+#slideshow-img_2,
+#slideshow-img_3,
+#slideshow-img_4 {
+    position: relative;
+
+
+}
+
+#slideshow-img_1 {
+
+    position: relative;
+    z-index: 0;
+}
+#slideshow-img_2 {
+
+    position: relative;
+    z-index: 1;
+}
+#slideshow-img_3 {
+
+    position: relative;
+    z-index: 2;
+}
+#slideshow-img_4 {
+    position: relative;
+    z-index: 3;
+}
+
+
+
+/* Margins at left right and bottom */
+.backup-img style {
     width: calc(100% - calc(2 * var(--margin)));
     margin-left: var(--margin);
     margin-right: var(--margin);
@@ -188,19 +238,36 @@ header {
     align-items: center;
 }
 
+/* 3.1) Main Title Area */
+.main-title-area {
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--main-title-area);
+}
+
+
+.main-title-area h2 {
+    font-size: 28px;
+    margin-top: 10px;
+    margin-left: var(--margin);
+}
+
 /* 4) Main */
 main {
     /* background-color: rgb(255, 193, 193); */
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(238, 249, 255);
     min-height: var(--mainMinHeight);
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 .main-grid {
     display: grid;
     grid-gap: var(--margin);
     max-width: 600px;
+
+    margin: auto;
     /* grid-template-rows: 480px 1fr; */
 
 
@@ -253,11 +320,6 @@ footer .center-area {
 
 }
 
-.welcome-img::before {
-    content: '';
-    width: 100px;
-
-}
 
 @media screen and (min-width: 600px) {
     footer .center-area {
