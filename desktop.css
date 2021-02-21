@@ -1,174 +1,259 @@
-:root {
-    /* --borderMainMenu: 3px solid var(--color-main-primary); */
-    /* --borderMainMenuBright: 3px solid white; */
+/* DESKTOP */
+@media screen and (min-width: 1100px) {
 
-    --main-menu-button-background: var(--color-main-primary);
-
-    --border-left-main-menu: none;
-    --border-left-main-menu-off: none;
-    --border-bottom-main-menu: 3px solid white;
-    --border-bottom-main-menu-off: 3px solid var(--color-main-primary);
-
-    --main-title-area: 1024px;
-}
-
-/*
-1) Typography
-2) Images
-3) Header
-4) Main
-5) Footer
-*/
-/* 1) Typography */
-/* This Edition List First Element */
-.this-edition-list > h3:nth-of-type(1),
-.this-edition-list > h3:nth-of-type(2) {
-margin-top: -14px; /* x TOP */
-margin-top: -10px;
-}
-h2 {
-    font-size: 38px;
-    font-weight: 400;
-}
-h3 {
-    font-size: 22px;
-    font-weight: 400;
-    margin-top: 14px;
-    margin-bottom: 12px;
-}
-p {
-    font-size: 15px;
-    padding-bottom: 3px;
-}
-
-.welcome p {
-    margin-top: 10px;
-}
+    :root {
+        /* property-description */
+    
+        /* --main-menu-button-background: var(--color-main-primary); */
+    
+        --border-right-main-menu: none;
+        --border-right-main-menu-off: none;
+        --border-bottom-main-menu: 3px solid white;
+        --border-bottom-main-menu-off: 3px solid rgba(0,0,0,0);
+    
+        --main-title-area: 1024px;
 
 
-/* 2) Images */
+    }
+    
+    /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+    1) Tipografia
+    2) Imagens
+
+    3) <body>
+    4) <header>
+    5) <main>
+    6) <footer>
+
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+    /* 1) Typography */
+    /* This Edition List First Element */
+    .this-edition-list > h3:nth-of-type(1),
+    .this-edition-list > h3:nth-of-type(2) {
+    margin-top: -14px; /* x TOP */
+    margin-top: -10px;
+    }
+    h2 {
+        font-size: 38px;
+        font-weight: 400;
+    }
+    h3 {
+        font-size: 22px;
+        font-weight: 400;
+        margin-top: 14px;
+        margin-bottom: 12px;
+    }
+    p {
+        font-size: 15px;
+        padding-bottom: 3px;
+    }
+    .welcome p {
+        margin-top: 10px;
+    }
+
+    /* 2) Images */
+    .welcome-img {
+        display: block;
+        width: calc(100% - var(--margin));
+        margin-left: var(--margin);
+        margin-right: 0;
+        margin-bottom: var(--margin);
+    }
+    
+    .slideshow-imgs {
+        /* width: calc(100% - var(--margin)); */
+    }
+
+    #slideshow-img_2,
+    #slideshow-img_3,
+    #slideshow-img_4 {
+        margin-top: var(--height-proportional-img-desktop);
+    }
+    
+    /* 3) <header> */
 
 
-/* 3) Header */
-header {
-    height: 100px;
-}
-#main-menu-option1 {
-    height: 94px;
-}
-.open-close-menu-button {
-    display: none;
-}
-#main-menu-option1,
-#main-menu-option2,
-#main-menu-option3,
-#main-menu-option4 {
-    border-top: 3px solid var(--color-main-primary);
-    border-bottom: var(--border-bottom-main-menu-off);
-    /* Javascript will set on element the --border-bottom-main-menu value */
+    header {
+        height: 100px;
 
-    border-left: none;
-}
-
-
-
-
-
-.menu-bar {
-    justify-content: center;
-    max-width: 800px;
-}
-.menu-right {
-    display: flex;
-}
-
-.menu-right p {
-    margin-left: var(--margin);
-    margin-right: var(--margin);
-}
-header svg {
-    max-height: 60px;
-}
-.logo-salao {
-    margin-left: var(--margin);
-    margin-right: var(--margin);
-}
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+    }
+    #main-menu-option1 {
+        height: 94px;
+    }
+    #open-close-menu-button {
+        display: none;
+    }
+    #main-menu-option1,
+    #main-menu-option2,
+    #main-menu-option3,
+    #main-menu-option4 {
+        border-top: 3px solid var(--color-main-primary);
+        border-bottom: var(--border-bottom-main-menu-off);
+        /* Javascript will set on element the --border-bottom-main-menu value */
+    
+        border-right: none;
+    }
+    
+    #main-menu-option2,
+    #main-menu-option3,
+    #main-menu-option4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .menu-bar {
+        margin: auto;
+        margin-right: var(--margin);
+    }
 
 
+    .menu-bar {
+        justify-content: center;
+    }
+    .menu-bar .menu-right {
+        display: flex;
 
-/* 4) Main */
+        /* If menu is opened */
+        flex-direction: row;
 
-#main-menu-option1 {
-    /* width: 30%; */
-    width: 207px;
-}
-.menu-right {
-    /* width: 70%; */
-}
-#main-menu-option2 {
-    margin-left: auto;
-}
+        /* :: not fully compatible :: */
+        /* justify-content: end; */
+    }
+    
+    .menu-right p {
+        margin-left: auto;
+        margin-right: var(--margin);
+    }
+    header svg {
+        max-height: 60px;
+    }
+    .logo-salao {
+        margin-left: var(--margin);
+        margin-right: var(--margin);
 
-#main-menu-option2,
-#main-menu-option3,
-#main-menu-option4 {
-    height: 94px; /* 100px - 6px */
-}
-#main-menu-option1:hover,
-#main-menu-option2:hover,
-#main-menu-option3:hover,
-#main-menu-option4:hover {
-    background-color: var(--color-main-primary-hover);
-    cursor: pointer;
-}
-#main-menu-option2.button-disabled:hover,
-#main-menu-option3.button-disabled:hover,
-#main-menu-option4.button-disabled:hover {
-    background-color: var(--color-main-primary);
-    cursor: not-allowed;
-}
-
-#main-menu-option2 div,
-#main-menu-option3 div,
-#main-menu-option4 div {
-    display: flex;
-}
+        margin-top: calc(var(--margin) - 3px);
+        margin-bottom: calc(var(--margin) - 3px);
+    }
 
 
-.menu-bar {
-    max-width: 1024px;
-}
-.main-grid {
-    grid-template-columns: 680px 1fr;
-    max-width: 1024px;
-}
-.maintenance {
-    width: calc(100% - var(--margin));
-    margin-left: var(--margin);
-    margin-right: 0;
-    margin-bottom: var(--margin);
-}
+    /* Menu bar */
+    .menu-bar {
+        height: var(--height-menu);
+        transition: height 1s ease;
+        width: var(--width-desktop);
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+    
+    }
+    .menu-opened {
+        height: var(--height-menu);
+    }
 
-.welcome-img {
-    display: block;
-    width: calc(100% - var(--margin));
-    margin-left: var(--margin);
-    margin-right: 0;
-    margin-bottom: var(--margin);
-}
+    #main-menu-option1 {
+        /* width: 30%; */
+        width: 207px;
+    }
+    .menu-bar #main-menu-option1 {
+        margin-left: 0;
+    }
 
-.slideshow-imgs {
-    width: calc(100% - var(--margin));
-}
+    .button-disabled {
+        display: block;
+    }
 
 
-.block {
-    padding-top: var(--margin);
-    padding-bottom: var(--margin);
-    padding-right: var(--margin);
-    border-radius: 4px;
-    background-color: white;
-}
-.block * {
-    margin-right: 0;
+
+    /* 'Em breve */
+    .menu-opened .mobile-aviso-manutencao {
+        display: none;
+    }
+
+
+    /* 4) <main> */
+    #grid-title-area-a,
+    #grid-title-area-b,
+    #grid-welcome,
+    #grid-moreinfo {
+        margin: 0 auto;
+        width: var(--width-desktop);
+        grid-template-columns: 678px 1fr;
+        grid-template-columns: 600px 1fr;
+    }
+
+    .menu-bar #main-menu-option1 {
+        height: calc(var(--height-menu) - 6px);
+        transition: border-bottom 1s linear;
+    }
+
+    #main-menu-option2 {
+        margin-left: auto;
+    }
+    
+    .menu-bar #main-menu-option2,
+    .menu-bar #main-menu-option3,
+    .menu-bar #main-menu-option4 {
+        height: 94px; /* 100px - 6px */
+        transition: border-bottom 1s linear;
+    }
+    #main-menu-option1:hover,
+    #main-menu-option2:hover,
+    #main-menu-option3:hover,
+    #main-menu-option4:hover {
+        background-color: var(--color-main-primary-hover);
+        cursor: pointer;
+    }
+    #main-menu-option2.button-disabled:hover,
+    #main-menu-option3.button-disabled:hover,
+    #main-menu-option4.button-disabled:hover {
+        background-color: var(--color-main-primary);
+        cursor: not-allowed;
+    }
+    
+    #main-menu-option2 div,
+    #main-menu-option3 div,
+    #main-menu-option4 div {
+        display: flex;
+    }
+    
+    
+
+
+    .maintenance {
+        width: calc(100% - var(--margin));
+        margin-left: var(--margin);
+        margin-right: 0;
+        margin-bottom: var(--margin);
+    }
+    .block {
+        padding-top: var(--margin);
+        padding-bottom: var(--margin);
+        padding-right: var(--margin-calc);
+    }
+    .block * {
+        margin-right: 0;
+    }
+
+
+
+
+
+
+
+
+    footer {
+        max-width: var(--width-desktop);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 }
