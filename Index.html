@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<!-- Salão Anapolino de Arte -->
 <html lang="pt-br">
 
     <head>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="Description" CONTENT="Site de informações do Salão Anapolino de Arte e suas edições anteriores. Artes Anápolis, Goiás, Brasil. Associação Amigos da Galeria Antônio Sibasolly.">
+        <meta name="robots" content="noindex,nofollow">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <meta property="og:type" content="website">
         <meta property="og:url" content="http://salaoanapolinodearte.netlify.app">
-        <meta property="og:title" content="Salão Anapolino de Artes">
-        <meta property="og:description" content="Portal">
+        <meta property="og:title" content="Salão Anapolino de Arte">
+        <meta property="og:description" content="Web App">
 
-        <link rel="apple-touch-icon" href="/img/logos/icon120px.png"> <!-- 120px -->
+        <link rel="apple-touch-icon" href="/img/icons/icon120px.png"> <!-- 120px -->
 
         <meta name="twitter:app:name:iphone" content="Salão Anapolino de Arte">
         <meta name="twitter:app:name:ipad"content="Salão Anapolino de Arte">
@@ -20,19 +21,20 @@
         <meta name="twitter:app:id:ipad"content="">
         <meta name="twitter:app:id:iphone" content="">
 
-        <meta property="og:image" content="/img/logos/thumbnail988.png">
-        <meta property="og:image:url" content="/img/logos/thumbnail988.png">
-        <link rel="icon" type="image/x-icon" href="/img/icons/favicon.ico"/>
+        <meta property="og:image" content="/img/icons/thumbnail988.png">
+        <meta property="og:image:url" content="/img/icons/thumbnail988.png">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 
-        <title>25º Salão Anapolino de Artes</title>
-
-        <link rel="stylesheet" href="common.css">
-        <link rel="stylesheet" href="desktop.css">
-
+        <link rel="stylesheet" href="/style/common.css">
+        <link rel="stylesheet" href="/style/desktop.css">
+        
+        <title>Salão Anapolino de Arte</title>
+        
     </head>
 
     <body style="--mainMenuHeight:100px; --mainMinHeight:171px;">
 
+        <h1 style="display: none;">Salão Anapolino de Arte</h1>
         <header>
             <div class="menu-bar">
                 <nav onclick="clickMainMenu('index');" id="main-menu-option1" style="background-color:var(--color-main-primary); border-bottom:var(--border-bottom-main-menu);">
@@ -192,15 +194,37 @@
                         <p class="en" style="display: none;">English Text</p>
                     </div>
 
-                    <div class="block calendario-list">
-                        <h3 class="pt" style="display: block;">Calendário:</h3>
-                        <h3 class="en" style="display: none;"></h3>
-                        <p class="">tal</p>
-                        <p class="">tal</p>
-                        <p class="">tal</p>
-                        <p class="">tal</p>
-                        <p class="">tal</p>
+                    <div id='block-group1'>
+                        <div class="block calendario-list">
+                            <h3 class="pt" style="display: block;">Calendário:</h3>
+                            <h3 class="en" style="display: none;"></h3>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                        </div>
+                        <div class="block calendario-list">
+                            <h3 class="pt" style="display: block;">Mais Informações!</h3>
+                            <h3 class="en" style="display: none;"></h3>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                        </div>
+                        <div class="block calendario-list">
+                            <h3 class="pt" style="display: block;">Mais algum bloco</h3>
+                            <h3 class="en" style="display: none;"></h3>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                            <p class="">tal</p>
+                        </div>
                     </div>
+
+
 
                 </div>
 
@@ -231,7 +255,7 @@
         </footer>
 
         <noscript>Este aplicativo Web utiliza Javascript. Favor habilitar em seu browser ou utilizar navegador compatível.</noscript>
-        <script src="slideshow-panoramicas.js"></script>
+        <script src="/js/slideshow-panoramicas.js"></script>
 
     </body>
 </html>

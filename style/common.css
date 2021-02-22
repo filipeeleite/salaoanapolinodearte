@@ -1,4 +1,12 @@
-@import url(https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500&display=swap);
+@font-face {
+    font-family: 'Jost-Regular';
+    src: url(/typography/Jost-Light.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Jost-Titles';
+    src: url(/typography/Jost-Regular.ttf) format('truetype');
+}
+/* @import url(https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500&display=swap); */
 
 :root {
     /* property-description */
@@ -11,7 +19,8 @@
     --color-dark: black;
     --color-bright: white;
 
-    --font-family: 'Jost';
+    --font-family-primary-a: 'Jost-Regular';
+    --font-family-primary-b: 'Jost-Titles';
 
     --margin-top-h2:-8px;
     --margin-bottom-h2:-11px;
@@ -24,7 +33,7 @@
 
     --height-menu: 100px;
     --height-menu-opened: 320px;
-    
+
     --width-mobile: 320px;
     --width-tablet: 600px;
     --width-desktop: 1024px;
@@ -32,16 +41,16 @@
     --height-proportional-img-mobile: -188px;
     --height-proportional-img-tablet: -372px;
     --height-proportional-img-desktop: -372px;
-    
+
     --main-menu-button-background: rgba(0,0,0,0);
     --main-menu-button-highlighted: var(--color-main-primary-hover);
-    
+
     /* Borders on menu */
     --border-right-main-menu: 3px solid white;
     --border-right-main-menu-off: 3px solid rgba(0,0,0,0);
     --border-bottom-main-menu: none;
     --border-bottom-main-menu-off: none;
-    
+
     --margin: 20px;
     --margin-calc: calc(var(--margin) - 1px);
 
@@ -54,7 +63,6 @@
 }
 html {
     -webkit-text-size-adjust: 100%; /* Escala se manter em mobiles */
-    font-family: var(--font-family);
     font-weight: 300;
 }
 .display-none {
@@ -76,6 +84,13 @@ html {
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 /* 1) Tipografia */
+a, p {
+    font-family: var(--font-family-primary-a);
+}
+h2, h3 {
+    font-family: var(--font-family-primary-b);
+}
+
 a {
     text-decoration: none;
 }
@@ -213,7 +228,7 @@ header svg .logo-sul {
 #slideshow-img_3 {
     position: relative;
     z-index: 2;
-    
+
     margin-top: var(--height-proportional-img-mobile);
 }
 #slideshow-img_4 {
@@ -250,11 +265,11 @@ header {
     height: var(--height-menu);
     transition: height 1s ease;
     width: 320px;
-    
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    
+
 }
 .menu-opened {
     height: var(--height-menu-opened);
@@ -360,7 +375,7 @@ header {
 /* Disabled Tags */
 .mobile-aviso-manutencao {
     display: none;
-    
+
     margin-bottom: var(--margin);
 }
 
@@ -374,7 +389,7 @@ header {
     display: block;
 
     font-size: 14px;
-    
+
     /* margin-bottom: var(--margin); */
 }
 
@@ -437,7 +452,7 @@ main {
     padding: var(--margin);
 
     background-color: white;
-    
+
     border-radius: var(--border-radius-outside);
     border-top: 1px solid white;
     border-left: 1px solid white;
@@ -480,6 +495,13 @@ main {
 #video-visita {
     border-radius: var(--border-radius-inside);
     width: 282px;
+}
+
+#block-group1 > .block:not(:nth-of-type(1)) {
+    /* background-color: red; */
+
+    margin-top: var(--margin);
+
 }
 
 /* 5) Footer */
@@ -583,6 +605,7 @@ footer > p {
         margin-right: auto;
     }
 
+    /* swap logos hoz-vert */
     footer .center-area {
         /* flex-direction: row; */
     }

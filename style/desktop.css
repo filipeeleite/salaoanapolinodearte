@@ -256,4 +256,9 @@
         margin-right: auto;
     }
 
+    /* swap logos hoz-vert */
+    footer .center-area {
+        flex-direction: row;
+    }
+
 }
