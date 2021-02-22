@@ -1,0 +1,578 @@
+
+
+
+
+
+
+<section>
+    <div class="grid-ed-ant-section-24">
+        <h2 class="grid-ed-ant-titulo-edicao">24ª Edição</h2>
+        <div class="grid-ed-ant-linha-divisao"></div>
+        <div class="grid-ed-ant-titulo-principal-a">
+            <p class="data">18 de maio a<br>26 de julho de 2019</p>
+        </div>
+        <div class="grid-ed-ant-icon-catalogo-a">
+            <a target="about:blank" href="http://cultura.anapolis.go.gov.br/static/media/catalago24.0bccd677.pdf"><!-- LINK PARA O CATALOGO DO 24º SALAO -->
+                <svg class="icon-catalogo ed24" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="100 0 100 175" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g class="hover"><!-- CAPA E LUPA -->
+                        <rect class="capa" width="200" height="161"/>
+                        <path class="lupa" d="M46 55c10,-2 21,5 23,15 1,7 -2,15 -7,19l7 13 -4 2 -8 -12c-1,0 -2,1 -4,1 -10,2 -20,-5 -23,-15 -2,-11 5,-21 16,-23zm6 33c8,-2 13,-9 11,-17 -1,-7 -8,-12 -16,-11 -8,2 -13,9 -11,17 1,7 9,12 16,11z"/>
+                        <polygon class="lupa" points="44,64 42,66 40,69 39,71 38,73 38,75 40,72 42,70 44,69 46,68 45,66 "/>
+                    </g>
+                    <!-- ROTULOS -->
+                    <polygon class="rotulo" points="136,142 135,143 132,142 132,140 131,142 129,141 129,141 129,141 128,140 128,138 130,138 130,136 129,135 131,134 132,135 133,134 133,133 135,132 136,133 135,134 136,135 139,134 141,133 141,134 140,136 141,136 142,135 144,136 142,138 144,141 143,143 141,143 141,141 138,141 136,139 136,140 135,140 135,141 "/>
+                    <polygon class="rotulo" points="148,140 151,141 151,142 151,143 152,140 154,137 154,135 153,134 151,133 149,133 148,133 147,132 146,135 147,138 147,141 "/>
+                    <polygon class="rotulo" points="158,132 159,133 163,133 163,135 164,136 165,135 165,137 164,139 163,139 160,143 159,142 158,141 158,139 157,137 157,135 156,134 156,133 158,133 "/>
+                    <polygon class="rotulo" points="176,132 179,134 180,134 179,135 180,136 180,138 178,141 175,141 173,142 172,143 170,141 168,140 170,137 172,136 173,133 "/>
+                    <polygon class="rotulo" points="187,132 189,133 191,135 190,135 191,137 189,140 186,143 187,141 186,142 182,139 186,136 185,135 185,133 "/>
+                    <line class="rotulo" x1="128" y1="150" x2="191" y2= "150" />
+                    <!-- INDICADOR -->
+                    <polyline class="indicador" points="142,169 149,166 157,169 "/>
+                </svg>
+            </a>
+        </div>
+        <div class="grid-ed-ant-subtitulo-1">
+            <h3>Artistas:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-1">
+            <li>Adriana Vignoli - DF</li>
+            <li>Andréa Hygino - RJ</li>
+            <li>Claudio Trindade - SC</li>
+            <li>Cristiana Nogueira - AP</li>
+            <li>Danielle Fonseca - PA</li>
+            <li>Daré - SP</li>
+            <li>Élcio Miazaki - SP</li>
+            <li>Eriel Araújo - BA</li>
+            <li class="premiado">Estefânia Young - RS</li>
+            <li>Fernanda Adamski - GO</li>
+            <li class="premiado">Fernanda Azou - DF</li>
+            <li class="premiado nome-longo">Guerreiro do Divino Amor - RJ</li>
+            <li>Hariel Revignet - GO</li>
+            <li class="premiado">Joardo Filho - GO</li>
+            <li>Júlia Milward - SP</li>
+            <li>Mano Penalva - SP</li>
+            <li>Marcelo Amorim - SP</li>
+            <li>Maurício Pokemon - PI</li>
+            <li>Renato Rios - SP</li>
+            <li>Yara Pina - GO</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-2">
+            <h3>Artista Homenageado:</h3>
+        </div>
+        <div class="grid-ed-ant-lista-2">
+            <ol>
+                <li>Nazareno Pereira Filho - Napefi</li>
+            </ol>
+            <h3>Prêmio<br>Artista Convidado:</h3>
+            <ol>
+                <li>Dalton Paula - GO</li>
+                <li>Marcelo Solá - GO</li>
+                <li>Selma Parreira - GO</li>
+            </ol>
+        </div>
+        <div class="grid-ed-ant-subtitulo-3">
+                <h3>Comissão de<br>Seleção:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-3">
+            <li>Josué Mattos</li>
+            <li>Ralph Gehre</li>
+            <li>Vânia Leal</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-4">
+            <h3>Comissão de<br>Premiação:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-4">
+            <li>Ana Luisa Lima</li>
+            <li>Nilton Campos</li>
+            <li>Orlando Maneschy</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-5">
+            <h3>Curadoria:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-5">
+            <li>Paulo Henrique Silva</li>
+        </ol>
+    </div>
+</section>
+<div id="ed-23"></div>
+
+<!-- 23a edição - 3 Catálogos --->
+<section>
+    <div class="grid-ed-ant-section-23">
+        <h2 class="grid-ed-ant-titulo-edicao">23ª Edição</h2>
+        <div class="grid-ed-ant-linha-divisao"></div>           
+        <div class="grid-ed-ant-titulo-principal-a">
+            <p class="data">28 de agosto a<br>28 de outubro de 2017</p>
+        </div>
+        <div class="grid-ed-ant-icon-catalogo-a">
+            <div>
+                <a target="about:blank" href="http://cultura.anapolis.go.gov.br/static/media/Catalogo23SalaoSelecionados.eeb616cd.pdf">
+                    <!-- ARTISTAS SELECIONADOS -->
+                    <svg class="icon-catalogo ed23a" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="100 0 100 175" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g class="hover"><!-- CAPA E LUPA -->
+                            <rect class="capa" width="200" height="161"/>
+                            <path class="lupa" d="M46 55c10,-2 21,5 23,15 1,7 -2,15 -7,19l7 13 -4 2 -8 -12c-1,0 -2,1 -4,1 -10,2 -20,-5 -23,-15 -2,-11 5,-21 16,-23zm6 33c8,-2 13,-9 11,-17 -1,-7 -8,-12 -16,-11 -8,2 -13,9 -11,17 1,7 9,12 16,11z"/>
+                            <polygon class="lupa" points="44,64 42,66 40,69 39,71 38,73 38,75 40,72 42,70 44,69 46,68 45,66 "/>
+                        </g>
+                        <!-- ROTULOS -->
+                        <polygon class="rotulo" points="136,142 135,143 132,142 132,140 131,142 129,141 129,141 129,141 128,140 128,138 130,138 130,136 129,135 131,134 132,135 133,134 133,133 135,132 136,133 135,134 136,135 139,134 141,133 141,134 140,136 141,136 142,135 144,136 142,138 144,141 143,143 141,143 141,141 138,141 136,139 136,140 135,140 135,141 "/>
+                        <polygon class="rotulo" points="148,140 151,141 151,142 151,143 152,140 154,137 154,135 153,134 151,133 149,133 148,133 147,132 146,135 147,138 147,141 "/>
+                        <polygon class="rotulo" points="158,132 159,133 163,133 163,135 164,136 165,135 165,137 164,139 163,139 160,143 159,142 158,141 158,139 157,137 157,135 156,134 156,133 158,133 "/>
+                        <polygon class="rotulo" points="176,132 179,134 180,134 179,135 180,136 180,138 178,141 175,141 173,142 172,143 170,141 168,140 170,137 172,136 173,133 "/>
+                        <polygon class="rotulo" points="187,132 189,133 191,135 190,135 191,137 189,140 186,143 187,141 186,142 182,139 186,136 185,135 185,133 "/>
+                        <line class="rotulo" x1="128" y1="150" x2="191" y2= "150" />
+                        <!-- INDICADOR -->
+                        <polyline class="indicador" points="142,169 149,166 157,169 "/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="grid-ed-ant-subtitulo-1">
+            <h3>Artistas:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-1">
+            <li>Antônio Obá - DF</li>
+            <li>Bruno Drolshagen - RJ</li>
+            <li class="premiado">Bruno Faria - SP</li>
+            <li>Célio Celestino</li>
+            <li class="premiado">Daniel Jablonski - SP</li>
+            <li>Daniel Moreira - MG</li>
+            <li>David Magila - SP</li>
+            <li>Felipe Seixas - SP</li>
+            <li>Gabriel Bicho - RO</li>
+            <li>Gilson Andrade - GO</li>
+            <li class="premiado">Helô Sanvoy</li>
+            <li>João Maciel - MG</li>
+            <li>Karina Felipe - MG</li>
+            <li>Manoela Medeiros - RJ</li>
+            <li>Raquel Versieux - CE</li>
+            <li class="premiado">Rei Souza - GO</li>
+            <li>Rondinelli Linhares - GO</li>
+            <li>Rubens Pileggi - GO</li>
+            <li>Sani Guerra - RJ</li>
+            <li>Virgílio Neto - DF</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-2">
+            <h3>Curador Premiado:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-2">
+            <li>Divino Sobral - GO</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-3">
+            <h3>Comissão de<br>Seleção:</h3>
+            </div>
+        <ol class="grid-ed-ant-lista-3">
+            <li>Carlos Eduardo Bitu Cassundé</li>
+            <li>Daniela Labra</li>
+            <li>Rodrigo Vivas</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-4">
+            <h3>Comissão de<br>Premiação:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-4">
+            <li>Agnaldo Farias</li>
+            <li>Jailton Moreira</li>
+            <li>Marcus Lontra</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-5">
+            <h3>Curadoria:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-5">
+            <li>Paulo Henrique Silva</li>
+        </ol>
+        <!-- ARTISTAS PREMIADOS -->
+        <div class="linha-divisao-subedicoes"></div>
+            <div class="grid-ed-ant-titulo-principal-b">
+                <p class="data">26 de fevereiro a <br>20 de abril 2020</p>
+                <p>Exposição<br>Artistas Premiados</p>
+            </div>
+        <div class="grid-ed-ant-icon-catalogo-b">
+            <a target="about:blank" href="http://cultura.anapolis.go.gov.br/static/media/Catalogo23SalaoPremiados.e47f1abf.pdf"><!-- LINK PARA O CATALOGO 23º - ARTISTAS PREMIADOS -->
+                <!-- CATÁLOGO 23b - ARTISTAS PREMIADOS -->
+                <svg class="icon-catalogo ed23b" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="100 0 100 175" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g class="hover"><!--CAPA E LUPA-->
+                        <rect class="capa" width="200" height="161"/>
+                        <path class="lupa" d="M46 55c10,-2 21,5 23,15 1,7 -2,15 -7,19l7 13 -4 2 -8 -12c-1,0 -2,1 -4,1 -10,2 -20,-5 -23,-15 -2,-11 5,-21 16,-23zm6 33c8,-2 13,-9 11,-17 -1,-7 -8,-12 -16,-11 -8,2 -13,9 -11,17 1,7 9,12 16,11z"/>
+                        <polygon class="lupa" points="44,64 42,66 40,69 39,71 38,73 38,75 40,72 42,70 44,69 46,68 45,66 "/>
+                    </g>
+                    <!-- ROTULOS -->
+                    <polygon class="rotulo" points="136,142 135,143 132,142 132,140 131,142 129,141 129,141 129,141 128,140 128,138 130,138 130,136 129,135 131,134 132,135 133,134 133,133 135,132 136,133 135,134 136,135 139,134 141,133 141,134 140,136 141,136 142,135 144,136 142,138 144,141 143,143 141,143 141,141 138,141 136,139 136,140 135,140 135,141 "/>
+                    <polygon class="rotulo" points="148,140 151,141 151,142 151,143 152,140 154,137 154,135 153,134 151,133 149,133 148,133 147,132 146,135 147,138 147,141 "/>
+                    <polygon class="rotulo" points="158,132 159,133 163,133 163,135 164,136 165,135 165,137 164,139 163,139 160,143 159,142 158,141 158,139 157,137 157,135 156,134 156,133 158,133 "/>
+                    <polygon class="rotulo" points="176,132 179,134 180,134 179,135 180,136 180,138 178,141 175,141 173,142 172,143 170,141 168,140 170,137 172,136 173,133 "/>
+                    <polygon class="rotulo" points="187,132 189,133 191,135 190,135 191,137 189,140 186,143 187,141 186,142 182,139 186,136 185,135 185,133 "/>
+                    <line class="rotulo" x1="128" y1="150" x2="191" y2= "150" />
+                    <!-- INDICADOR -->
+                    <polyline class="indicador" points="142,169 149,166 157,169 "/>
+                </svg>
+            </a>
+        </div>
+        <div class="linha-divisao-subedicoes"></div>
+        <div class="grid-ed-ant-titulo-principal-c">
+            <p class="data">19 de maio a<br>12 de julho de 2018</p>
+            <p>Exposição<br>Prêmio curadoria</p>
+        </div>
+        <div class="grid-ed-ant-icon-catalogo-c">
+            <a target="about:blank" href="http://cultura.anapolis.go.gov.br/static/media/Catalogo23SalaoPremioCuradoria.826e9696.pdf">
+                <!-- CATÁLOGO 23a - ARTISTAS SELECIONADOS -->
+                <svg class="icon-catalogo ed23c" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="100 0 100 175" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g class="hover"><!--CAPA E LUPA-->
+                        <rect class="capa" width="200" height="161"/>
+                        <path class="lupa" d="M46 55c10,-2 21,5 23,15 1,7 -2,15 -7,19l7 13 -4 2 -8 -12c-1,0 -2,1 -4,1 -10,2 -20,-5 -23,-15 -2,-11 5,-21 16,-23zm6 33c8,-2 13,-9 11,-17 -1,-7 -8,-12 -16,-11 -8,2 -13,9 -11,17 1,7 9,12 16,11z"/>
+                        <polygon class="lupa" points="44,64 42,66 40,69 39,71 38,73 38,75 40,72 42,70 44,69 46,68 45,66 "/>
+                    </g>
+                    <!-- ROTULOS -->
+                    <polygon class="rotulo" points="136,142 135,143 132,142 132,140 131,142 129,141 129,141 129,141 128,140 128,138 130,138 130,136 129,135 131,134 132,135 133,134 133,133 135,132 136,133 135,134 136,135 139,134 141,133 141,134 140,136 141,136 142,135 144,136 142,138 144,141 143,143 141,143 141,141 138,141 136,139 136,140 135,140 135,141 "/>
+                    <polygon class="rotulo" points="148,140 151,141 151,142 151,143 152,140 154,137 154,135 153,134 151,133 149,133 148,133 147,132 146,135 147,138 147,141 "/>
+                    <polygon class="rotulo" points="158,132 159,133 163,133 163,135 164,136 165,135 165,137 164,139 163,139 160,143 159,142 158,141 158,139 157,137 157,135 156,134 156,133 158,133 "/>
+                    <polygon class="rotulo" points="176,132 179,134 180,134 179,135 180,136 180,138 178,141 175,141 173,142 172,143 170,141 168,140 170,137 172,136 173,133 "/>
+                    <polygon class="rotulo" points="187,132 189,133 191,135 190,135 191,137 189,140 186,143 187,141 186,142 182,139 186,136 185,135 185,133 "/>
+                    <line class="rotulo" x1="128" y1="150" x2="191" y2= "150" />
+                    <!-- INDICADOR -->
+                    <polyline class="indicador" points="142,169 149,166 157,169 "/>
+                </svg>
+            </a>
+        </div>
+        <div class="grid-ed-ant-subtitulo-6">
+            <h3>Artistas:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-6">
+            <li>Aline Figueiredo</li>
+            <li>Bené Fonteles</li>
+            <li>Cildo Meireles</li>
+            <li>Dalton Paula</li>
+            <li>Elyeser Szturm</li>
+            <li>Enauro de Castro</li>
+            <li>Gervane de Paula</li>
+            <li>Humberto Espíndola</li>
+            <li>João Angelini</li>
+            <li>Marcelo Feijó</li>
+            <li>Miguel Penha</li>
+            <li>Milton Marques</li>
+            <li>Rodrigo Paglieri</li>
+            <li>Thales Noor</li>
+        </ol>
+    </div>
+</section>
+<div id="ed-22"></div>
+
+<!-- 22a edição - 2 Catálogos --->
+<section>
+    <div class="grid-ed-ant-section-22">
+        <h2 class="grid-ed-ant-titulo-edicao">22ª Edição</h2>
+        <div class="grid-ed-ant-linha-divisao"></div>
+        <div class="grid-ed-ant-titulo-principal-a">
+            <p class="data">29 de julho a<br>30 de setembro de 2016</p>
+        </div>
+        <div class="grid-ed-ant-icon-catalogo-a">
+            <a target="about:blank" href="http://cultura.anapolis.go.gov.br/static/media/catalogo.3cb744a9.pdf"><!--LINK PARA O CATALOGO-->
+                <svg class="icon-catalogo ed22a" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="100 0 100 175" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g class="hover"><!-- CAPA E LUPA -->
+                        <rect class="capa" width="200" height="161"/>
+                        <path class="lupa" d="M46 55c10,-2 21,5 23,15 1,7 -2,15 -7,19l7 13 -4 2 -8 -12c-1,0 -2,1 -4,1 -10,2 -20,-5 -23,-15 -2,-11 5,-21 16,-23zm6 33c8,-2 13,-9 11,-17 -1,-7 -8,-12 -16,-11 -8,2 -13,9 -11,17 1,7 9,12 16,11z"/>
+                        <polygon class="lupa" points="44,64 42,66 40,69 39,71 38,73 38,75 40,72 42,70 44,69 46,68 45,66 "/>
+                    </g>
+                        <!-- ROTULOS -->
+                    <polygon class="rotulo" points="136,142 135,143 132,142 132,140 131,142 129,141 129,141 129,141 128,140 128,138 130,138 130,136 129,135 131,134 132,135 133,134 133,133 135,132 136,133 135,134 136,135 139,134 141,133 141,134 140,136 141,136 142,135 144,136 142,138 144,141 143,143 141,143 141,141 138,141 136,139 136,140 135,140 135,141 "/>
+                    <polygon class="rotulo" points="148,140 151,141 151,142 151,143 152,140 154,137 154,135 153,134 151,133 149,133 148,133 147,132 146,135 147,138 147,141 "/>
+                    <polygon class="rotulo" points="158,132 159,133 163,133 163,135 164,136 165,135 165,137 164,139 163,139 160,143 159,142 158,141 158,139 157,137 157,135 156,134 156,133 158,133 "/>
+                    <polygon class="rotulo" points="176,132 179,134 180,134 179,135 180,136 180,138 178,141 175,141 173,142 172,143 170,141 168,140 170,137 172,136 173,133 "/>
+                    <polygon class="rotulo" points="187,132 189,133 191,135 190,135 191,137 189,140 186,143 187,141 186,142 182,139 186,136 185,135 185,133 "/>
+                    <line class="rotulo" x1="128" y1="150" x2="191" y2= "150" />
+                    <!-- INDICADOR -->
+                    <polyline class="indicador" points="142,169 149,166 157,169 "/>
+                </svg>
+            </a>
+        </div>
+        <div class="grid-ed-ant-subtitulo-1">
+            <h3>Artistas:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-1">
+            <li class="premiado">Alice Lara - DF</li>
+            <li>Arthur Arnold - RJ</li>
+            <li>Bruno Duque - MG</li>
+            <li>César Becker - DF</li>
+            <li>Danielle Fonseca - PA</li>
+            <li>Débora Mazloum - DF</li>
+            <li>Favia Fabiana - GO</li>
+            <li>Iris Helena - DF</li>
+            <li>Janaína Miranda - RJ</li>
+            <li>José Loures - GO</li>
+            <li>Luciana Kater - SP</li>
+            <li class="premiado letter-spacing">Luciana Ohira e Sergio Bonilha - MS</li>
+            <li>Mario Grisolli - RJ</li>
+            <li>Pontogor - SP</li>
+            <li class="premiado">Rei Souza - GO</li>
+            <li>Rodrigo Moreira - MG</li>
+            <li class="premiado">Talles Lopes - GO</li>
+            <li>Tchelo - SP</li>
+            <li>Virgínia Pinho - CE</li>
+            <li>Vítor Mizael - SP</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-2">
+            <h3>Comissão de<br>Seleção:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-2">
+            <li>Cayo Honorato</li>
+            <li>Daniela Name</li>
+            <li>Marisa Mokarzel</li>
+        </ol>
+        <div class="linha-divisao-subedicoes"></div>
+        <div class="grid-ed-ant-titulo-principal-b">
+            <p class="data">15 de outubro a<br>16 de dezembro de 206</p>
+            <p>Exposição<br>Ponto de convergência</p>
+        </div>
+        <div class="grid-ed-ant-icon-catalogo-b">
+            <a target="about:blank" href="http://cultura.anapolis.go.gov.br/static/media/catalogoconvergencia.6c47d8b0.pdf"><!--LINK PARA O CATALOGO-->
+                <svg class="icon-catalogo ed22b" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="100 0 100 175" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g class="hover"><!-- CAPA E LUPA -->
+                        <rect class="capa" width="200" height="161"/>
+                        <path class="lupa" d="M46 55c10,-2 21,5 23,15 1,7 -2,15 -7,19l7 13 -4 2 -8 -12c-1,0 -2,1 -4,1 -10,2 -20,-5 -23,-15 -2,-11 5,-21 16,-23zm6 33c8,-2 13,-9 11,-17 -1,-7 -8,-12 -16,-11 -8,2 -13,9 -11,17 1,7 9,12 16,11z"/>
+                        <polygon class="lupa" points="44,64 42,66 40,69 39,71 38,73 38,75 40,72 42,70 44,69 46,68 45,66 "/>
+                    </g>
+                    <!-- ROTULOS -->
+                    <polygon class="rotulo" points="136,142 135,143 132,142 132,140 131,142 129,141 129,141 129,141 128,140 128,138 130,138 130,136 129,135 131,134 132,135 133,134 133,133 135,132 136,133 135,134 136,135 139,134 141,133 141,134 140,136 141,136 142,135 144,136 142,138 144,141 143,143 141,143 141,141 138,141 136,139 136,140 135,140 135,141 "/>
+                    <polygon class="rotulo" points="148,140 151,141 151,142 151,143 152,140 154,137 154,135 153,134 151,133 149,133 148,133 147,132 146,135 147,138 147,141 "/>
+                    <polygon class="rotulo" points="158,132 159,133 163,133 163,135 164,136 165,135 165,137 164,139 163,139 160,143 159,142 158,141 158,139 157,137 157,135 156,134 156,133 158,133 "/>
+                    <polygon class="rotulo" points="176,132 179,134 180,134 179,135 180,136 180,138 178,141 175,141 173,142 172,143 170,141 168,140 170,137 172,136 173,133 "/>
+                    <polygon class="rotulo" points="187,132 189,133 191,135 190,135 191,137 189,140 186,143 187,141 186,142 182,139 186,136 185,135 185,133 "/>
+                    <line class="rotulo" x1="128" y1="150" x2="191" y2= "150" />
+                    <!-- INDICADOR -->
+                    <polyline class="indicador" points="142,169 149,166 157,169 "/>
+                </svg>
+            </a>
+        </div>
+        <div class="grid-ed-ant-subtitulo-3">
+            <h3>Comissão de<br>Premiação:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-3">
+            <li>Mario Harum</li>
+            <li>Ralph Gehre</li>
+            <li>Ricardo Resende</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-4">
+            <h3>Curadoria:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-4">
+            <li>Paulo Henrique Silva</li>
+        </ol>
+    </div>
+</section>
+<div id="ed-21"></div>
+
+<!-- 21a edição - 1 Catálogo --->
+<section>
+    <div class="grid-ed-ant-section-21">
+        <h2 class="grid-ed-ant-titulo-edicao">21ª Edição</h2>
+        <div class="grid-ed-ant-linha-divisao"></div>
+        <div class="grid-ed-ant-titulo-principal-a">
+            <p class="data">30 de julho a<br>18 de setembro de 2015</p>
+        </div>
+        <div class="grid-ed-ant-icon-catalogo-a">
+            <a target="about:blank" href="http://cultura.anapolis.go.gov.br/static/media/21SALAO.16a26ab5.pdf"><!--LINK PARA O CATALOGO-->
+                <svg class="icon-catalogo ed21" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="100 0 100 175" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g class="hover"><!-- CAPA E LUPA -->
+                        <rect class="capa" width="200" height="161"/>
+                        <path class="lupa" d="M46 55c10,-2 21,5 23,15 1,7 -2,15 -7,19l7 13 -4 2 -8 -12c-1,0 -2,1 -4,1 -10,2 -20,-5 -23,-15 -2,-11 5,-21 16,-23zm6 33c8,-2 13,-9 11,-17 -1,-7 -8,-12 -16,-11 -8,2 -13,9 -11,17 1,7 9,12 16,11z"/>
+                        <polygon class="lupa" points="44,64 42,66 40,69 39,71 38,73 38,75 40,72 42,70 44,69 46,68 45,66 "/>
+                    </g>
+                    <!-- ROTULOS -->
+                    <polygon class="rotulo" points="136,142 135,143 132,142 132,140 131,142 129,141 129,141 129,141 128,140 128,138 130,138 130,136 129,135 131,134 132,135 133,134 133,133 135,132 136,133 135,134 136,135 139,134 141,133 141,134 140,136 141,136 142,135 144,136 142,138 144,141 143,143 141,143 141,141 138,141 136,139 136,140 135,140 135,141 "/>
+                    <polygon class="rotulo" points="148,140 151,141 151,142 151,143 152,140 154,137 154,135 153,134 151,133 149,133 148,133 147,132 146,135 147,138 147,141 "/>
+                    <polygon class="rotulo" points="158,132 159,133 163,133 163,135 164,136 165,135 165,137 164,139 163,139 160,143 159,142 158,141 158,139 157,137 157,135 156,134 156,133 158,133 "/>
+                    <polygon class="rotulo" points="176,132 179,134 180,134 179,135 180,136 180,138 178,141 175,141 173,142 172,143 170,141 168,140 170,137 172,136 173,133 "/>
+                    <polygon class="rotulo" points="187,132 189,133 191,135 190,135 191,137 189,140 186,143 187,141 186,142 182,139 186,136 185,135 185,133 "/>
+                    <line class="rotulo" x1="128" y1="150" x2="191" y2= "150" />
+                    <!-- INDICADOR -->
+                    <polyline class="indicador" points="142,169 149,166 157,169 "/>
+                </svg>
+            </a>
+        </div>
+        <div class="grid-ed-ant-subtitulo-1">
+            <h3>Artistas:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-1">
+            <li>Cecilia Walton - SP</li>
+            <li>César - MG</li>
+            <li>Cristiani Papini - MG</li>
+            <li>Eduardo Freitas - PR</li>
+            <li>Guilherme Moreira - DF</li>
+            <li class="premiado">Guilherme Portela - SP</li>
+            <li>Helô Sanvoy - GO</li>
+            <li>Joardo Filho - GO</li>
+            <li>Júnio Suci - SP</li>
+            <li>Lara Ovídio - RN</li>
+            <li>Leandro Muniz - SP</li>
+            <li>Lilian Maus - RS</li>
+            <li>Lucas Costa - SP</li>
+            <li class="premiado">Noara Quintana - SP</li>
+            <li>Roberta Tassinari - SC</li>
+            <li>Talles Lopes - GO</li>
+            <li class="premiado">Thais Graciotti - SP</li>
+            <li>Thiago Pinheiro - DF</li>
+            <li>Yuli Yamagata - SP</li>
+            <li class="premiado">Valdson Ramos - GO</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-2">
+            <h3>Comissão de<br>Seleção:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-2">
+            <li>Divino Sobral</li>
+            <li>Douglas Freitas</li>
+            <li>Kamilla Nunes</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-3">
+            <h3>Comissão de<br>Premiação:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-3">
+            <li>Aguinaldo Coelho</li>
+            <li>Celso Fioravante</li>
+            <li>Cristiana Tejo</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-4">
+            <h3>Curadoria:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-4">
+            <li>Paulo Henrique Silva</li>
+        </ol>
+    </div>
+</section>
+<div id="ed-20"></div>
+
+<!-- 20a edição - 1 Catálogo -->
+<section>
+    <div class="grid-ed-ant-section-20">
+        <h2 class="grid-ed-ant-titulo-edicao">20ª Edição</h2>
+        <div class="grid-ed-ant-linha-divisao"></div>
+        <div class="grid-ed-ant-titulo-principal-a">
+                <p class="data">25 de julho a<br>25 de agosto de 2014</p>
+            </div>
+        <div class="grid-ed-ant-icon-catalogo-a">
+            <a target="about:blank" href="http://cultura.anapolis.go.gov.br/static/media/20SALAO.fbb775bf.pdf"><!--LINK PARA O CATALOGO-->
+                <svg class="icon-catalogo ed20" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="100 0 100 175" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g class="hover"><!-- CAPA E LUPA -->
+                        <rect class="capa" width="200" height="161"/>
+                        <path class="lupa" d="M46 55c10,-2 21,5 23,15 1,7 -2,15 -7,19l7 13 -4 2 -8 -12c-1,0 -2,1 -4,1 -10,2 -20,-5 -23,-15 -2,-11 5,-21 16,-23zm6 33c8,-2 13,-9 11,-17 -1,-7 -8,-12 -16,-11 -8,2 -13,9 -11,17 1,7 9,12 16,11z"/>
+                        <polygon class="lupa" points="44,64 42,66 40,69 39,71 38,73 38,75 40,72 42,70 44,69 46,68 45,66 "/>
+                    </g>
+                    <!-- ROTULOS -->
+                    <polygon class="rotulo" points="136,142 135,143 132,142 132,140 131,142 129,141 129,141 129,141 128,140 128,138 130,138 130,136 129,135 131,134 132,135 133,134 133,133 135,132 136,133 135,134 136,135 139,134 141,133 141,134 140,136 141,136 142,135 144,136 142,138 144,141 143,143 141,143 141,141 138,141 136,139 136,140 135,140 135,141 "/>
+                    <polygon class="rotulo" points="148,140 151,141 151,142 151,143 152,140 154,137 154,135 153,134 151,133 149,133 148,133 147,132 146,135 147,138 147,141 "/>
+                    <polygon class="rotulo" points="158,132 159,133 163,133 163,135 164,136 165,135 165,137 164,139 163,139 160,143 159,142 158,141 158,139 157,137 157,135 156,134 156,133 158,133 "/>
+                    <polygon class="rotulo" points="176,132 179,134 180,134 179,135 180,136 180,138 178,141 175,141 173,142 172,143 170,141 168,140 170,137 172,136 173,133 "/>
+                    <polygon class="rotulo" points="187,132 189,133 191,135 190,135 191,137 189,140 186,143 187,141 186,142 182,139 186,136 185,135 185,133 "/>
+                    <line class="rotulo" x1="128" y1="150" x2="191" y2= "150" />
+                    <!-- INDICADOR -->
+                    <polyline class="indicador" points="142,169 149,166 157,169 "/>
+                </svg>
+            </a>
+        </div>
+        <div class="grid-ed-ant-subtitulo-1">
+            <h3>Artistas:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-1">
+            <li>Alice Lara - DF</li>
+            <li>Ana Ruas - MS</li>
+            <li>Ananda Giuliani - DF</li>
+            <li>Bruno Silvério - MG</li>
+            <li class="premiado">Carolina Mazzini - MG</li>
+            <li>Derli Almeida - MG</li>
+            <li class="premiado">Fernanda Adamski - GO</li>
+            <li>Hortência Moreira - GO</li>
+            <li>Íris Helena - DF</li>
+            <li>José Loures - GO</li>
+            <li>Nina Orthof - DF</li>
+            <li>Odinaldo Costa - GO</li>
+            <li>Pablo Lucena - BA</li>
+            <li class="premiado">Paul Setúbal - GO</li>
+            <li>Polliana Dalla - ES</li>
+            <li>Rodrigo Mogiz - MG</li>
+            <li>Vicente Pessôa - MG</li>
+            <li>Yara Pina - GO</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-2">
+            <h3>Comissão de<br>Seleção e Premiação:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-2">
+            <li>Fernando Oliva</li>
+            <li>Luciana Paiva</li>
+            <li>Marcus Lontra</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-3">
+            <h3>Curadoria:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-3">
+            <li>Paulo Henrique Silva</li>
+        </ol>
+    </div>
+</section>
+<div id="ed-19"></div>
+<!-- 19a edicao - 1 catálogo --->
+<section>
+    <div class="grid-ed-ant-section-19">
+        <h2 class="grid-ed-ant-titulo-edicao">19ª Edição</h2>
+        <div class="grid-ed-ant-linha-divisao"></div>
+        <div class="grid-ed-ant-titulo-principal-a">
+            <p class="data">25 de julho a<br>14 de setembro de 2013</p>
+        </div>
+        <div class="grid-ed-ant-icon-catalogo-a">
+            <a target="about:blank" href="http://cultura.anapolis.go.gov.br/static/media/19SALAO.37b49fa6.pdf"><!-- LINK PARA O CATALOGO -->
+                <svg class="icon-catalogo ed19" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1" viewBox="100 0 100 175" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g class="hover"><!-- CAPA E LUPA -->
+                        <rect class="capa" width="200" height="161"/>
+                        <path class="lupa" d="M46 55c10,-2 21,5 23,15 1,7 -2,15 -7,19l7 13 -4 2 -8 -12c-1,0 -2,1 -4,1 -10,2 -20,-5 -23,-15 -2,-11 5,-21 16,-23zm6 33c8,-2 13,-9 11,-17 -1,-7 -8,-12 -16,-11 -8,2 -13,9 -11,17 1,7 9,12 16,11z"/>
+                        <polygon class="lupa" points="44,64 42,66 40,69 39,71 38,73 38,75 40,72 42,70 44,69 46,68 45,66 "/>
+                    </g>
+                    <!-- ROTULOS -->
+                    <polygon class="rotulo" points="136,142 135,143 132,142 132,140 131,142 129,141 129,141 129,141 128,140 128,138 130,138 130,136 129,135 131,134 132,135 133,134 133,133 135,132 136,133 135,134 136,135 139,134 141,133 141,134 140,136 141,136 142,135 144,136 142,138 144,141 143,143 141,143 141,141 138,141 136,139 136,140 135,140 135,141 "/>
+                    <polygon class="rotulo" points="148,140 151,141 151,142 151,143 152,140 154,137 154,135 153,134 151,133 149,133 148,133 147,132 146,135 147,138 147,141 "/>
+                    <polygon class="rotulo" points="158,132 159,133 163,133 163,135 164,136 165,135 165,137 164,139 163,139 160,143 159,142 158,141 158,139 157,137 157,135 156,134 156,133 158,133 "/>
+                    <polygon class="rotulo" points="176,132 179,134 180,134 179,135 180,136 180,138 178,141 175,141 173,142 172,143 170,141 168,140 170,137 172,136 173,133 "/>
+                    <polygon class="rotulo" points="187,132 189,133 191,135 190,135 191,137 189,140 186,143 187,141 186,142 182,139 186,136 185,135 185,133 "/>
+                    <line class="rotulo" x1="128" y1="150" x2="191" y2= "150" />
+                    <!-- INDICADOR -->
+                    <polyline class="indicador" points="142,169 149,166 157,169 "/>
+                </svg>
+            </a>
+        </div>
+        <div class="grid-ed-ant-subtitulo-1">
+            <h3>Artistas:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-1">
+            <li>André Vechi - DF</li>
+            <li>Camila Soato - DF</li>
+            <li>David Almeida - DF</li>
+            <li>Diego de Santos - CE</li>
+            <li>Diogo Miranda - GO</li>
+            <li>Edney Antunes - GO</li>
+            <li>Erasmo Mageri - GO</li>
+            <li class="premiado">Evandro Soares - GO</li>
+            <li>Flávio Yoshida - GO</li>
+            <li>Letícia Alves Vitral - MG</li>
+            <li>Luis Sérgio - GO</li>
+            <li>Luciana de Lima Aguirre - DF</li>
+            <li class="premiado">Márcio H. Mota - DF</li>
+            <li class="premiado">Maurício Noblat - GO</li>
+            <li>Péricles Mendes - BA</li>
+            <li>Polyanna Morgana - DF</li>
+            <li>Priscilla Pessoa - MS</li>
+            <li class="premiado">Raquel Nava - DF</li>
+            <li>Suelen Pessoa - MG</li>
+            <li>Thales Noor - DF</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-2">
+            <h3>Comissão de<br>Seleção e Premiação:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-2">
+            <li>Fernando Oliva</li>
+            <li>Luciana Paiva</li>
+            <li>Marcus Lontra</li>
+        </ol>
+        <div class="grid-ed-ant-subtitulo-3">
+            <h3>Curadoria:</h3>
+        </div>
+        <ol class="grid-ed-ant-lista-3">
+            <li>Paulo Henrique Silva</li>
+        </ol>
+    </div>
+</section>

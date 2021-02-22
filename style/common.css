@@ -46,10 +46,14 @@
     --main-menu-button-highlighted: var(--color-main-primary-hover);
 
     /* Borders on menu */
+    --border-top-main-menu: 3px solid var(--color-main-primary);
+    --border-top-main-menu-off: none;
     --border-right-main-menu: 3px solid white;
     --border-right-main-menu-off: 3px solid rgba(0,0,0,0);
     --border-bottom-main-menu: none;
+    --border-bottom-main-menu: 3px solid var(--color-main-primary);
     --border-bottom-main-menu-off: none;
+
 
     --margin: 20px;
     --margin-calc: calc(var(--margin) - 1px);
@@ -159,19 +163,54 @@ svg {
     display: block;
 }
 
+#mainbackground {
+    position: fixed;
+    top: 0;
+    z-index: 0;
+}
+#mainbackground svg {
+    width: 100vw;
+}
+
+.bg-norte,
+.bg-nordeste,
+.bg-centro-oeste,
+.bg-sudeste,
+.bg-sul {
+    stroke: var(--color-main-primary);
+    stroke-width: 10;
+    fill: none;
+
+    opacity: 0;
+
+    /* transition: transform 30s linear; */
+}
+
 /* 2.1) Imagens: Main Logo */
-header svg {
+.logo-salao {
     max-height: 52px;
     height: 100%;
-    /* width: 100%; */
 
     margin-top: auto;
-    /* margin-left: var(--margin); */
-    /* margin-right: var(--margin); */
     margin-bottom: auto;
+    margin-left: var(--margin);
 
     fill-rule: evenodd;
     clip-rule: evenodd;
+}
+
+header svg {
+    /* max-height: 52px; */
+    /* height: 100%; */
+    /* width: 100%; */
+
+    /* margin-top: auto; */
+    /* margin-left: var(--margin); */
+    /* margin-right: var(--margin); */
+    /* margin-bottom: auto; */
+
+    /* fill-rule: evenodd; */
+    /* clip-rule: evenodd; */
 }
 header svg .logo-norte,
 header svg .logo-nordeste,
@@ -349,10 +388,12 @@ header {
 }
 */
 .menu-bar #main-menu-option1 {
-    height: var(--height-menu);
+    /* height: var(--height-menu); */
+    height: calc(var(--height-menu) - 6px);
     transition: height 1s ease;
 
     margin-left: var(--margin);
+    margin-left: 0;
 }
 .menu-opened #main-menu-option1 {
     height: var(--height-menu-opened);
@@ -397,11 +438,17 @@ header {
     display: none;
 }
 
-/* 4.1) Main Title Area */
+/* 4) Main */
+#main-grid {
+    position: relative;
+}
+
+/* 4.1) Main Title Areas */
 #grid-title-area-a,
 #grid-title-area-b {
     width: 100%;
 }
+#grid-ed-anteriores,
 #grid-welcome,
 #grid-moreinfo {
     margin: 0 auto;
@@ -417,7 +464,7 @@ header {
     margin-left: 0;
 }
 
-/* 5) <main> */
+/* 4.2)  Grids */
 
 main {
     /* background-color: rgb(255, 193, 193); */
@@ -428,6 +475,7 @@ main {
     flex-direction: column;
     /* justify-content: center; */
 }
+#grid-ed-anteriores,
 #grid-welcome,
 #grid-moreinfo {
     display: grid;
@@ -460,7 +508,7 @@ main {
     border-bottom: 1px solid white;
 }
 
-
+#grid-ed-anteriores,
 
 #grid-welcome,
 #grid-moreinfo {
@@ -506,12 +554,15 @@ main {
 
 /* 5) Footer */
 footer {
+    position: relative;
     /* border: 1px solid blue; */
     /* max-width: 900px; */
     display: flex;
     flex-direction: column;
     padding-top: 20px;
     padding-bottom: 20px;
+
+    background-color: white;
 }
 footer .center-area {
     /* background-color: rgb(255, 182, 182); */
@@ -558,6 +609,7 @@ footer > p {
     .menu-bar,
     /* #grid-title-area-a, */
     /* #grid-title-area-b, */
+    #grid-ed-anteriores,
     #grid-welcome,
     #grid-moreinfo {
         width: var(--width-tablet);
@@ -580,6 +632,7 @@ footer > p {
         height: 64px;
         /* margin-left: var(--margin); */
         margin-right: auto;
+        margin-left: var(--margin);
     }
 
     .welcome div {

@@ -161,7 +161,8 @@
 
     #main-menu-option1 {
         /* width: 30%; */
-        width: 207px;
+        /* width: 207px; */
+        width: calc(145px + (2 * var(--margin)));
     }
     .menu-bar #main-menu-option1 {
         margin-left: 0;
@@ -182,12 +183,19 @@
     /* 4) <main> */
     #grid-title-area-a,
     #grid-title-area-b,
+
     #grid-welcome,
     #grid-moreinfo {
         margin: 0 auto;
         width: var(--width-desktop);
         grid-template-columns: 678px 1fr;
         grid-template-columns: 600px 1fr;
+    }
+
+    #grid-ed-anteriores {
+        margin: 0 auto;
+        width: var(--width-desktop);
+
     }
 
     .menu-bar #main-menu-option1 {

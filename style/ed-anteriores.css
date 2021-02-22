@@ -1,0 +1,169 @@
+:root {
+    --width-catalogo-mobile: 80px;
+    --width-catalogo-desktop: 120px;
+
+    --color-24ed: rgb(60, 15, 82);
+    --color-23ed-a: rgb(74, 101, 97);
+    --color-23ed-b: rgb(94, 215, 197); /* Claro */
+    --color-23ed-c: rgb(15, 89, 78); /* Curadoria */
+    --color-23ed-d: rgb(249, 212, 3); /* Amarelo Curadoria */
+    --color-22ed-a: rgb(143, 49, 55);
+    --color-22ed-b: rgb(216, 23, 35); /* ====== */
+    --color-21ed: rgb(182, 106, 39);
+    --color-20ed: rgb(163, 117, 166);
+    --color-19ed: rgb(121, 29, 101);
+    --color-18ed: rgb(235, 97, 0);
+    --color-17ed: rgb(170, 26, 23);
+    --color-14ed: rgb(0,0,0);
+
+    --font-size-h4: 20px;
+
+    --margin-top-h4: -5px;
+    --margin-bottom-h4: -6px;
+}
+
+ol {
+    margin: 0;
+    padding: 0;
+}
+li {
+    font-family: var(--font-family-primary-a);
+    font-size: 15px;
+}
+
+.data {
+    font-size: 12px;
+}
+
+
+.block {
+    /* outline: 1px solid red; */
+}
+h3 {
+    margin-top: var(--margin-top-h3);
+    margin-bottom: var(--margin-bottom-h3);
+}
+
+h4 {
+    font-family: var(--font-family-primary-b);
+    font-weight: 100;
+    color: rgb(170, 72, 72);
+
+    margin-top: var(--margin-top-h4);
+    margin-bottom: calc(10px + var(--margin-bottom-h4));
+}
+
+.data {
+    /* margin-top: var(--margin-top-p); */
+    /* margin-bottom: var(--margin-bottom-p); */
+}
+
+.icon-catalogo {
+    width: var(--width-catalogo-mobile);
+}
+
+.icon-catalogo.ed24 .capa { fill: var(--color-24ed); }
+.icon-catalogo.ed23a .capa { fill: var(--color-23ed-a); }
+.icon-catalogo.ed23b .capa { fill: var(--color-23ed-b); } 
+.icon-catalogo.ed23c .capa { fill: var(--color-23ed-c); }
+.icon-catalogo.ed22a .capa { fill: var(--color-22ed-a); }
+.icon-catalogo.ed22b .capa { fill: var(--color-22ed-b); }
+.icon-catalogo.ed21 .capa { fill: var(--color-21ed); }
+.icon-catalogo.ed20 .capa { fill: var(--color-20ed); }
+.icon-catalogo.ed19 .capa { fill: var(--color-19ed); }
+.icon-catalogo.ed18 .capa { fill: var(--color-18ed); }
+.icon-catalogo.ed17 .capa { fill: var(--color-17ed); }
+.icon-catalogo.ed14 .capa { fill: var(--color-14ed); }
+
+/* Rótulos na capa */
+/* Stroke */
+.icon-catalogo.ed24 .rotulo { stroke: white; }
+.icon-catalogo.ed23a .rotulo { stroke: var(--color-23ed-b); }
+.icon-catalogo.ed23b .rotulo { stroke: var(--color-23ed-a); }
+.icon-catalogo.ed23c .rotulo { stroke: var(--color-23ed-d); }
+.icon-catalogo.ed22a .rotulo { stroke: white; }
+.icon-catalogo.ed22b .rotulo { stroke: white; }
+.icon-catalogo.ed21 .rotulo { stroke: white; }
+.icon-catalogo.ed20 .rotulo { stroke: white; }
+.icon-catalogo.ed19 .rotulo { stroke: white; }
+.icon-catalogo.ed18 .rotulo { stroke: white; }
+.icon-catalogo.ed17 .rotulo { stroke: white; }
+.icon-catalogo.ed14 .rotulo { stroke: white; }
+.icon-catalogo.ed14 svg polygon {stroke: white; }
+/* FILL - NONE */
+.rotulo { fill: none; }
+
+/* INDICADOR EMBAIXO DO CATALOGO E ANIMACAO */
+svg .indicador {
+fill: none;
+stroke: var(--color-dark);
+stroke-width: 1.5;
+transform: translateY(0px);
+animation-name: indicadorcatalogo;
+animation-duration: 2s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+}
+
+@keyframes indicadorcatalogo {
+    50% {
+    transform: translateY(3px);
+    }
+}
+
+.ed-24 {
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    grid-template-areas:
+    "edition  edition"
+    "catalogo lista-a"
+    "catalogo lista-b";
+}
+
+.grid-ed-ant-lista-a {
+    grid-area: lista-a;
+}
+.grid-ed-ant-lista-b {
+    grid-area: lista-b;
+}
+
+.ed-anteriores-title {
+    grid-area: edition;
+}
+h3.ed-anteriores-title {
+    text-align: center;
+    margin-bottom: calc(var(--margin) + var(--margin-bottom-h3));
+}
+
+.grid-ed-ant-lista-a h4,
+.grid-ed-ant-lista-b h4 {
+    /* margin-top: calc(var(--margin) + var(--margin-top-h3)); */
+    /* margin-bottom: calc(var(--margin) + var(--margin-bottom-h3)); */
+}
+.ed-24 ol {
+    margin-bottom: var(--margin);
+}
+
+.ed-24 li {
+    list-style: none;
+}
+
+@media screen and (min-width: 1100px) {
+
+    .ed-24 {
+        display: grid;
+    
+        grid-template-columns: 1fr 1fr 1fr;
+    
+        grid-template-areas:
+        "edition  edition edition"
+        "catalogo lista-a lista-b";
+    }
+
+    .icon-catalogo {
+        width: var(--width-catalogo-desktop);
+    }
+
+}
