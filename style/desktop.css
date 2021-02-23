@@ -55,6 +55,14 @@
         margin-top: 10px;
     }
 
+
+
+
+    .read-more-button-text {
+        /* color: red; */
+        margin:var(--margin);
+    }
+
     /* 2) Images */
     .welcome-img {
         display: block;
@@ -252,6 +260,17 @@
     }
 
 
+    /* Read More Section */
+    .read-more-button {
+        display: none;
+
+        /* padding: var; */
+    }
+    .read-more {
+        display: block;
+    }
+
+
 
 
 
@@ -259,7 +278,9 @@
 
 
     footer {
-        max-width: var(--width-desktop);
+        width: 100%;
+
+        /* max-width: var(--width-desktop); */
         margin-left: auto;
         margin-right: auto;
     }
